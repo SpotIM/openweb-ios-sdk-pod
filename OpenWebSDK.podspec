@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.summary          = 'OpenWeb SDK'
   s.description      = 'This SDK allows you to integrate OpenWeb into your iOS app.'
   s.homepage        = "https://www.openweb.com"
-  s.screenshots     = 'https://github.com/SpotIM/openweb-ios-sdk-pod/blob/master/Screenshots/ios-sdk-screenshot.png?raw=true'
+  s.screenshots     = 'https://github.com/SpotIM/spotim-ios-sdk-pod/assets/8794663/b451b791-92fc-4946-be64-00531d216fd3'
   s.license         = { :type => 'CUSTOM', :file => 'LICENSE' }
   s.author          = { 'Alon Haiut' => 'alon.h@openweb.com' }
   s.platform        = :ios
