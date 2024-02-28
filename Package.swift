@@ -7,7 +7,7 @@ let package = Package(
         .iOS(.v12)
     ],
     products: [
-        .library(name: "OpenWebSDK", targets: ["WrapperSPMTarget"])
+        .library(name: "OpenWebSDK", targets: ["OpenWebSDKWrapperTarget"])
     ],
     dependencies: [
         // Here we define our package's external dependencies
@@ -23,12 +23,14 @@ let package = Package(
             path: "OpenWebSDK.xcframework"
         ),
         .target(
-            name: "WrapperSPMTarget",
+            name: "OpenWebSDKWrapperTarget",
             dependencies: [
                 .target(name: "OpenWebSDK", condition: .when(platforms: .some([.iOS]))),
-                "RxSwift",
-                .product(name: "RxCocoa", package: "RxSwift")
-            ]
+                .product(name: "RxSwift-Dynamic", package: "RxSwift"),
+                .product(name: "RxCocoa-Dynamic", package: "RxSwift"),
+                .product(name: "RxRelay-Dynamic", package: "RxSwift"),
+            ],
+            path: "OpenWebSDKWrapperTarget"
         )
     ]
 )
