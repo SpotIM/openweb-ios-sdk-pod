@@ -24,7 +24,5 @@ Pod::Spec.new do |s|
 # the Pre-Compiled Framework:
   s.source          = { :git => 'https://github.com/SpotIM/openweb-ios-sdk-pod.git', :tag => s.version.to_s }
   s.ios.vendored_frameworks = 'OpenWebSDK.xcframework'
-  s.dependency 'RxSwift', '~> 6.5'
-  s.dependency 'RxCocoa', '~> 6.5'
 
 end
