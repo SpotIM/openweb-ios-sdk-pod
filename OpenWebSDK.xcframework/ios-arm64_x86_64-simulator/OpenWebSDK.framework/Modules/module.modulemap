@@ -1,0 +1,4 @@
+framework module OpenWebSDK {
+  header "OpenWebSDK-Swift.h"
+  requires objc
+}
