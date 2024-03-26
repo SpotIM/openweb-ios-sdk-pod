@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		fGnEN/AMeDaJB++36XoheXQkfuA=
+		wUz7roTtkAZzkWbObS8QCN6phN0=
 		</data>
 		<key>Headers/OpenWebSDK-Swift.h</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		QIKafNpBFczdwQy+paxvCfrRdAA=
+		P4M3l99wJ9CV6rcZX3TySQdTCsw=
 		</data>
 		<key>Modules/OpenWebSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -90,7 +90,7 @@
 		</data>
 		<key>OpenWebSettings.plist</key>
 		<data>
-		xwBk2HdUYVmlsaWWxnuntbcW5nM=
+		lekK4SPYp0gRoDYcoEpHzzWkk1g=
 		</data>
 		<key>ar-001.lproj/Localizable.strings</key>
 		<dict>
@@ -161,7 +161,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			82mDg3wLB5d8ah4fxWAt3LigiVeqsuIir0kANEVem6o=
+			9aDeAPcSOWUhvoufVV4dbHuzXObK8Gcig34Pp7OzcpY=
 			</data>
 		</dict>
 		<key>Headers/OpenWebSDK-Swift.h</key>
@@ -301,7 +301,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jGZfhHhOlwAAZj77UXVGHF6Phu1YY/coVwqLDBnsmaY=
+			JrcUcZ7twzRlEdshFS0EXDWDSmWmfvoZi3dqcyFzroQ=
 			</data>
 		</dict>
 		<key>ar-001.lproj/Localizable.strings</key>
