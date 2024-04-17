@@ -1,7 +1,6 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
-// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name OpenWebSDK
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-bare-slash-regex -module-name OpenWebSDK
 import AVFoundation
 import DeveloperToolsSupport
 import Dispatch
@@ -72,6 +71,9 @@ extension OpenWebSDK.OWLocaleStrategy : Swift.Equatable {
 public enum OWEmptyStateCustomizableElement {
   case icon(image: UIKit.UIImageView)
   case title(label: UIKit.UILabel)
+}
+extension OpenWebSDK.OWPreConversationSpacing : Swift.Equatable {
+  public static func == (lhs: OpenWebSDK.OWPreConversationSpacing, rhs: OpenWebSDK.OWPreConversationSpacing) -> Swift.Bool
 }
 public struct OWTheme {
   public let skeletonColor: OpenWebSDK.OWColor?
@@ -596,6 +598,7 @@ public enum OWPreConversationStyle : Swift.Codable {
   public struct Metrics {
     public static let defaultCommunityGuidelinesStyle: OpenWebSDK.OWCommunityGuidelinesStyle
     public static let defaultCommunityQuestionsStyle: OpenWebSDK.OWCommunityQuestionStyle
+    public static let defaultSpacing: OpenWebSDK.OWPreConversationSpacing
     public static let defaultRegularNumberOfComments: Swift.Int
     public static let minNumberOfComments: Swift.Int
     public static let maxNumberOfComments: Swift.Int
@@ -604,7 +607,7 @@ public enum OWPreConversationStyle : Swift.Codable {
   case compact
   case ctaButtonOnly
   case ctaWithSummary(communityGuidelinesStyle: OpenWebSDK.OWCommunityGuidelinesStyle = Metrics.defaultCommunityGuidelinesStyle, communityQuestionsStyle: OpenWebSDK.OWCommunityQuestionStyle = Metrics.defaultCommunityQuestionsStyle)
-  case custom(numberOfComments: Swift.Int = Metrics.defaultRegularNumberOfComments, communityGuidelinesStyle: OpenWebSDK.OWCommunityGuidelinesStyle = Metrics.defaultCommunityGuidelinesStyle, communityQuestionsStyle: OpenWebSDK.OWCommunityQuestionStyle = Metrics.defaultCommunityQuestionsStyle)
+  case custom(numberOfComments: Swift.Int = Metrics.defaultRegularNumberOfComments, communityGuidelinesStyle: OpenWebSDK.OWCommunityGuidelinesStyle = Metrics.defaultCommunityGuidelinesStyle, communityQuestionsStyle: OpenWebSDK.OWCommunityQuestionStyle = Metrics.defaultCommunityQuestionsStyle, spacing: OpenWebSDK.OWPreConversationSpacing = Metrics.defaultSpacing)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -704,6 +707,20 @@ public enum OWLanguageStrategy : Swift.Codable {
   case useServerConfig
   case use(language: OpenWebSDK.OWSupportedLanguage)
   public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum OWPreConversationSpacing : Swift.Codable {
+  public struct Metrics {
+    public static let defaultSpaceBetweenComments: CoreFoundation.CGFloat
+    public static let defaultSpaceCommunityGuidelines: CoreFoundation.CGFloat
+    public static let defaultSpaceCommunityQuestions: CoreFoundation.CGFloat
+  }
+  case regular
+  public func hash(into hasher: inout Swift.Hasher)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
   public init(from decoder: any Swift.Decoder) throws
 }
 public protocol OWUIAuthentication {
@@ -937,6 +954,7 @@ extension OpenWebSDK.OWThemeStyle : Swift.Hashable {}
 extension OpenWebSDK.OWThemeStyle : Swift.RawRepresentable {}
 extension OpenWebSDK.OWUserProfileType : Swift.Equatable {}
 extension OpenWebSDK.OWUserProfileType : Swift.Hashable {}
+extension OpenWebSDK.OWPreConversationSpacing : Swift.Hashable {}
 extension OpenWebSDK.OWModalPresentationStyle : Swift.Equatable {}
 extension OpenWebSDK.OWModalPresentationStyle : Swift.Hashable {}
 extension OpenWebSDK.OWNavigationBarStyle : Swift.Equatable {}
