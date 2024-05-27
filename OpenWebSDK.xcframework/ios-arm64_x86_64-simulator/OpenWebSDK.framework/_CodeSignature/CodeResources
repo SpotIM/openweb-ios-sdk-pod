@@ -18,11 +18,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		4WBzzwwc3qKlvSlqq0OfHTJ1K1g=
+		eSdpSOHK9K3EiWcd96/tzJ3V0zc=
 		</data>
 		<key>Modules/OpenWebSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		LAq3Lv0P3vvmet3mjJEDI6rb8No=
+		bcZ+d3QXECPSQFPEOBKRSXSgyMU=
 		</data>
 		<key>Modules/OpenWebSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -38,11 +38,11 @@
 		</data>
 		<key>Modules/OpenWebSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		oEApatEgdI/sNLofR7g5OmCXUPQ=
+		vndlcGLfMGbU6ABflp6d8XN4mXY=
 		</data>
 		<key>Modules/OpenWebSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		LAq3Lv0P3vvmet3mjJEDI6rb8No=
+		bcZ+d3QXECPSQFPEOBKRSXSgyMU=
 		</data>
 		<key>Modules/OpenWebSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Modules/OpenWebSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		aEuksIMRW//hshk0IR98aqYCXK8=
+		WZDVW2P2NgOIZ0/YaUhYHfg0BE0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -90,7 +90,7 @@
 		</data>
 		<key>OpenWebSettings.plist</key>
 		<data>
-		gnwVV/bmiLLii4aq7DKfsPSYhr4=
+		v+evstzX5TIZCYAFOHCq0UBgUzo=
 		</data>
 		<key>PrivacyInfo.xcprivacy</key>
 		<data>
@@ -186,7 +186,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pEQtEf0g4rJ4MmN4GRffk/6X90kXvwcl+4Hjc+6QmV8=
+			1d3op3plad2TpHzXf5oPuC0KJQMZX2LM6qOiOCdYC6k=
 			</data>
 		</dict>
 		<key>Modules/OpenWebSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -214,14 +214,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qZOPR+/XITHahiwrYSz9myX217ULCYJZjHXSRviLzbo=
+			vquAKRbDN9fypSlW6DsHlhKOnZAFCpXYYPqrfq1DwJg=
 			</data>
 		</dict>
 		<key>Modules/OpenWebSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pEQtEf0g4rJ4MmN4GRffk/6X90kXvwcl+4Hjc+6QmV8=
+			1d3op3plad2TpHzXf5oPuC0KJQMZX2LM6qOiOCdYC6k=
 			</data>
 		</dict>
 		<key>Modules/OpenWebSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -249,7 +249,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YFSpdqnxnFW8ddFWMQWnYrUHXcSqD6910Ab3tlb99SU=
+			tHI2sfWgWO2MlggzrVlEI5CoYnoAe5UWR8iIRDjuYsk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -305,7 +305,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/GXYM2rFnYQl6c4geCr2JIgsv86OpXUa+IWnEyzoNHk=
+			cLDuXpeFuovXYPtm72E1HcOHI4fy9oZRqabRGx6AgB0=
 			</data>
 		</dict>
 		<key>PrivacyInfo.xcprivacy</key>
