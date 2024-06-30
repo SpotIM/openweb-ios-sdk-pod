@@ -6,7 +6,10 @@ import DeveloperToolsSupport
 import Dispatch
 import Foundation
 import MobileCoreServices
+import NaturalLanguage
 import Network
+import OpenWebSDK.OWGiphySDK
+@_exported import OpenWebSDK
 import RxCocoa
 import RxSwift
 import SafariServices
@@ -252,6 +255,8 @@ public typealias OWUserAuthenticationStatusCompletion = (Swift.Result<OpenWebSDK
 public typealias OWSpotId = Swift.String
 public typealias OWPostId = Swift.String
 public typealias OWCommentId = Swift.String
+public typealias OWUserId = Swift.String
+public typealias OWFilterTabId = Swift.String
 public enum OWPreConversationSummaryStyle {
   case none
   case regular
