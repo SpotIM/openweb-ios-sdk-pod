@@ -18141,6 +18141,43 @@
             "moduleName": "OpenWebSDK"
           },
           {
+            "kind": "Var",
+            "name": "dutch",
+            "printedName": "dutch",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(OpenWebSDK.OWSupportedLanguage.Type) -> OpenWebSDK.OWSupportedLanguage",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OWSupportedLanguage",
+                    "printedName": "OpenWebSDK.OWSupportedLanguage",
+                    "usr": "s:10OpenWebSDK19OWSupportedLanguageO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "OpenWebSDK.OWSupportedLanguage.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OWSupportedLanguage",
+                        "printedName": "OpenWebSDK.OWSupportedLanguage",
+                        "usr": "s:10OpenWebSDK19OWSupportedLanguageO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10OpenWebSDK19OWSupportedLanguageO5dutchyA2CmF",
+            "mangledName": "$s10OpenWebSDK19OWSupportedLanguageO5dutchyA2CmF",
+            "moduleName": "OpenWebSDK"
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(rawValue:)",
@@ -57765,6 +57802,13 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/SdkAPI\/Enums\/OWSupportedLanguage.swift",
       "kind": "StringLiteral",
+      "offset": 393,
+      "length": 4,
+      "value": "\"nl\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/SdkAPI\/Enums\/OWSupportedLanguage.swift",
+      "kind": "StringLiteral",
       "offset": 250,
       "length": 4,
       "value": "\"he\""
@@ -57803,6 +57847,13 @@
       "offset": 371,
       "length": 4,
       "value": "\"fr\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/SdkAPI\/Enums\/OWSupportedLanguage.swift",
+      "kind": "StringLiteral",
+      "offset": 393,
+      "length": 4,
+      "value": "\"nl\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Services\/OWAnalyticsService.swift",

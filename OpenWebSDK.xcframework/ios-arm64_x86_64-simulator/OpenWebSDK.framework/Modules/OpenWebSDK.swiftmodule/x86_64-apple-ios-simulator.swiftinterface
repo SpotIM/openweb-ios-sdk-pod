@@ -440,6 +440,7 @@ public enum OWSupportedLanguage : Swift.String, Swift.Codable, Swift.CaseIterabl
   case spanish
   case portuguese
   case french
+  case dutch
   public init?(rawValue: Swift.String)
   public typealias AllCases = [OpenWebSDK.OWSupportedLanguage]
   public typealias RawValue = Swift.String
