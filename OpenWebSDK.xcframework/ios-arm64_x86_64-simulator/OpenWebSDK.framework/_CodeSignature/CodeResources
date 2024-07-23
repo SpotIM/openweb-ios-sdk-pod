@@ -26,11 +26,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		dT6ZaG31nmto5TeMqxwcA/MMMMc=
+		QBZ6lvsSwhgcRO3A8sI4t7zJWgE=
 		</data>
 		<key>Modules/OpenWebSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		CnVUDqkjRG09MRIjsQWiRq8F93M=
+		467wPToIkPw52Mb9GkJ0eDIdA+Y=
 		</data>
 		<key>Modules/OpenWebSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/OpenWebSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		CnVUDqkjRG09MRIjsQWiRq8F93M=
+		467wPToIkPw52Mb9GkJ0eDIdA+Y=
 		</data>
 		<key>Modules/OpenWebSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -217,7 +217,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			O5PuJNYyDC56iJ+froX9+RjqBNPnNz7G4Kbqtde8sj8=
+			TxUCjaTYYwYOC8dbdQq1NtmZ7/ZpAAz5Dn9CCrrGF+Y=
 			</data>
 		</dict>
 		<key>Modules/OpenWebSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -252,7 +252,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			O5PuJNYyDC56iJ+froX9+RjqBNPnNz7G4Kbqtde8sj8=
+			TxUCjaTYYwYOC8dbdQq1NtmZ7/ZpAAz5Dn9CCrrGF+Y=
 			</data>
 		</dict>
 		<key>Modules/OpenWebSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>

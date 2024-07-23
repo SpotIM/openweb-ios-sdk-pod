@@ -42257,28 +42257,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "HasDataSource",
-            "printedName": "HasDataSource",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "DataSource",
-                "printedName": "DataSource",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UITableViewDataSource",
-                    "printedName": "UIKit.UITableViewDataSource",
-                    "usr": "c:objc(pl)UITableViewDataSource"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:7RxCocoa13HasDataSourceP",
-            "mangledName": "$s7RxCocoa13HasDataSourceP"
-          },
-          {
-            "kind": "Conformance",
             "name": "HasPrefetchDataSource",
             "printedName": "HasPrefetchDataSource",
             "children": [
@@ -42298,6 +42276,28 @@
             ],
             "usr": "s:7RxCocoa21HasPrefetchDataSourceP",
             "mangledName": "$s7RxCocoa21HasPrefetchDataSourceP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "HasDataSource",
+            "printedName": "HasDataSource",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "DataSource",
+                "printedName": "DataSource",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UITableViewDataSource",
+                    "printedName": "UIKit.UITableViewDataSource",
+                    "usr": "c:objc(pl)UITableViewDataSource"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7RxCocoa13HasDataSourceP",
+            "mangledName": "$s7RxCocoa13HasDataSourceP"
           }
         ]
       },
@@ -43899,28 +43899,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "KVORepresentable",
-            "printedName": "KVORepresentable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "KVOType",
-                "printedName": "KVOType",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "NSNumber",
-                    "printedName": "Foundation.NSNumber",
-                    "usr": "c:objc(cs)NSNumber"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:7RxCocoa16KVORepresentableP",
-            "mangledName": "$s7RxCocoa16KVORepresentableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "_FormatSpecifiable",
             "printedName": "_FormatSpecifiable",
             "children": [
@@ -43940,6 +43918,28 @@
             ],
             "usr": "s:7SwiftUI18_FormatSpecifiableP",
             "mangledName": "$s7SwiftUI18_FormatSpecifiableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "KVORepresentable",
+            "printedName": "KVORepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "KVOType",
+                "printedName": "KVOType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSNumber",
+                    "printedName": "Foundation.NSNumber",
+                    "usr": "c:objc(cs)NSNumber"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7RxCocoa16KVORepresentableP",
+            "mangledName": "$s7RxCocoa16KVORepresentableP"
           }
         ]
       },
@@ -44018,28 +44018,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "KVORepresentable",
-            "printedName": "KVORepresentable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "KVOType",
-                "printedName": "KVOType",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "NSValue",
-                    "printedName": "Foundation.NSValue",
-                    "usr": "c:objc(cs)NSValue"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:7RxCocoa16KVORepresentableP",
-            "mangledName": "$s7RxCocoa16KVORepresentableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Animatable",
             "printedName": "Animatable",
             "children": [
@@ -44073,6 +44051,28 @@
             ],
             "usr": "s:7SwiftUI10AnimatableP",
             "mangledName": "$s7SwiftUI10AnimatableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "KVORepresentable",
+            "printedName": "KVORepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "KVOType",
+                "printedName": "KVOType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSValue",
+                    "printedName": "Foundation.NSValue",
+                    "usr": "c:objc(cs)NSValue"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7RxCocoa16KVORepresentableP",
+            "mangledName": "$s7RxCocoa16KVORepresentableP"
           }
         ]
       },
@@ -44151,28 +44151,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "KVORepresentable",
-            "printedName": "KVORepresentable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "KVOType",
-                "printedName": "KVOType",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "NSValue",
-                    "printedName": "Foundation.NSValue",
-                    "usr": "c:objc(cs)NSValue"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:7RxCocoa16KVORepresentableP",
-            "mangledName": "$s7RxCocoa16KVORepresentableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Animatable",
             "printedName": "Animatable",
             "children": [
@@ -44206,6 +44184,28 @@
             ],
             "usr": "s:7SwiftUI10AnimatableP",
             "mangledName": "$s7SwiftUI10AnimatableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "KVORepresentable",
+            "printedName": "KVORepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "KVOType",
+                "printedName": "KVOType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSValue",
+                    "printedName": "Foundation.NSValue",
+                    "usr": "c:objc(cs)NSValue"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7RxCocoa16KVORepresentableP",
+            "mangledName": "$s7RxCocoa16KVORepresentableP"
           },
           {
             "kind": "Conformance",
@@ -44641,28 +44641,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "KVORepresentable",
-            "printedName": "KVORepresentable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "KVOType",
-                "printedName": "KVOType",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "NSNumber",
-                    "printedName": "Foundation.NSNumber",
-                    "usr": "c:objc(cs)NSNumber"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:7RxCocoa16KVORepresentableP",
-            "mangledName": "$s7RxCocoa16KVORepresentableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "_FormatSpecifiable",
             "printedName": "_FormatSpecifiable",
             "children": [
@@ -44682,6 +44660,28 @@
             ],
             "usr": "s:7SwiftUI18_FormatSpecifiableP",
             "mangledName": "$s7SwiftUI18_FormatSpecifiableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "KVORepresentable",
+            "printedName": "KVORepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "KVOType",
+                "printedName": "KVOType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSNumber",
+                    "printedName": "Foundation.NSNumber",
+                    "usr": "c:objc(cs)NSNumber"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7RxCocoa16KVORepresentableP",
+            "mangledName": "$s7RxCocoa16KVORepresentableP"
           }
         ]
       },
@@ -46269,28 +46269,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "HasDataSource",
-            "printedName": "HasDataSource",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "DataSource",
-                "printedName": "DataSource",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UICollectionViewDataSource",
-                    "printedName": "UIKit.UICollectionViewDataSource",
-                    "usr": "c:objc(pl)UICollectionViewDataSource"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:7RxCocoa13HasDataSourceP",
-            "mangledName": "$s7RxCocoa13HasDataSourceP"
-          },
-          {
-            "kind": "Conformance",
             "name": "HasPrefetchDataSource",
             "printedName": "HasPrefetchDataSource",
             "children": [
@@ -46310,6 +46288,28 @@
             ],
             "usr": "s:7RxCocoa21HasPrefetchDataSourceP",
             "mangledName": "$s7RxCocoa21HasPrefetchDataSourceP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "HasDataSource",
+            "printedName": "HasDataSource",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "DataSource",
+                "printedName": "DataSource",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UICollectionViewDataSource",
+                    "printedName": "UIKit.UICollectionViewDataSource",
+                    "usr": "c:objc(pl)UICollectionViewDataSource"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7RxCocoa13HasDataSourceP",
+            "mangledName": "$s7RxCocoa13HasDataSourceP"
           }
         ]
       },
@@ -47739,28 +47739,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "KVORepresentable",
-            "printedName": "KVORepresentable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "KVOType",
-                "printedName": "KVOType",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "NSNumber",
-                    "printedName": "Foundation.NSNumber",
-                    "usr": "c:objc(cs)NSNumber"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:7RxCocoa16KVORepresentableP",
-            "mangledName": "$s7RxCocoa16KVORepresentableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "_FormatSpecifiable",
             "printedName": "_FormatSpecifiable",
             "children": [
@@ -47780,6 +47758,28 @@
             ],
             "usr": "s:7SwiftUI18_FormatSpecifiableP",
             "mangledName": "$s7SwiftUI18_FormatSpecifiableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "KVORepresentable",
+            "printedName": "KVORepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "KVOType",
+                "printedName": "KVOType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSNumber",
+                    "printedName": "Foundation.NSNumber",
+                    "usr": "c:objc(cs)NSNumber"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7RxCocoa16KVORepresentableP",
+            "mangledName": "$s7RxCocoa16KVORepresentableP"
           }
         ]
       },
@@ -48156,28 +48156,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "KVORepresentable",
-            "printedName": "KVORepresentable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "KVOType",
-                "printedName": "KVOType",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "NSNumber",
-                    "printedName": "Foundation.NSNumber",
-                    "usr": "c:objc(cs)NSNumber"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:7RxCocoa16KVORepresentableP",
-            "mangledName": "$s7RxCocoa16KVORepresentableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "_FormatSpecifiable",
             "printedName": "_FormatSpecifiable",
             "children": [
@@ -48197,6 +48175,28 @@
             ],
             "usr": "s:7SwiftUI18_FormatSpecifiableP",
             "mangledName": "$s7SwiftUI18_FormatSpecifiableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "KVORepresentable",
+            "printedName": "KVORepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "KVOType",
+                "printedName": "KVOType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSNumber",
+                    "printedName": "Foundation.NSNumber",
+                    "usr": "c:objc(cs)NSNumber"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7RxCocoa16KVORepresentableP",
+            "mangledName": "$s7RxCocoa16KVORepresentableP"
           }
         ]
       },
@@ -49335,28 +49335,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "KVORepresentable",
-            "printedName": "KVORepresentable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "KVOType",
-                "printedName": "KVOType",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "NSNumber",
-                    "printedName": "Foundation.NSNumber",
-                    "usr": "c:objc(cs)NSNumber"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:7RxCocoa16KVORepresentableP",
-            "mangledName": "$s7RxCocoa16KVORepresentableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "_FormatSpecifiable",
             "printedName": "_FormatSpecifiable",
             "children": [
@@ -49376,6 +49354,28 @@
             ],
             "usr": "s:7SwiftUI18_FormatSpecifiableP",
             "mangledName": "$s7SwiftUI18_FormatSpecifiableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "KVORepresentable",
+            "printedName": "KVORepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "KVOType",
+                "printedName": "KVOType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSNumber",
+                    "printedName": "Foundation.NSNumber",
+                    "usr": "c:objc(cs)NSNumber"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7RxCocoa16KVORepresentableP",
+            "mangledName": "$s7RxCocoa16KVORepresentableP"
           }
         ]
       },
@@ -49745,28 +49745,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "KVORepresentable",
-            "printedName": "KVORepresentable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "KVOType",
-                "printedName": "KVOType",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "NSNumber",
-                    "printedName": "Foundation.NSNumber",
-                    "usr": "c:objc(cs)NSNumber"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:7RxCocoa16KVORepresentableP",
-            "mangledName": "$s7RxCocoa16KVORepresentableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "_FormatSpecifiable",
             "printedName": "_FormatSpecifiable",
             "children": [
@@ -49786,6 +49764,28 @@
             ],
             "usr": "s:7SwiftUI18_FormatSpecifiableP",
             "mangledName": "$s7SwiftUI18_FormatSpecifiableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "KVORepresentable",
+            "printedName": "KVORepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "KVOType",
+                "printedName": "KVOType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSNumber",
+                    "printedName": "Foundation.NSNumber",
+                    "usr": "c:objc(cs)NSNumber"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7RxCocoa16KVORepresentableP",
+            "mangledName": "$s7RxCocoa16KVORepresentableP"
           }
         ]
       },
