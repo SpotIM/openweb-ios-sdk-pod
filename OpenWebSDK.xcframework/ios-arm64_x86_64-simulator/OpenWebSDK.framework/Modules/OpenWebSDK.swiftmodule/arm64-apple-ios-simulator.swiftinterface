@@ -11,6 +11,8 @@ import NaturalLanguage
 import Network
 import OpenWebSDK.OWGiphySDK
 @_exported import OpenWebSDK
+import RxCocoa
+import RxSwift
 import SafariServices
 import Swift
 import SwiftUI

@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		zin4dqlRBAgaX3j7UcGbxhJianE=
+		QFXDhnEngzko2t0+jTLCzTdn6e0=
 		</data>
 		<key>GiphyConfiguration.plist</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/OpenWebSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		QZjjYQVKv9o+A3yNxHaEwwL8iko=
+		467wPToIkPw52Mb9GkJ0eDIdA+Y=
 		</data>
 		<key>Modules/OpenWebSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		e4PGubeJR40vp5/6ynKBWW9jAAA=
+		oHf2WSsV/kLxqv74owwe2fBcHz4=
 		</data>
 		<key>Modules/OpenWebSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -42,19 +42,19 @@
 		</data>
 		<key>Modules/OpenWebSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		e4PGubeJR40vp5/6ynKBWW9jAAA=
+		oHf2WSsV/kLxqv74owwe2fBcHz4=
 		</data>
 		<key>Modules/OpenWebSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		HFoH/i3iTtPHmRxNGTQ0SHrgZfI=
+		6+qoG5uosd1oY8yOOAjijtQHtjY=
 		</data>
 		<key>Modules/OpenWebSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		QZjjYQVKv9o+A3yNxHaEwwL8iko=
+		467wPToIkPw52Mb9GkJ0eDIdA+Y=
 		</data>
 		<key>Modules/OpenWebSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		K4XB52i7HguFBn0YoZmzPJidt34=
+		I8L/CnDTuBikE2HJ2baONeAZf/0=
 		</data>
 		<key>Modules/OpenWebSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -62,11 +62,11 @@
 		</data>
 		<key>Modules/OpenWebSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		K4XB52i7HguFBn0YoZmzPJidt34=
+		I8L/CnDTuBikE2HJ2baONeAZf/0=
 		</data>
 		<key>Modules/OpenWebSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		U+JrXJ13Sv1ltQ7KvudwHS0Ly+o=
+		qPhKw1mByXhv4ge5lgZLjvEgXFc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -182,7 +182,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bdhwSdjWuLEHEqQ3GFi2CIS2GV+xw08IFL04RrCW3m0=
+			LCOTFBQCI7YG91vCR6wt0xKNZFWKjuhnSl8ljW0DqBc=
 			</data>
 		</dict>
 		<key>GiphyConfiguration.plist</key>
@@ -217,14 +217,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			DTbzwj+3t/ULMb0OQVk/3wTx7vKny3TCZfv8ENR6muU=
+			TxUCjaTYYwYOC8dbdQq1NtmZ7/ZpAAz5Dn9CCrrGF+Y=
 			</data>
 		</dict>
 		<key>Modules/OpenWebSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SZ6m4Xq1d8ECggW/1lIIxJhL5O4eh/NTrqzLAyWR750=
+			jjVmAjIbDwz/GdixNsKkf5CNnHmopqEwaP7S/DXDn4M=
 			</data>
 		</dict>
 		<key>Modules/OpenWebSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -238,28 +238,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SZ6m4Xq1d8ECggW/1lIIxJhL5O4eh/NTrqzLAyWR750=
+			jjVmAjIbDwz/GdixNsKkf5CNnHmopqEwaP7S/DXDn4M=
 			</data>
 		</dict>
 		<key>Modules/OpenWebSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kUcJCeQWshG6pkDrsLXQBaxjqw6XdSQD5Tl8YhGOETI=
+			fk3EWAclpxzdnH0pJKJG/xyyEJ836XlIncOEMTlmcrk=
 			</data>
 		</dict>
 		<key>Modules/OpenWebSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DTbzwj+3t/ULMb0OQVk/3wTx7vKny3TCZfv8ENR6muU=
+			TxUCjaTYYwYOC8dbdQq1NtmZ7/ZpAAz5Dn9CCrrGF+Y=
 			</data>
 		</dict>
 		<key>Modules/OpenWebSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YWSwaS5XARpVKVCeTRx+JAh0pLEDeS3WCK3zSAc1d6c=
+			3k2Ukw4ihxGKJEnZF+v6XsPXzO84bFgXwt5W7FaBYS8=
 			</data>
 		</dict>
 		<key>Modules/OpenWebSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -273,14 +273,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YWSwaS5XARpVKVCeTRx+JAh0pLEDeS3WCK3zSAc1d6c=
+			3k2Ukw4ihxGKJEnZF+v6XsPXzO84bFgXwt5W7FaBYS8=
 			</data>
 		</dict>
 		<key>Modules/OpenWebSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			b5S1BIqeHjTCSa0eK0nYjg54e1hzVBUP+xX3e4FTmPc=
+			tcnxmTUp61KNsu1T3VvcDVbXkj0ZpRtHmyApxj4K8WU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
