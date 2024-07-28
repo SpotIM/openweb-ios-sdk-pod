@@ -2,23 +2,20 @@
 import PackageDescription
 
 let vendorFrameworkshostingUrl = "https://github.com/SpotIM/openweb-ios-vendor-frameworks/tree/light-rx/Vendor-Frameworks/"
-let owPrefix = ""
 let owSDK = "OpenWebSDK"
 let owSDKWrapperTarget = "OpenWebSDKWrapperTarget"
 
 let frameworksChecksumMapper = [
-    "\(owPrefix)RxSwift": "e6fc04e99fa4f07dfaa2076c8b2dbfc439f416cbf3c2ba62263ef7900c2a505d",
-    "\(owPrefix)RxCocoa": "bad9176adcd17b818c6d100fe5169b282519e62753496d3b1833327e72945140",
-    "\(owPrefix)RxRelay": "4ad480a9daa70ef8294e3676951783d940bed948b588dc12ed9ca323fedb6fc7"
-//    "OneSignalUser": "6595a504ba8334b650444281cf354cecbabdf6ce2d6e7f34cf4dce9a999fe804"
+    "RxSwift": "e6fc04e99fa4f07dfaa2076c8b2dbfc439f416cbf3c2ba62263ef7900c2a505d",
+    "RxCocoa": "bad9176adcd17b818c6d100fe5169b282519e62753496d3b1833327e72945140",
+    "RxRelay": "4ad480a9daa70ef8294e3676951783d940bed948b588dc12ed9ca323fedb6fc7"
 ]
 
 func createProducts() -> [Product] {
     let products: [Product] = [.library(name: owSDK, targets: [owSDKWrapperTarget]),
-                               .library(name: "\(owPrefix)RxSwift", targets: [owSDKWrapperTarget]),
-                               .library(name: "\(owPrefix)RxCocoa", targets: [owSDKWrapperTarget]),
-                               .library(name: "\(owPrefix)RxRelay", targets: [owSDKWrapperTarget])]
-//                                .library(name: "OneSignalUser", targets: [owSDKWrapperTarget])]
+                               .library(name: "RxSwift", targets: [owSDKWrapperTarget]),
+                               .library(name: "RxCocoa", targets: [owSDKWrapperTarget]),
+                               .library(name: "RxRelay", targets: [owSDKWrapperTarget])]
 
     return products
 }
@@ -74,12 +71,8 @@ func createTargets() -> [Target] {
 }
 
 func createRemoteTarget(framework: String, checksum: String = "") -> Target {
-    var url = "\(vendorFrameworkshostingUrl)\(framework).xcframework.zip"
-    if framework == "OneSignalUser" {
-        url = "https://github.com/OneSignal/OneSignal-iOS-SDK/releases/download/5.2.2/OneSignalUser.xcframework.zip"
-    }
     return Target.binaryTarget(name: "\(framework)",
-                               url: url,
+                               url: "\(vendorFrameworkshostingUrl)\(framework).xcframework.zip",
                                checksum: checksum)
 }
 
