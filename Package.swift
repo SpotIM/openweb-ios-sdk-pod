@@ -1,14 +1,15 @@
 // swift-tools-version:5.5
 import PackageDescription
 
-let vendorFrameworkshostingUrl = "https://github.com/SpotIM/openweb-ios-vendor-frameworks/tree/light-rx/Vendor-Frameworks/"
+let version = "1.0.0"
+let vendorFrameworkshostingUrl = "https://github.com/SpotIM/openweb-ios-vendor-frameworks/releases/download/\(version)/"
 let owSDK = "OpenWebSDK"
 let owSDKWrapperTarget = "OpenWebSDKWrapperTarget"
 
 let frameworksChecksumMapper = [
-    "RxSwift": "e6fc04e99fa4f07dfaa2076c8b2dbfc439f416cbf3c2ba62263ef7900c2a505d",
-    "RxCocoa": "bad9176adcd17b818c6d100fe5169b282519e62753496d3b1833327e72945140",
-    "RxRelay": "4ad480a9daa70ef8294e3676951783d940bed948b588dc12ed9ca323fedb6fc7"
+    "RxSwift": "e4b4b0b5673e218066cf191deb6ed7e9add990f457b97acb20c0787c4376e514",
+    "RxCocoa": "65f7dc645cf6eef52384ff20bbbc27b2fac302055ed1bbffacf58b45dcff5d2f",
+    "RxRelay": "b71d151141603d21f18cdc8a6417c6c58b9e5d9e60a3ee7d60e544cbc7061e99"
 ]
 
 func createProducts() -> [Product] {
@@ -30,24 +31,13 @@ func createTargets() -> [Target] {
     )
     targets.append(OpenWebSDK)
 
-    let rxSwift: Target = .binaryTarget(
-        name: "RxSwift",
-        path: "RxSwift.xcframework"
-    )
-    targets.append(rxSwift)
+    // Adding remote vendors xcframework(s)
+    let remoteTargets = frameworksChecksumMapper.flatMap { framework, checksum -> [Target] in
+        return [createRemoteTarget(framework: framework, checksum: checksum)]
+    }
+    targets.append(contentsOf: remoteTargets)
 
-    let rxCocoa: Target = .binaryTarget(
-        name: "RxCocoa",
-        path: "RxCocoa.xcframework"
-    )
-    targets.append(rxCocoa)
-
-    let rxRelay: Target = .binaryTarget(
-        name: "RxRelay",
-        path: "RxRelay.xcframework"
-    )
-    targets.append(rxRelay)
-
+    // Adding a "wrapper" target which all xcframeworks are "dependencies" to this one
     let wrapperTarget: Target = .target(
         name: owSDKWrapperTarget,
         dependencies: [
@@ -59,13 +49,6 @@ func createTargets() -> [Target] {
         path: owSDKWrapperTarget
     )
     targets.append(wrapperTarget)
-
-
-//    // Adding remote vendors xcframework(s)
-//    let remoteTargets = frameworksChecksumMapper.flatMap { framework, checksum -> [Target] in
-//        return [createRemoteTarget(framework: framework, checksum: checksum)]
-//    }
-//    targets.append(contentsOf: remoteTargets)
 
     return targets
 }
