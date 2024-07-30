@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '12.0'
 
 # the Pre-Compiled Framework:
-  s.source          = { :git => 'https://github.com/SpotIM/openweb-ios-sdk-pod.git', :branch => 'testing-integration-2.4.0-xcode15.2.0' }
+  s.source          = { :git => 'https://github.com/SpotIM/openweb-ios-sdk-pod.git', :branch => 'new-simple-integration' }
   s.ios.vendored_frameworks = 'OpenWebSDK.xcframework'
   s.dependency 'RxSwift', '~> 6.7.0'
   s.dependency 'RxRelay', '~> 6.7.0'
