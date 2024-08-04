@@ -8,8 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'OpenWebSDK'
-  s.version          = '2.3.3'
-  s.swift_versions = ['5.0']
+  s.version          = '2.4.0'
   s.summary          = 'OpenWeb SDK'
   s.description      = 'This SDK allows you to integrate OpenWeb into your iOS app.'
   s.homepage        = "https://www.openweb.com"
@@ -18,11 +17,12 @@ Pod::Spec.new do |s|
   s.author          = { 'Alon Haiut' => 'alon.h@openweb.com' }
   s.platform        = :ios
   s.ios.deployment_target = '12.0'
-  # Setting pod `BUILD_LIBRARY_FOR_DISTRIBUTION` to `YES`
-  s.pod_target_xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
 
 # the Pre-Compiled Framework:
   s.source          = { :git => 'https://github.com/SpotIM/openweb-ios-sdk-pod.git', :tag => s.version.to_s }
   s.ios.vendored_frameworks = 'OpenWebSDK.xcframework'
+  s.dependency 'RxSwift', '~> 6.7.0'
+  s.dependency 'RxRelay', '~> 6.7.0'
+  s.dependency 'RxCocoa', '~> 6.7.0'
 
 end
