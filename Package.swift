@@ -7,9 +7,9 @@ let owSDK = "OpenWebSDK"
 let owSDKWrapperTarget = "OpenWebSDKWrapperTarget"
 
 let frameworksChecksumMapper = [
-    "RxSwift": "e4b4b0b5673e218066cf191deb6ed7e9add990f457b97acb20c0787c4376e514",
-    "RxCocoa": "65f7dc645cf6eef52384ff20bbbc27b2fac302055ed1bbffacf58b45dcff5d2f",
-    "RxRelay": "b71d151141603d21f18cdc8a6417c6c58b9e5d9e60a3ee7d60e544cbc7061e99"
+    "RxSwift": "8dda0dd2c6ae8d86b8440c880f50e30c75950a7bff38fd83d7554c2d3abb758f",
+    "RxCocoa": "4546710b488e4d4c1b4d0b292eb5ca90893da1203b45fddbfb2ba7c139368dba",
+    "RxRelay": "40175e1abb021a5f6d580acf78ec3e553ebd9ee15b4ebe0201310fa2d355b828"
 ]
 
 func createProducts() -> [Product] {
