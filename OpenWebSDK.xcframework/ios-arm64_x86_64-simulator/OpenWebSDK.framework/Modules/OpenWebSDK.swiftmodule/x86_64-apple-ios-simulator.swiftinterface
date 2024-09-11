@@ -49,6 +49,10 @@ public enum OWLocaleStrategy : Swift.Codable {
 extension OpenWebSDK.OWArticleExtraData {
   public static let empty: OpenWebSDK.OWArticleExtraData
 }
+public protocol OWCommentActionsCustomizations {
+  var fontStyle: OpenWebSDK.OWCommentActionsFontStyle { get set }
+  var color: OpenWebSDK.OWCommentActionsColor { get set }
+}
 public enum OWSummaryHeaderCustomizableElement {
   case title(label: UIKit.UILabel)
   case counter(label: UIKit.UILabel)
@@ -95,7 +99,11 @@ public struct OWTheme {
   public let secondaryBorderColor: OpenWebSDK.OWColor?
   public let loaderColor: OpenWebSDK.OWColor?
   public let brandColor: OpenWebSDK.OWColor?
-  public init(skeletonColor: OpenWebSDK.OWColor? = nil, skeletonShimmeringColor: OpenWebSDK.OWColor? = nil, primarySeparatorColor: OpenWebSDK.OWColor? = nil, secondarySeparatorColor: OpenWebSDK.OWColor? = nil, tertiarySeparatorColor: OpenWebSDK.OWColor? = nil, primaryTextColor: OpenWebSDK.OWColor? = nil, secondaryTextColor: OpenWebSDK.OWColor? = nil, tertiaryTextColor: OpenWebSDK.OWColor? = nil, primaryBackgroundColor: OpenWebSDK.OWColor? = nil, secondaryBackgroundColor: OpenWebSDK.OWColor? = nil, tertiaryBackgroundColor: OpenWebSDK.OWColor? = nil, surfaceColor: OpenWebSDK.OWColor? = nil, primaryBorderColor: OpenWebSDK.OWColor? = nil, secondaryBorderColor: OpenWebSDK.OWColor? = nil, loaderColor: OpenWebSDK.OWColor? = nil, brandColor: OpenWebSDK.OWColor? = nil)
+  public let voteUpUnselectedColor: OpenWebSDK.OWColor?
+  public let voteDownUnselectedColor: OpenWebSDK.OWColor?
+  public let voteUpSelectedColor: OpenWebSDK.OWColor?
+  public let voteDownSelectedColor: OpenWebSDK.OWColor?
+  public init(skeletonColor: OpenWebSDK.OWColor? = nil, skeletonShimmeringColor: OpenWebSDK.OWColor? = nil, primarySeparatorColor: OpenWebSDK.OWColor? = nil, secondarySeparatorColor: OpenWebSDK.OWColor? = nil, tertiarySeparatorColor: OpenWebSDK.OWColor? = nil, primaryTextColor: OpenWebSDK.OWColor? = nil, secondaryTextColor: OpenWebSDK.OWColor? = nil, tertiaryTextColor: OpenWebSDK.OWColor? = nil, primaryBackgroundColor: OpenWebSDK.OWColor? = nil, secondaryBackgroundColor: OpenWebSDK.OWColor? = nil, tertiaryBackgroundColor: OpenWebSDK.OWColor? = nil, surfaceColor: OpenWebSDK.OWColor? = nil, primaryBorderColor: OpenWebSDK.OWColor? = nil, secondaryBorderColor: OpenWebSDK.OWColor? = nil, loaderColor: OpenWebSDK.OWColor? = nil, brandColor: OpenWebSDK.OWColor? = nil, voteUpUnselectedColor: OpenWebSDK.OWColor? = nil, voteDownUnselectedColor: OpenWebSDK.OWColor? = nil, voteUpSelectedColor: OpenWebSDK.OWColor? = nil, voteDownSelectedColor: OpenWebSDK.OWColor? = nil)
 }
 public protocol OWUIViews {
   func preConversation(postId: OpenWebSDK.OWPostId, article: any OpenWebSDK.OWArticleProtocol, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWViewActionsCallbacks?, completion: @escaping OpenWebSDK.OWViewCompletion)
@@ -182,6 +190,15 @@ public typealias OWProviderSSOHandler = (Swift.Result<OpenWebSDK.OWSSOProviderMo
 public enum OWEmptyStateCommentingEndedCustomizableElement {
   case icon(imageView: UIKit.UIImageView)
   case title(label: UIKit.UILabel)
+}
+public enum OWCommentActionsColor : Swift.Int, Swift.Codable {
+  case `default`
+  case brandColor
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
 }
 public protocol OWLoggerConfiguration {
   var level: OpenWebSDK.OWLogLevel { get set }
@@ -642,6 +659,7 @@ public struct OWAdditionalSettings : OpenWebSDK.OWAdditionalSettingsProtocol {
   public init(preConversationSettings: any OpenWebSDK.OWPreConversationSettingsProtocol = OWPreConversationSettings(), fullConversationSettings: any OpenWebSDK.OWConversationSettingsProtocol = OWConversationSettings(), commentCreationSettings: any OpenWebSDK.OWCommentCreationSettingsProtocol = OWCommentCreationSettings(), commentThreadSettings: any OpenWebSDK.OWCommentThreadSettingsProtocol = OWCommentThreadSettings())
 }
 public protocol OWCustomizations {
+  var commentActions: any OpenWebSDK.OWCommentActionsCustomizations { get set }
   var fontFamily: OpenWebSDK.OWFontGroupFamily { get set }
   var sorting: any OpenWebSDK.OWSortingCustomizations { get }
   var themeEnforcement: OpenWebSDK.OWThemeStyleEnforcement { get set }
@@ -854,6 +872,15 @@ public enum OWUserAuthenticationStatus {
   case guest
   case ssoLoggedIn(userId: Swift.String)
 }
+public enum OWCommentActionsFontStyle : Swift.Int, Swift.Codable {
+  case `default`
+  case semiBold
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 public enum OWOrientation : Swift.Codable {
   case portrait
   case landscape
@@ -967,6 +994,9 @@ extension OpenWebSDK.OWNavigationBarStyle : Swift.Equatable {}
 extension OpenWebSDK.OWNavigationBarStyle : Swift.Hashable {}
 extension OpenWebSDK.OWReadOnlyMode : Swift.Equatable {}
 extension OpenWebSDK.OWReadOnlyMode : Swift.Hashable {}
+extension OpenWebSDK.OWCommentActionsColor : Swift.Equatable {}
+extension OpenWebSDK.OWCommentActionsColor : Swift.Hashable {}
+extension OpenWebSDK.OWCommentActionsColor : Swift.RawRepresentable {}
 extension OpenWebSDK.OWArticleHeaderStyle : Swift.Equatable {}
 extension OpenWebSDK.OWArticleHeaderStyle : Swift.Hashable {}
 extension OpenWebSDK.OWSortOption : Swift.Equatable {}
@@ -999,6 +1029,9 @@ extension OpenWebSDK.OWClarityDetailsType : Swift.Equatable {}
 extension OpenWebSDK.OWClarityDetailsType : Swift.Hashable {}
 extension OpenWebSDK.OWParserError : Swift.Equatable {}
 extension OpenWebSDK.OWParserError : Swift.Hashable {}
+extension OpenWebSDK.OWCommentActionsFontStyle : Swift.Equatable {}
+extension OpenWebSDK.OWCommentActionsFontStyle : Swift.Hashable {}
+extension OpenWebSDK.OWCommentActionsFontStyle : Swift.RawRepresentable {}
 extension OpenWebSDK.OWOrientation : Swift.Equatable {}
 extension OpenWebSDK.OWOrientation : Swift.Hashable {}
 extension OpenWebSDK.SPUserInterfaceStyle : Swift.Equatable {}
