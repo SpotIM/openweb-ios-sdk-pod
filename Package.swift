@@ -33,8 +33,8 @@ func createTargets() -> [Target] {
     )
     targets.append(OpenWebSDK)
 
-		// Adding OpenWebSDK Adapter target
-		let OpenWebSDKAdapter: Target = .target(
+    // Adding OpenWebSDK Adapter target
+    let OpenWebSDKAdapter: Target = .target(
         name: owSDKAdapter,
         path: "OpenWebSDKAdapter"
     )
