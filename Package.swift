@@ -4,6 +4,7 @@ import PackageDescription
 let version = "1.0.0"
 let vendorFrameworkshostingUrl = "https://github.com/SpotIM/openweb-ios-vendor-frameworks/releases/download/\(version)/"
 let owSDK = "OpenWebSDK"
+let owSDKAdapter = "OpenWebSDKAdapter"
 let owSDKWrapperTarget = "OpenWebSDKWrapperTarget"
 
 let frameworksChecksumMapper = [
@@ -14,6 +15,7 @@ let frameworksChecksumMapper = [
 
 func createProducts() -> [Product] {
     let products: [Product] = [.library(name: owSDK, targets: [owSDKWrapperTarget]),
+															 .library(name: owSDKAdapter, type: .dynamic, targets: [owSDKAdapter])
                                .library(name: "RxSwift", targets: [owSDKWrapperTarget]),
                                .library(name: "RxCocoa", targets: [owSDKWrapperTarget]),
                                .library(name: "RxRelay", targets: [owSDKWrapperTarget])]
@@ -30,6 +32,13 @@ func createTargets() -> [Target] {
         path: "\(owSDK).xcframework"
     )
     targets.append(OpenWebSDK)
+
+		// Adding OpenWebSDK Adapter target
+		let OpenWebSDKAdapter: Target = .target(
+        name: owSDKAdapter,
+        path: "OpenWebSDKAdapter"
+    )
+    targets.append(OpenWebSDKAdapter)
 
     // Adding remote vendors xcframework(s)
     let remoteTargets = frameworksChecksumMapper.flatMap { framework, checksum -> [Target] in
