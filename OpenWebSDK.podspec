@@ -24,6 +24,6 @@ Pod::Spec.new do |s|
   s.dependency 'RxSwift', '~> 6.7.0'
   s.dependency 'RxRelay', '~> 6.7.0'
   s.dependency 'RxCocoa', '~> 6.7.0'
-	s.dependency 'OpenWebSDKAdapter', '~> 1.0.0'
+  s.dependency 'OpenWebSDKAdapter', '~> 1.0.0'
 
 end
