@@ -15,7 +15,7 @@ let frameworksChecksumMapper = [
 
 func createProducts() -> [Product] {
     let products: [Product] = [.library(name: owSDK, targets: [owSDKWrapperTarget]),
-															 .library(name: owSDKAdapter, type: .dynamic, targets: [owSDKAdapter])
+                               .library(name: owSDKAdapter, type: .dynamic, targets: [owSDKAdapter])
                                .library(name: "RxSwift", targets: [owSDKWrapperTarget]),
                                .library(name: "RxCocoa", targets: [owSDKWrapperTarget]),
                                .library(name: "RxRelay", targets: [owSDKWrapperTarget])]
@@ -33,8 +33,8 @@ func createTargets() -> [Target] {
     )
     targets.append(OpenWebSDK)
 
-		// Adding OpenWebSDK Adapter target
-		let OpenWebSDKAdapter: Target = .target(
+    // Adding OpenWebSDK Adapter target
+    let OpenWebSDKAdapter: Target = .target(
         name: owSDKAdapter,
         path: "OpenWebSDKAdapter"
     )

@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint OpenWebSDK.podspec' to ensure this is a
+# Be sure to run `pod lib lint OpenWebSDKAdapter.podspec' to ensure this is a
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'OpenWebSDKAdapter'
-  s.version          = '1.0.0'
+  s.version          = '2.5.1'
   s.summary          = 'OpenWeb SDK Adapter'
   s.description      = 'OpenWeb Adapter SDK for OpenWebSDK'
   s.homepage        = "https://www.openweb.com"
@@ -19,5 +19,5 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '12.0'
   s.source          = { :git => 'https://github.com/SpotIM/openweb-ios-sdk-pod.git', :tag => s.version.to_s }
 
-	s.source_files    = "OpenWebSDKAdapter/**/*"
+  s.source_files    = "OpenWebSDKAdapter/**/*"
 end
