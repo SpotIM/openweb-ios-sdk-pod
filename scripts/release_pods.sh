@@ -2,8 +2,8 @@
 
 # Ordered list of .podspecs to push
 PODSPECS=(
-	"OpenWebSDKAdapter.podspec"
-	"OpenWebSDK.podspec"
+  "OpenWebSDKAdapter.podspec"
+  "OpenWebSDK.podspec"
 )
 
 # Fetches the remote pod version
@@ -14,8 +14,8 @@ get_remote_pod_version() {
 
 # get the local pod version
 get_local_pod_version() {
-	podspec=$1
-	pod ipc spec "$podspec" | grep '"version"' | awk -F'"' '{print $4}'
+  podspec=$1
+  pod ipc spec "$podspec" | grep '"version"' | awk -F'"' '{print $4}'
 }
 
 # Push a podspec with retries
@@ -26,7 +26,7 @@ push_retrying() {
 
   while :; do
     current_remote_version=$(get_remote_pod_version "$podspec")
-		current_local_version=$(get_local_pod_version "$podspec")
+    current_local_version=$(get_local_pod_version "$podspec")
     if [[ "$current_remote_version" == "$current_local_version" ]]; then
       echo "No need to push: $podspec. Latest version is already $current_local_version."
       return 0
