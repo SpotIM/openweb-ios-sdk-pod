@@ -9,16 +9,10 @@ jobs:
     runs-on: macos-12
 
     steps:
-    - uses: actions/checkout@v2
-      
-    - name: Run pod spec lint
-      env:
-        COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
-      run: |
-        pod spec lint OpenWebSDK.podspec --allow-warnings
+      - uses: actions/checkout@v2
 
-    - name: Publish to CocoaPod
-      env:
-        COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
-      run: |
-        pod trunk push OpenWebSDK.podspec --allow-warnings
+      - name: Publish to CocoaPod
+        env:
+          COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
+        run: |
+          ./scripts/release_pods.sh
