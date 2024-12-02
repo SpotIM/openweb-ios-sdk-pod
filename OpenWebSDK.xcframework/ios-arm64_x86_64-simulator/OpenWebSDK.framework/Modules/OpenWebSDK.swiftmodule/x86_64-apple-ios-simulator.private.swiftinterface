@@ -29,8 +29,6 @@ public enum OWInitialSortStrategy {
   case useServerConfig
   case use(sortOption: OpenWebSDK.OWSortOption)
 }
-public protocol OWReportReasonSettingsProtocol {
-}
 public enum OWThemeStyle : Swift.String {
   case light
   case dark
@@ -502,6 +500,8 @@ public enum OWViewActionCallbackType : Swift.Codable {
   case openCommenterAppeal(data: OpenWebSDK.OWAppealRequiredData)
   case openCommentThread(commentId: OpenWebSDK.OWCommentId, performActionType: OpenWebSDK.OWCommentThreadPerformActionType)
   case closeCommentThread
+  case termsTapped
+  case privacyTapped
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -725,6 +725,13 @@ public enum OWError : Swift.Error, Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+#if compiler(>=5.3) && $RetroactiveAttribute
+extension Foundation.OutputStream : @unchecked @retroactive Swift.Sendable {
+}
+#else
+extension Foundation.OutputStream : @unchecked Swift.Sendable {
+}
+#endif
 public protocol OWHelpers {
   func conversationCounters(forPostIds postIds: [OpenWebSDK.OWPostId], completion: @escaping OpenWebSDK.OWConversationCountersCompletion)
   var additionalConfigurations: [OpenWebSDK.OWAdditionalConfiguration] { get set }
@@ -842,16 +849,6 @@ public enum OWModalPresentationStyle : Swift.Codable {
 public struct OWSSOCompletionModel {
   public let userId: Swift.String
 }
-public typealias JSON = [Swift.String : Any]
-public enum OWParserError : Swift.Error {
-  case keyNotFound
-  case generalParseError
-  public static func == (a: OpenWebSDK.OWParserError, b: OpenWebSDK.OWParserError) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-}
 public enum OWLoginPromptCustomizableElement {
   case lockIcon(imageView: UIKit.UIImageView)
   case arrowIcon(imageView: UIKit.UIImageView)
@@ -935,6 +932,14 @@ public enum SPUserInterfaceStyle : Swift.Int {
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum OWParserError : Swift.Error {
+  case generalParseError
+  public static func == (a: OpenWebSDK.OWParserError, b: OpenWebSDK.OWParserError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
     get
   }
 }
@@ -1055,8 +1060,6 @@ extension OpenWebSDK.OWSpacerStyle : Swift.Equatable {}
 extension OpenWebSDK.OWSpacerStyle : Swift.Hashable {}
 extension OpenWebSDK.OWClarityDetailsType : Swift.Equatable {}
 extension OpenWebSDK.OWClarityDetailsType : Swift.Hashable {}
-extension OpenWebSDK.OWParserError : Swift.Equatable {}
-extension OpenWebSDK.OWParserError : Swift.Hashable {}
 extension OpenWebSDK.OWCommentActionsFontStyle : Swift.Equatable {}
 extension OpenWebSDK.OWCommentActionsFontStyle : Swift.Hashable {}
 extension OpenWebSDK.OWCommentActionsFontStyle : Swift.RawRepresentable {}
@@ -1065,5 +1068,7 @@ extension OpenWebSDK.OWOrientation : Swift.Hashable {}
 extension OpenWebSDK.SPUserInterfaceStyle : Swift.Equatable {}
 extension OpenWebSDK.SPUserInterfaceStyle : Swift.Hashable {}
 extension OpenWebSDK.SPUserInterfaceStyle : Swift.RawRepresentable {}
+extension OpenWebSDK.OWParserError : Swift.Equatable {}
+extension OpenWebSDK.OWParserError : Swift.Hashable {}
 extension OpenWebSDK.AdSize : Swift.Equatable {}
 extension OpenWebSDK.AdSize : Swift.Hashable {}
