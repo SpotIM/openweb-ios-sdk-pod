@@ -25,4 +25,5 @@ Pod::Spec.new do |s|
   s.dependency 'RxRelay', '~> 6.7.0'
   s.dependency 'RxCocoa', '~> 6.7.0'
 
+  s.pod_target_xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
 end
