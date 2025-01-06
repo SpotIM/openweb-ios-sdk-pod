@@ -33,8 +33,8 @@ func createTargets() -> [Target] {
     )
     targets.append(OpenWebSDK)
 
-    // Adding OpenWebCommon target
-    let OpenWebCommonSDK: Target = .target(
+    // Adding OpenWebCommon xcframework
+    let OpenWebCommonSDK: Target = .binaryTarget(
         name: owSDKCommon,
         path: "\(owSDKCommon).xcframework"
     )
