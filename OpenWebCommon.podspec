@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'OpenWebCommon'
-  s.version          = '2.6.0'
+  s.version          = '2.6.1'
   s.summary          = 'OpenWeb SDK Adapter'
   s.description      = 'OpenWeb Adapter SDK for OpenWebSDK'
   s.homepage        = "https://www.openweb.com"
