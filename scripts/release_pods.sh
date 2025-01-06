@@ -2,7 +2,7 @@
 
 # Ordered list of .podspecs to push
 PODSPECS=(
-  "OpenWebSDKAdapter.podspec"
+  "OpenWebCommon.podspec"
   "OpenWebSDK.podspec"
 )
 
