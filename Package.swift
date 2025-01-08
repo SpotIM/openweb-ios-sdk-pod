@@ -75,7 +75,7 @@ let targets = createTargets()
 let package = Package(
     name: owSDK,
     platforms: [
-        .iOS(.v12)
+        .iOS(.v13)
     ],
     products: products,
     targets: targets
