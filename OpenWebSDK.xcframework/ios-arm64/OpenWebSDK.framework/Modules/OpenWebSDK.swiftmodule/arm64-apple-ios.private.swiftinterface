@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
-// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-bare-slash-regex -module-name OpenWebSDK
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-bare-slash-regex -module-name OpenWebSDK
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import AVFoundation
 import DeveloperToolsSupport
@@ -10,6 +10,7 @@ import MobileCoreServices
 import NaturalLanguage
 import Network
 import OpenWebSDK.OWGiphySDK
+@_exported import OpenWebCommon
 @_exported import OpenWebSDK
 import RxCocoa
 import RxSwift
@@ -82,19 +83,6 @@ public struct OWArticleSettings : OpenWebSDK.OWArticleSettingsProtocol {
   public let readOnlyMode: OpenWebSDK.OWReadOnlyMode
   public init(section: Swift.String, headerStyle: OpenWebSDK.OWArticleHeaderStyle = .regular, readOnlyMode: OpenWebSDK.OWReadOnlyMode = .server)
 }
-public struct OWArticleSettingsBuilder {
-  public var section: Swift.String
-  public var headerStyle: OpenWebSDK.OWArticleHeaderStyle
-  public var readOnlyMode: OpenWebSDK.OWReadOnlyMode
-  public init(section: Swift.String, headerStyle: OpenWebSDK.OWArticleHeaderStyle = .regular, readOnlyMode: OpenWebSDK.OWReadOnlyMode = .server)
-  @discardableResult
-  public mutating func section(_ section: Swift.String) -> OpenWebSDK.OWArticleSettingsBuilder
-  @discardableResult
-  public mutating func headerStyle(_ headerStyle: OpenWebSDK.OWArticleHeaderStyle) -> OpenWebSDK.OWArticleSettingsBuilder
-  @discardableResult
-  public mutating func readOnlyMode(_ readOnlyMode: OpenWebSDK.OWReadOnlyMode) -> OpenWebSDK.OWArticleSettingsBuilder
-  public func build() -> any OpenWebSDK.OWArticleSettingsProtocol
-}
 public struct OWCommentCreationSettings : OpenWebSDK.OWCommentCreationSettingsProtocol {
   public let style: OpenWebSDK.OWCommentCreationStyle
   public init(style: OpenWebSDK.OWCommentCreationStyle = .regular)
@@ -155,12 +143,14 @@ extension OpenWebSDK.OWPreConversationSpacing : Swift.Equatable {
 extension OpenWebSDK.OWPreConversationStyle : Swift.Equatable {
   public static func == (lhs: OpenWebSDK.OWPreConversationStyle, rhs: OpenWebSDK.OWPreConversationStyle) -> Swift.Bool
 }
+extension OpenWebSDK.OWSortOption : Swift.Codable {
+}
 public struct OWAppealRequiredData : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct OWClarityDetailsRequireData : Swift.Codable {
-  public let commentId: OpenWebSDK.OWCommentId
+  public let commentId: OpenWebCommon.OWCommentId
   public let type: OpenWebSDK.OWClarityDetailsType
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -276,7 +266,7 @@ public enum OWBIAnalyticEvent {
   case showMoreComments
   case communityGuidelinesLinkClicked
 }
-public protocol OWCommentActionsCustomizations {
+public protocol OWCommentActionsCustomizations : AnyObject {
   var fontStyle: OpenWebSDK.OWCommentActionsFontStyle { get set }
   var color: OpenWebSDK.OWCommentActionsColor { get set }
 }
@@ -408,15 +398,24 @@ public enum OWError : Swift.Error, Swift.Codable {
   case conversationCounters
   case custom(description: Swift.String)
   case missingImplementation
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension OpenWebSDK.OWError : Swift.CustomStringConvertible {
   public var description: Swift.String {
     get
   }
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+}
+extension OpenWebSDK.OWError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
 }
 public enum OWFlowActionCallbackType : Swift.Codable {
   case openPublisherProfile(ssoPublisherId: Swift.String, type: OpenWebSDK.OWUserProfileType, presentationalMode: OpenWebSDK.OWPresentationalMode)
   case conversationDismissed
+  case adSizeChanged(size: CoreFoundation.CGSize)
+  case adEvent(_: OpenWebCommon.OWIAUViewEventCallbackType, index: Swift.Int)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -687,7 +686,7 @@ public enum OWViewActionCallbackType : Swift.Codable {
   case closeConversationPressed
   case openPublisherProfile(ssoPublisherId: Swift.String, type: OpenWebSDK.OWUserProfileType)
   case openOWProfile(data: OpenWebSDK.OWOpenProfileData)
-  case openReportReason(commentId: OpenWebSDK.OWCommentId, parentId: OpenWebSDK.OWCommentId)
+  case openReportReason(commentId: OpenWebCommon.OWCommentId, parentId: OpenWebCommon.OWCommentId)
   case openCommentCreation(type: OpenWebSDK.OWCommentCreationType)
   case closeReportReason
   case openClarityDetails(data: OpenWebSDK.OWClarityDetailsRequireData)
@@ -699,10 +698,12 @@ public enum OWViewActionCallbackType : Swift.Codable {
   case closeWebView
   case openLinkInComment(url: Foundation.URL)
   case openCommenterAppeal(data: OpenWebSDK.OWAppealRequiredData)
-  case openCommentThread(commentId: OpenWebSDK.OWCommentId, performActionType: OpenWebSDK.OWCommentThreadPerformActionType)
+  case openCommentThread(commentId: OpenWebCommon.OWCommentId, performActionType: OpenWebSDK.OWCommentThreadPerformActionType)
   case closeCommentThread
   case termsTapped
   case privacyTapped
+  case adSizeChanged(size: CoreFoundation.CGSize)
+  case adEvent(_: OpenWebCommon.OWIAUViewEventCallbackType, index: Swift.Int)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -744,8 +745,8 @@ public struct OWColor {
 }
 public enum OWCommentCreationType : Swift.Codable {
   case comment
-  case edit(commentId: OpenWebSDK.OWCommentId)
-  case replyTo(commentId: OpenWebSDK.OWCommentId)
+  case edit(commentId: OpenWebCommon.OWCommentId)
+  case replyTo(commentId: OpenWebCommon.OWCommentId)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -819,22 +820,24 @@ public protocol OWArticleSettingsProtocol {
   var headerStyle: OpenWebSDK.OWArticleHeaderStyle { get }
   var readOnlyMode: OpenWebSDK.OWReadOnlyMode { get }
 }
-public protocol OWSortingCustomizations {
+public protocol OWSortingCustomizations : AnyObject {
   func setTitle(_ title: Swift.String, forOption sortOption: OpenWebSDK.OWSortOption)
   var initialOption: OpenWebSDK.OWInitialSortStrategy { get set }
 }
-public protocol OWAnalytics {
+public protocol OWAnalytics : AnyObject {
   var customBIData: OpenWebSDK.OWCustomBIData { get set }
   func addBICallback(_ callback: @escaping OpenWebSDK.OWBIAnalyticEventCallback)
 }
-public protocol OWAuthentication {
+public protocol OWAuthentication : AnyObject {
   func sso(_ flowType: OpenWebSDK.OWSSOFlowType)
   func userStatus(completion: @escaping OpenWebSDK.OWUserAuthenticationStatusCompletion)
   func logout(completion: @escaping OpenWebSDK.OWDefaultCompletion)
   var renewSSO: OpenWebSDK.OWRenewSSOCallback? { get set }
   var shouldDisplayLoginPrompt: Swift.Bool { get set }
+  @_Concurrency.MainActor func userStatus() async throws -> OpenWebSDK.OWUserAuthenticationStatus
+  @_Concurrency.MainActor func logout() async throws
 }
-public protocol OWCustomizations {
+public protocol OWCustomizations : AnyObject {
   var commentActions: any OpenWebSDK.OWCommentActionsCustomizations { get set }
   var fontFamily: OpenWebSDK.OWFontGroupFamily { get set }
   var sorting: any OpenWebSDK.OWSortingCustomizations { get }
@@ -844,40 +847,82 @@ public protocol OWCustomizations {
   var customizedTheme: OpenWebSDK.OWTheme { get set }
   func addElementCallback(_ callback: @escaping OpenWebSDK.OWCustomizableElementCallback)
 }
-public protocol OWHelpers {
-  func conversationCounters(forPostIds postIds: [OpenWebSDK.OWPostId], completion: @escaping OpenWebSDK.OWConversationCountersCompletion)
+public protocol OWHelpers : AnyObject {
+  func conversationCounters(forPostIds postIds: [OpenWebCommon.OWPostId], completion: @escaping OpenWebSDK.OWConversationCountersCompletion)
   var additionalConfigurations: [OpenWebSDK.OWAdditionalConfiguration] { get set }
   var loggerConfiguration: any OpenWebSDK.OWLoggerConfiguration { get }
   var languageStrategy: OpenWebSDK.OWLanguageStrategy { get set }
   var localeStrategy: OpenWebSDK.OWLocaleStrategy { get set }
   var orientationEnforcement: OpenWebSDK.OWOrientationEnforcement { get set }
+  @_Concurrency.MainActor func conversationCounters(forPostIds postIds: [OpenWebCommon.OWPostId]) async throws -> [OpenWebCommon.OWPostId : OpenWebSDK.OWConversationCounter]
 }
 public protocol OWMonetization {
+  var iauProvider: (any OpenWebCommon.OWIAUProviding)? { get set }
 }
-public protocol OWUI {
+public protocol OWUI : AnyObject {
   var flows: any OpenWebSDK.OWUIFlows { get }
   var views: any OpenWebSDK.OWUIViews { get }
   var customizations: any OpenWebSDK.OWCustomizations { get }
   var authenticationUI: any OpenWebSDK.OWUIAuthentication { get }
 }
-public protocol OWUIAuthentication {
+public protocol OWUIAuthentication : AnyObject {
   var displayAuthenticationFlow: OpenWebSDK.OWAuthenticationFlowCallback? { get set }
 }
-public protocol OWUIFlows {
-  func preConversation(postId: OpenWebSDK.OWPostId, article: any OpenWebSDK.OWArticleProtocol, presentationalMode: OpenWebSDK.OWPresentationalMode, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWFlowActionsCallbacks?, completion: @escaping OpenWebSDK.OWViewCompletion)
-  func conversation(postId: OpenWebSDK.OWPostId, article: any OpenWebSDK.OWArticleProtocol, presentationalMode: OpenWebSDK.OWPresentationalMode, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWFlowActionsCallbacks?, completion: @escaping OpenWebSDK.OWDefaultCompletion)
-  func commentCreation(postId: OpenWebSDK.OWPostId, article: any OpenWebSDK.OWArticleProtocol, presentationalMode: OpenWebSDK.OWPresentationalMode, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWFlowActionsCallbacks?, completion: @escaping OpenWebSDK.OWDefaultCompletion)
-  func commentThread(postId: OpenWebSDK.OWPostId, article: any OpenWebSDK.OWArticleProtocol, commentId: OpenWebSDK.OWCommentId, presentationalMode: OpenWebSDK.OWPresentationalMode, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWFlowActionsCallbacks?, completion: @escaping OpenWebSDK.OWDefaultCompletion)
+public protocol OWUIFlows : AnyObject {
+  func preConversation(postId: OpenWebCommon.OWPostId, article: any OpenWebSDK.OWArticleProtocol, presentationalMode: OpenWebSDK.OWPresentationalMode, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWFlowActionsCallbacks?, completion: @escaping OpenWebSDK.OWViewCompletion)
+  func conversation(postId: OpenWebCommon.OWPostId, article: any OpenWebSDK.OWArticleProtocol, presentationalMode: OpenWebSDK.OWPresentationalMode, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWFlowActionsCallbacks?, completion: @escaping OpenWebSDK.OWDefaultCompletion)
+  func commentCreation(postId: OpenWebCommon.OWPostId, article: any OpenWebSDK.OWArticleProtocol, presentationalMode: OpenWebSDK.OWPresentationalMode, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWFlowActionsCallbacks?, completion: @escaping OpenWebSDK.OWDefaultCompletion)
+  func commentThread(postId: OpenWebCommon.OWPostId, article: any OpenWebSDK.OWArticleProtocol, commentId: OpenWebCommon.OWCommentId, presentationalMode: OpenWebSDK.OWPresentationalMode, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWFlowActionsCallbacks?, completion: @escaping OpenWebSDK.OWDefaultCompletion)
+  @_Concurrency.MainActor func preConversation(postId: OpenWebCommon.OWPostId, article: any OpenWebSDK.OWArticleProtocol, presentationalMode: OpenWebSDK.OWPresentationalMode, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWFlowActionsCallbacks?) async throws -> UIKit.UIView
+  @_Concurrency.MainActor func conversation(postId: OpenWebCommon.OWPostId, article: any OpenWebSDK.OWArticleProtocol, presentationalMode: OpenWebSDK.OWPresentationalMode, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWFlowActionsCallbacks?) async throws
+  @_Concurrency.MainActor func commentCreation(postId: OpenWebCommon.OWPostId, article: any OpenWebSDK.OWArticleProtocol, presentationalMode: OpenWebSDK.OWPresentationalMode, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWFlowActionsCallbacks?) async throws
+  @_Concurrency.MainActor func commentThread(postId: OpenWebCommon.OWPostId, article: any OpenWebSDK.OWArticleProtocol, commentId: OpenWebCommon.OWCommentId, presentationalMode: OpenWebSDK.OWPresentationalMode, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWFlowActionsCallbacks?) async throws
 }
-public protocol OWUIViews {
-  func preConversation(postId: OpenWebSDK.OWPostId, article: any OpenWebSDK.OWArticleProtocol, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWViewActionsCallbacks?, completion: @escaping OpenWebSDK.OWViewCompletion)
-  func conversation(postId: OpenWebSDK.OWPostId, article: any OpenWebSDK.OWArticleProtocol, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWViewActionsCallbacks?, completion: @escaping OpenWebSDK.OWViewCompletion)
-  func commentCreation(postId: OpenWebSDK.OWPostId, article: any OpenWebSDK.OWArticleProtocol, commentCreationType: OpenWebSDK.OWCommentCreationType, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWViewActionsCallbacks?, completion: @escaping OpenWebSDK.OWViewCompletion)
-  func commentThread(postId: OpenWebSDK.OWPostId, article: any OpenWebSDK.OWArticleProtocol, commentId: OpenWebSDK.OWCommentId, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWViewActionsCallbacks?, completion: @escaping OpenWebSDK.OWViewCompletion)
-  func reportReason(postId: OpenWebSDK.OWPostId, commentId: OpenWebSDK.OWCommentId, parentId: OpenWebSDK.OWCommentId, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWViewActionsCallbacks?, completion: @escaping OpenWebSDK.OWViewCompletion)
-  func clarityDetails(postId: OpenWebSDK.OWPostId, commentId: OpenWebSDK.OWCommentId, type: OpenWebSDK.OWClarityDetailsType, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWViewActionsCallbacks?, completion: @escaping OpenWebSDK.OWViewCompletion)
-  func webTab(postId: OpenWebSDK.OWPostId, tabOptions: OpenWebSDK.OWWebTabOptions, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWViewActionsCallbacks?, completion: @escaping OpenWebSDK.OWViewCompletion)
-  func commenterAppeal(postId: OpenWebSDK.OWPostId, data: OpenWebSDK.OWAppealRequiredData, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWViewActionsCallbacks?, completion: @escaping OpenWebSDK.OWViewCompletion)
+extension OpenWebSDK.OWUIFlows {
+  public func preConversation(postId: OpenWebCommon.OWPostId, article: any OpenWebSDK.OWArticleProtocol, presentationalMode: OpenWebSDK.OWPresentationalMode, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol = OWAdditionalSettings(), callbacks: OpenWebSDK.OWFlowActionsCallbacks? = nil, completion: @escaping OpenWebSDK.OWViewCompletion)
+  public func conversation(postId: OpenWebCommon.OWPostId, article: any OpenWebSDK.OWArticleProtocol, presentationalMode: OpenWebSDK.OWPresentationalMode, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol = OWAdditionalSettings(), callbacks: OpenWebSDK.OWFlowActionsCallbacks? = nil, completion: @escaping OpenWebSDK.OWDefaultCompletion)
+  public func commentCreation(postId: OpenWebCommon.OWPostId, article: any OpenWebSDK.OWArticleProtocol, presentationalMode: OpenWebSDK.OWPresentationalMode, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol = OWAdditionalSettings(), callbacks: OpenWebSDK.OWFlowActionsCallbacks? = nil, completion: @escaping OpenWebSDK.OWDefaultCompletion)
+  public func commentThread(postId: OpenWebCommon.OWPostId, article: any OpenWebSDK.OWArticleProtocol, commentId: OpenWebCommon.OWCommentId, presentationalMode: OpenWebSDK.OWPresentationalMode, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol = OWAdditionalSettings(), callbacks: OpenWebSDK.OWFlowActionsCallbacks? = nil, completion: @escaping OpenWebSDK.OWDefaultCompletion)
+  @_Concurrency.MainActor public func preConversation(postId: OpenWebCommon.OWPostId, article: any OpenWebSDK.OWArticleProtocol, presentationalMode: OpenWebSDK.OWPresentationalMode, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol = OWAdditionalSettings(), callbacks: OpenWebSDK.OWFlowActionsCallbacks? = nil) async throws -> UIKit.UIView
+  @_Concurrency.MainActor public func conversation(postId: OpenWebCommon.OWPostId, article: any OpenWebSDK.OWArticleProtocol, presentationalMode: OpenWebSDK.OWPresentationalMode, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol = OWAdditionalSettings(), callbacks: OpenWebSDK.OWFlowActionsCallbacks? = nil) async throws
+  @_Concurrency.MainActor public func commentCreation(postId: OpenWebCommon.OWPostId, article: any OpenWebSDK.OWArticleProtocol, presentationalMode: OpenWebSDK.OWPresentationalMode, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol = OWAdditionalSettings(), callbacks: OpenWebSDK.OWFlowActionsCallbacks? = nil) async throws
+  @_Concurrency.MainActor public func commentThread(postId: OpenWebCommon.OWPostId, article: any OpenWebSDK.OWArticleProtocol, commentId: OpenWebCommon.OWCommentId, presentationalMode: OpenWebSDK.OWPresentationalMode, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol = OWAdditionalSettings(), callbacks: OpenWebSDK.OWFlowActionsCallbacks? = nil) async throws
+}
+public protocol OWUIViews : AnyObject {
+  func preConversation(postId: OpenWebCommon.OWPostId, article: any OpenWebSDK.OWArticleProtocol, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWViewActionsCallbacks?, completion: @escaping OpenWebSDK.OWViewCompletion)
+  func conversation(postId: OpenWebCommon.OWPostId, article: any OpenWebSDK.OWArticleProtocol, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWViewActionsCallbacks?, completion: @escaping OpenWebSDK.OWViewCompletion)
+  func commentCreation(postId: OpenWebCommon.OWPostId, article: any OpenWebSDK.OWArticleProtocol, commentCreationType: OpenWebSDK.OWCommentCreationType, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWViewActionsCallbacks?, completion: @escaping OpenWebSDK.OWViewCompletion)
+  func commentThread(postId: OpenWebCommon.OWPostId, article: any OpenWebSDK.OWArticleProtocol, commentId: OpenWebCommon.OWCommentId, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWViewActionsCallbacks?, completion: @escaping OpenWebSDK.OWViewCompletion)
+  func reportReason(postId: OpenWebCommon.OWPostId, commentId: OpenWebCommon.OWCommentId, parentId: OpenWebCommon.OWCommentId, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWViewActionsCallbacks?, completion: @escaping OpenWebSDK.OWViewCompletion)
+  func clarityDetails(postId: OpenWebCommon.OWPostId, commentId: OpenWebCommon.OWCommentId, type: OpenWebSDK.OWClarityDetailsType, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWViewActionsCallbacks?, completion: @escaping OpenWebSDK.OWViewCompletion)
+  func webTab(postId: OpenWebCommon.OWPostId, tabOptions: OpenWebSDK.OWWebTabOptions, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWViewActionsCallbacks?, completion: @escaping OpenWebSDK.OWViewCompletion)
+  func commenterAppeal(postId: OpenWebCommon.OWPostId, data: OpenWebSDK.OWAppealRequiredData, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWViewActionsCallbacks?, completion: @escaping OpenWebSDK.OWViewCompletion)
+  @_Concurrency.MainActor func preConversation(postId: OpenWebCommon.OWPostId, article: any OpenWebSDK.OWArticleProtocol, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWViewActionsCallbacks?) async throws -> UIKit.UIView
+  @_Concurrency.MainActor func conversation(postId: OpenWebCommon.OWPostId, article: any OpenWebSDK.OWArticleProtocol, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWViewActionsCallbacks?) async throws -> UIKit.UIView
+  @_Concurrency.MainActor func commentCreation(postId: OpenWebCommon.OWPostId, article: any OpenWebSDK.OWArticleProtocol, commentCreationType: OpenWebSDK.OWCommentCreationType, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWViewActionsCallbacks?) async throws -> UIKit.UIView
+  @_Concurrency.MainActor func commentThread(postId: OpenWebCommon.OWPostId, article: any OpenWebSDK.OWArticleProtocol, commentId: OpenWebCommon.OWCommentId, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWViewActionsCallbacks?) async throws -> UIKit.UIView
+  @_Concurrency.MainActor func reportReason(postId: OpenWebCommon.OWPostId, commentId: OpenWebCommon.OWCommentId, parentId: OpenWebCommon.OWCommentId, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWViewActionsCallbacks?) async throws -> UIKit.UIView
+  @_Concurrency.MainActor func clarityDetails(postId: OpenWebCommon.OWPostId, commentId: OpenWebCommon.OWCommentId, type: OpenWebSDK.OWClarityDetailsType, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWViewActionsCallbacks?) async throws -> UIKit.UIView
+  @_Concurrency.MainActor func webTab(postId: OpenWebCommon.OWPostId, tabOptions: OpenWebSDK.OWWebTabOptions, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWViewActionsCallbacks?) async throws -> UIKit.UIView
+  @_Concurrency.MainActor func commenterAppeal(postId: OpenWebCommon.OWPostId, data: OpenWebSDK.OWAppealRequiredData, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWViewActionsCallbacks?) async throws -> UIKit.UIView
+}
+extension OpenWebSDK.OWUIViews {
+  public func preConversation(postId: OpenWebCommon.OWPostId, article: any OpenWebSDK.OWArticleProtocol, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol = OWAdditionalSettings(), callbacks: OpenWebSDK.OWViewActionsCallbacks?, completion: @escaping OpenWebSDK.OWViewCompletion)
+  public func conversation(postId: OpenWebCommon.OWPostId, article: any OpenWebSDK.OWArticleProtocol, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol = OWAdditionalSettings(), callbacks: OpenWebSDK.OWViewActionsCallbacks?, completion: @escaping OpenWebSDK.OWViewCompletion)
+  public func commentCreation(postId: OpenWebCommon.OWPostId, article: any OpenWebSDK.OWArticleProtocol, commentCreationType: OpenWebSDK.OWCommentCreationType, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol = OWAdditionalSettings(), callbacks: OpenWebSDK.OWViewActionsCallbacks?, completion: @escaping OpenWebSDK.OWViewCompletion)
+  public func commentThread(postId: OpenWebCommon.OWPostId, article: any OpenWebSDK.OWArticleProtocol, commentId: OpenWebCommon.OWCommentId, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol = OWAdditionalSettings(), callbacks: OpenWebSDK.OWViewActionsCallbacks?, completion: @escaping OpenWebSDK.OWViewCompletion)
+  public func reportReason(postId: OpenWebCommon.OWPostId, commentId: OpenWebCommon.OWCommentId, parentId: OpenWebCommon.OWCommentId, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol = OWAdditionalSettings(), callbacks: OpenWebSDK.OWViewActionsCallbacks?, completion: @escaping OpenWebSDK.OWViewCompletion)
+  public func clarityDetails(postId: OpenWebCommon.OWPostId, commentId: OpenWebCommon.OWCommentId, type: OpenWebSDK.OWClarityDetailsType, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol = OWAdditionalSettings(), callbacks: OpenWebSDK.OWViewActionsCallbacks?, completion: @escaping OpenWebSDK.OWViewCompletion)
+  public func webTab(postId: OpenWebCommon.OWPostId, tabOptions: OpenWebSDK.OWWebTabOptions, callbacks: OpenWebSDK.OWViewActionsCallbacks?, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol = OWAdditionalSettings(), completion: @escaping OpenWebSDK.OWViewCompletion)
+  public func commenterAppeal(postId: OpenWebCommon.OWPostId, data: OpenWebSDK.OWAppealRequiredData, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol = OWAdditionalSettings(), callbacks: OpenWebSDK.OWViewActionsCallbacks?, completion: @escaping OpenWebSDK.OWViewCompletion)
+  @_Concurrency.MainActor public func preConversation(postId: OpenWebCommon.OWPostId, article: any OpenWebSDK.OWArticleProtocol, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol = OWAdditionalSettings(), callbacks: OpenWebSDK.OWViewActionsCallbacks?) async throws -> UIKit.UIView
+  @_Concurrency.MainActor public func conversation(postId: OpenWebCommon.OWPostId, article: any OpenWebSDK.OWArticleProtocol, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol = OWAdditionalSettings(), callbacks: OpenWebSDK.OWViewActionsCallbacks?) async throws -> UIKit.UIView
+  @_Concurrency.MainActor public func commentCreation(postId: OpenWebCommon.OWPostId, article: any OpenWebSDK.OWArticleProtocol, commentCreationType: OpenWebSDK.OWCommentCreationType, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol = OWAdditionalSettings(), callbacks: OpenWebSDK.OWViewActionsCallbacks?) async throws -> UIKit.UIView
+  @_Concurrency.MainActor public func commentThread(postId: OpenWebCommon.OWPostId, article: any OpenWebSDK.OWArticleProtocol, commentId: OpenWebCommon.OWCommentId, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol = OWAdditionalSettings(), callbacks: OpenWebSDK.OWViewActionsCallbacks?) async throws -> UIKit.UIView
+  @_Concurrency.MainActor public func reportReason(postId: OpenWebCommon.OWPostId, commentId: OpenWebCommon.OWCommentId, parentId: OpenWebCommon.OWCommentId, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol = OWAdditionalSettings(), callbacks: OpenWebSDK.OWViewActionsCallbacks?) async throws -> UIKit.UIView
+  @_Concurrency.MainActor public func clarityDetails(postId: OpenWebCommon.OWPostId, commentId: OpenWebCommon.OWCommentId, type: OpenWebSDK.OWClarityDetailsType, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol = OWAdditionalSettings(), callbacks: OpenWebSDK.OWViewActionsCallbacks?) async throws -> UIKit.UIView
+  @_Concurrency.MainActor public func webTab(postId: OpenWebCommon.OWPostId, tabOptions: OpenWebSDK.OWWebTabOptions, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol = OWAdditionalSettings(), callbacks: OpenWebSDK.OWViewActionsCallbacks?) async throws -> UIKit.UIView
+  @_Concurrency.MainActor public func commenterAppeal(postId: OpenWebCommon.OWPostId, data: OpenWebSDK.OWAppealRequiredData, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol = OWAdditionalSettings(), callbacks: OpenWebSDK.OWViewActionsCallbacks?) async throws -> UIKit.UIView
 }
 public protocol OWAdditionalSettingsProtocol {
   var preConversationSettings: any OpenWebSDK.OWPreConversationSettingsProtocol { get }
@@ -902,8 +947,8 @@ public protocol OWLoggerConfiguration {
 public protocol OWPreConversationSettingsProtocol {
   var style: OpenWebSDK.OWPreConversationStyle { get }
 }
-public protocol OWManagerProtocol {
-  var spotId: OpenWebSDK.OWSpotId { get set }
+public protocol OWManagerProtocol : AnyObject {
+  var spotId: OpenWebCommon.OWSpotId { get set }
   var ui: any OpenWebSDK.OWUI { get }
   var analytics: any OpenWebSDK.OWAnalytics { get }
   var monetization: any OpenWebSDK.OWMonetization { get }
@@ -917,7 +962,7 @@ public typealias OWFlowActionsCallbacks = (OpenWebSDK.OWFlowActionCallbackType, 
 public typealias OWRenewSSOCallback = (Swift.String, @escaping OpenWebSDK.OWBasicCompletion) -> Swift.Void
 public typealias OWViewActionsCallbacks = (OpenWebSDK.OWViewActionCallbackType, OpenWebSDK.OWViewSourceType, Swift.String) -> Swift.Void
 public typealias OWBasicCompletion = () -> Swift.Void
-public typealias OWConversationCountersCompletion = (Swift.Result<[OpenWebSDK.OWPostId : OpenWebSDK.OWConversationCounter], OpenWebSDK.OWError>) -> Swift.Void
+public typealias OWConversationCountersCompletion = (Swift.Result<[OpenWebCommon.OWPostId : OpenWebSDK.OWConversationCounter], OpenWebSDK.OWError>) -> Swift.Void
 public typealias OWDefaultCompletion = (Swift.Result<Swift.Void, OpenWebSDK.OWError>) -> Swift.Void
 public typealias OWManipulateTextCompletion = (Swift.Result<OpenWebSDK.OWManipulateTextModel, OpenWebSDK.OWError>) -> Swift.String
 public typealias OWProviderSSOHandler = (Swift.Result<OpenWebSDK.OWSSOProviderModel, OpenWebSDK.OWError>) -> Swift.Void
@@ -926,43 +971,9 @@ public typealias OWSSOStartHandler = (Swift.Result<OpenWebSDK.OWSSOStartModel, O
 public typealias OWUserAuthenticationStatusCompletion = (Swift.Result<OpenWebSDK.OWUserAuthenticationStatus, OpenWebSDK.OWError>) -> Swift.Void
 public typealias OWViewCompletion = (Swift.Result<UIKit.UIView, OpenWebSDK.OWError>) -> Swift.Void
 public typealias OWCustomBIData = [Swift.String : any Swift.Decodable & Swift.Encodable]
-public typealias OWSpotId = Swift.String
-public typealias OWPostId = Swift.String
-public typealias OWCommentId = Swift.String
-public typealias OWUserId = Swift.String
-public typealias OWFilterTabId = Swift.String
 @_hasMissingDesignatedInitializers public class OpenWeb {
   public static let manager: any OpenWebSDK.OWManagerProtocol
   @objc deinit
-}
-public protocol AdsProviderBannerDelegate : AnyObject {
-  func bannerLoaded(bannerView: UIKit.UIView, adBannerSize: CoreFoundation.CGSize, adUnitID: Swift.String)
-  func bannerFailedToLoad(error: any Swift.Error)
-}
-public protocol AdsProviderInterstitialDelegate : AnyObject {
-  func interstitialLoaded()
-  func interstitialWillBeShown()
-  func interstitialDidDismiss()
-  func interstitialFailedToLoad(error: any Swift.Error)
-}
-public enum AdSize {
-  case small
-  case medium
-  case large
-  public static func == (a: OpenWebSDK.AdSize, b: OpenWebSDK.AdSize) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-public protocol AdsProvider : AnyObject {
-  func version() -> Swift.String
-  func setSpotId(spotId: Swift.String)
-  func setupAdsBanner(with adId: Swift.String, in controller: UIKit.UIViewController, validSizes: Swift.Set<OpenWebSDK.AdSize>)
-  func setupInterstitial(with adId: Swift.String)
-  func showInterstitial(in controller: UIKit.UIViewController) -> Swift.Bool
-  var bannerDelegate: (any OpenWebSDK.AdsProviderBannerDelegate)? { get set }
-  var interstitialDelegate: (any OpenWebSDK.AdsProviderInterstitialDelegate)? { get set }
 }
 extension OpenWebSDK.OWUserAuthenticationStatus : Swift.Equatable {
   public static func == (lhs: OpenWebSDK.OWUserAuthenticationStatus, rhs: OpenWebSDK.OWUserAuthenticationStatus) -> Swift.Bool
@@ -1066,8 +1077,6 @@ extension OpenWebSDK.OWViewableMode : Swift.Equatable {}
 extension OpenWebSDK.OWViewableMode : Swift.Hashable {}
 extension OpenWebSDK.OWViewSourceType : Swift.Equatable {}
 extension OpenWebSDK.OWViewSourceType : Swift.Hashable {}
-extension OpenWebSDK.AdSize : Swift.Equatable {}
-extension OpenWebSDK.AdSize : Swift.Hashable {}
 extension OpenWebSDK.OWLogLevel : Swift.Equatable {}
 extension OpenWebSDK.OWLogLevel : Swift.Hashable {}
 extension OpenWebSDK.OWClarityDetailsType : Swift.Equatable {}

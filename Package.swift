@@ -4,6 +4,7 @@ import PackageDescription
 let version = "1.0.0"
 let vendorFrameworkshostingUrl = "https://github.com/SpotIM/openweb-ios-vendor-frameworks/releases/download/\(version)/"
 let owSDK = "OpenWebSDK"
+let owSDKCommon = "OpenWebCommon"
 let owSDKWrapperTarget = "OpenWebSDKWrapperTarget"
 
 let frameworksChecksumMapper = [
@@ -14,6 +15,7 @@ let frameworksChecksumMapper = [
 
 func createProducts() -> [Product] {
     let products: [Product] = [.library(name: owSDK, targets: [owSDKWrapperTarget]),
+                               .library(name: owSDKCommon, targets: [owSDKWrapperTarget]),
                                .library(name: "RxSwift", targets: [owSDKWrapperTarget]),
                                .library(name: "RxCocoa", targets: [owSDKWrapperTarget]),
                                .library(name: "RxRelay", targets: [owSDKWrapperTarget])]
@@ -31,6 +33,13 @@ func createTargets() -> [Target] {
     )
     targets.append(OpenWebSDK)
 
+    // Adding OpenWebCommon xcframework
+    let OpenWebCommonSDK: Target = .binaryTarget(
+        name: owSDKCommon,
+        path: "\(owSDKCommon).xcframework"
+    )
+    targets.append(OpenWebCommonSDK)
+
     // Adding remote vendors xcframework(s)
     let remoteTargets = frameworksChecksumMapper.flatMap { framework, checksum -> [Target] in
         return [createRemoteTarget(framework: framework, checksum: checksum)]
@@ -42,6 +51,7 @@ func createTargets() -> [Target] {
         name: owSDKWrapperTarget,
         dependencies: [
             .target(name: "OpenWebSDK", condition: .when(platforms: .some([.iOS]))),
+            .target(name: "OpenWebCommon", condition: .when(platforms: .some([.iOS]))),
             .target(name: "RxSwift", condition: .when(platforms: .some([.iOS]))),
             .target(name: "RxCocoa", condition: .when(platforms: .some([.iOS]))),
             .target(name: "RxRelay", condition: .when(platforms: .some([.iOS])))
@@ -65,7 +75,7 @@ let targets = createTargets()
 let package = Package(
     name: owSDK,
     platforms: [
-        .iOS(.v12)
+        .iOS(.v13)
     ],
     products: products,
     targets: targets
