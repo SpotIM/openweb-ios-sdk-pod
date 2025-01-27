@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
 // swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-bare-slash-regex -module-name OpenWebCommon
 import Foundation
 import Swift
@@ -26,14 +26,17 @@ public enum OWIAURemoteAdsStrategy {
 public enum OWIAUViewActionCallbackType {
   case adSizeChanged(UIKit.UIView, CoreFoundation.CGSize)
 }
-public enum OWIAUViewEventCallbackType {
+public enum OWIAUViewEventCallbackType : Swift.Codable, Swift.Equatable {
   case video(OpenWebCommon.OWIAUViewEventCallbackVideoType)
   case display(OpenWebCommon.OWIAUViewEventCallbackDisplayType)
   public var description: Swift.String {
     get
   }
+  public static func == (a: OpenWebCommon.OWIAUViewEventCallbackType, b: OpenWebCommon.OWIAUViewEventCallbackType) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
-public enum OWIAUViewEventCallbackVideoType {
+public enum OWIAUViewEventCallbackVideoType : Swift.Codable, Swift.Equatable {
   case adServerCalled
   case inventory
   case viewableImpression
@@ -52,8 +55,11 @@ public enum OWIAUViewEventCallbackVideoType {
   public var description: Swift.String {
     get
   }
+  public static func == (a: OpenWebCommon.OWIAUViewEventCallbackVideoType, b: OpenWebCommon.OWIAUViewEventCallbackVideoType) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
-public enum OWIAUViewEventCallbackDisplayType {
+public enum OWIAUViewEventCallbackDisplayType : Swift.Codable, Swift.Equatable {
   case inventory
   case sourceLoaded
   case error(_: Swift.String)
@@ -64,8 +70,11 @@ public enum OWIAUViewEventCallbackDisplayType {
   public var description: Swift.String {
     get
   }
+  public static func == (a: OpenWebCommon.OWIAUViewEventCallbackDisplayType, b: OpenWebCommon.OWIAUViewEventCallbackDisplayType) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
-public enum OWIAUVideoProgress {
+public enum OWIAUVideoProgress : Swift.Codable, Swift.Equatable {
   case started
   case firstQuartile
   case midpoint
@@ -74,19 +83,23 @@ public enum OWIAUVideoProgress {
   public var description: Swift.String {
     get
   }
+  public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: OpenWebCommon.OWIAUVideoProgress, b: OpenWebCommon.OWIAUVideoProgress) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
+  public func encode(to encoder: any Swift.Encoder) throws
   public var hashValue: Swift.Int {
     get
   }
+  public init(from decoder: any Swift.Decoder) throws
 }
-public enum OWIAUViewSourceType {
+public enum OWIAUViewSourceType : Swift.Codable, Swift.Equatable {
   case ad
-  public static func == (a: OpenWebCommon.OWIAUViewSourceType, b: OpenWebCommon.OWIAUViewSourceType) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: OpenWebCommon.OWIAUViewSourceType, b: OpenWebCommon.OWIAUViewSourceType) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
   public var hashValue: Swift.Int {
     get
   }
+  public init(from decoder: any Swift.Decoder) throws
 }
 public protocol OWIAUAdSettingsProtocol {
   var configuration: OpenWebCommon.OWIAUAdConfiguration { get }
@@ -97,6 +110,11 @@ public protocol OWIAUSettingsProtocol {
 public typealias OWIAUAdViewActionsCallbacks = (OpenWebCommon.OWIAUViewActionCallbackType, OpenWebCommon.OWIAUViewSourceType, OpenWebCommon.OWPostId) -> Swift.Void
 public typealias OWIAUViewCompletion = (Swift.Result<UIKit.UIView, OpenWebCommon.OWIAUError>) -> Swift.Void
 public typealias OWIAUAdViewEventsCallbacks = (OpenWebCommon.OWIAUViewEventCallbackType, OpenWebCommon.OWIAUViewSourceType, OpenWebCommon.OWPostId) -> Swift.Void
+public class OWIAUAdSettings : OpenWebCommon.OWIAUAdSettingsProtocol {
+  public var configuration: OpenWebCommon.OWIAUAdConfiguration
+  public init(configuration: OpenWebCommon.OWIAUAdConfiguration)
+  @objc deinit
+}
 public protocol OWIAUDelegate : AnyObject {
   func getPageViewId() -> Swift.String
 }
@@ -106,7 +124,5 @@ public protocol OWIAUProviding {
   var settings: any OpenWebCommon.OWIAUSettingsProtocol { get set }
   func ad(postId: OpenWebCommon.OWPostId, settings: any OpenWebCommon.OWIAUAdSettingsProtocol, viewEventCallbacks: OpenWebCommon.OWIAUAdViewEventsCallbacks?, actionsCallbacks: OpenWebCommon.OWIAUAdViewActionsCallbacks?, completion: @escaping OpenWebCommon.OWIAUViewCompletion)
 }
-extension OpenWebCommon.OWIAUVideoProgress : Swift.Equatable {}
 extension OpenWebCommon.OWIAUVideoProgress : Swift.Hashable {}
-extension OpenWebCommon.OWIAUViewSourceType : Swift.Equatable {}
 extension OpenWebCommon.OWIAUViewSourceType : Swift.Hashable {}

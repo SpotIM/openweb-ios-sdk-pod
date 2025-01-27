@@ -657,6 +657,89 @@
                 "accessorKind": "get"
               }
             ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OWIAUViewEventCallbackType",
+                "printedName": "OpenWebCommon.OWIAUViewEventCallbackType",
+                "usr": "s:13OpenWebCommon26OWIAUViewEventCallbackTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13OpenWebCommon26OWIAUViewEventCallbackTypeO4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s13OpenWebCommon26OWIAUViewEventCallbackTypeO4fromACs7Decoder_p_tKcfc",
+            "moduleName": "OpenWebCommon",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13OpenWebCommon26OWIAUViewEventCallbackTypeO6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s13OpenWebCommon26OWIAUViewEventCallbackTypeO6encode2toys7Encoder_p_tKF",
+            "moduleName": "OpenWebCommon",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OWIAUViewEventCallbackType",
+                "printedName": "OpenWebCommon.OWIAUViewEventCallbackType",
+                "usr": "s:13OpenWebCommon26OWIAUViewEventCallbackTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OWIAUViewEventCallbackType",
+                "printedName": "OpenWebCommon.OWIAUViewEventCallbackType",
+                "usr": "s:13OpenWebCommon26OWIAUViewEventCallbackTypeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13OpenWebCommon26OWIAUViewEventCallbackTypeO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s13OpenWebCommon26OWIAUViewEventCallbackTypeO2eeoiySbAC_ACtFZ",
+            "moduleName": "OpenWebCommon",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Enum",
@@ -680,6 +763,27 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
           }
         ]
       },
@@ -1321,6 +1425,89 @@
                 "accessorKind": "get"
               }
             ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OWIAUViewEventCallbackVideoType",
+                "printedName": "OpenWebCommon.OWIAUViewEventCallbackVideoType",
+                "usr": "s:13OpenWebCommon31OWIAUViewEventCallbackVideoTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13OpenWebCommon31OWIAUViewEventCallbackVideoTypeO4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s13OpenWebCommon31OWIAUViewEventCallbackVideoTypeO4fromACs7Decoder_p_tKcfc",
+            "moduleName": "OpenWebCommon",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13OpenWebCommon31OWIAUViewEventCallbackVideoTypeO6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s13OpenWebCommon31OWIAUViewEventCallbackVideoTypeO6encode2toys7Encoder_p_tKF",
+            "moduleName": "OpenWebCommon",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OWIAUViewEventCallbackVideoType",
+                "printedName": "OpenWebCommon.OWIAUViewEventCallbackVideoType",
+                "usr": "s:13OpenWebCommon31OWIAUViewEventCallbackVideoTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OWIAUViewEventCallbackVideoType",
+                "printedName": "OpenWebCommon.OWIAUViewEventCallbackVideoType",
+                "usr": "s:13OpenWebCommon31OWIAUViewEventCallbackVideoTypeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13OpenWebCommon31OWIAUViewEventCallbackVideoTypeO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s13OpenWebCommon31OWIAUViewEventCallbackVideoTypeO2eeoiySbAC_ACtFZ",
+            "moduleName": "OpenWebCommon",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Enum",
@@ -1344,6 +1531,27 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
           }
         ]
       },
@@ -1663,6 +1871,89 @@
                 "accessorKind": "get"
               }
             ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OWIAUViewEventCallbackDisplayType",
+                "printedName": "OpenWebCommon.OWIAUViewEventCallbackDisplayType",
+                "usr": "s:13OpenWebCommon33OWIAUViewEventCallbackDisplayTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13OpenWebCommon33OWIAUViewEventCallbackDisplayTypeO4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s13OpenWebCommon33OWIAUViewEventCallbackDisplayTypeO4fromACs7Decoder_p_tKcfc",
+            "moduleName": "OpenWebCommon",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13OpenWebCommon33OWIAUViewEventCallbackDisplayTypeO6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s13OpenWebCommon33OWIAUViewEventCallbackDisplayTypeO6encode2toys7Encoder_p_tKF",
+            "moduleName": "OpenWebCommon",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OWIAUViewEventCallbackDisplayType",
+                "printedName": "OpenWebCommon.OWIAUViewEventCallbackDisplayType",
+                "usr": "s:13OpenWebCommon33OWIAUViewEventCallbackDisplayTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OWIAUViewEventCallbackDisplayType",
+                "printedName": "OpenWebCommon.OWIAUViewEventCallbackDisplayType",
+                "usr": "s:13OpenWebCommon33OWIAUViewEventCallbackDisplayTypeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13OpenWebCommon33OWIAUViewEventCallbackDisplayTypeO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s13OpenWebCommon33OWIAUViewEventCallbackDisplayTypeO2eeoiySbAC_ACtFZ",
+            "moduleName": "OpenWebCommon",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Enum",
@@ -1686,6 +1977,27 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
           }
         ]
       },
@@ -1920,38 +2232,6 @@
             ]
           },
           {
-            "kind": "Function",
-            "name": "==",
-            "printedName": "==(_:_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "OWIAUVideoProgress",
-                "printedName": "OpenWebCommon.OWIAUVideoProgress",
-                "usr": "s:13OpenWebCommon18OWIAUVideoProgressO"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "OWIAUVideoProgress",
-                "printedName": "OpenWebCommon.OWIAUVideoProgress",
-                "usr": "s:13OpenWebCommon18OWIAUVideoProgressO"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:13OpenWebCommon18OWIAUVideoProgressO2eeoiySbAC_ACtFZ",
-            "mangledName": "$s13OpenWebCommon18OWIAUVideoProgressO2eeoiySbAC_ACtFZ",
-            "moduleName": "OpenWebCommon",
-            "static": true,
-            "implicit": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
             "kind": "Var",
             "name": "hashValue",
             "printedName": "hashValue",
@@ -2014,6 +2294,89 @@
             "moduleName": "OpenWebCommon",
             "implicit": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OWIAUVideoProgress",
+                "printedName": "OpenWebCommon.OWIAUVideoProgress",
+                "usr": "s:13OpenWebCommon18OWIAUVideoProgressO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13OpenWebCommon18OWIAUVideoProgressO4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s13OpenWebCommon18OWIAUVideoProgressO4fromACs7Decoder_p_tKcfc",
+            "moduleName": "OpenWebCommon",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13OpenWebCommon18OWIAUVideoProgressO6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s13OpenWebCommon18OWIAUVideoProgressO6encode2toys7Encoder_p_tKF",
+            "moduleName": "OpenWebCommon",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OWIAUVideoProgress",
+                "printedName": "OpenWebCommon.OWIAUVideoProgress",
+                "usr": "s:13OpenWebCommon18OWIAUVideoProgressO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OWIAUVideoProgress",
+                "printedName": "OpenWebCommon.OWIAUVideoProgress",
+                "usr": "s:13OpenWebCommon18OWIAUVideoProgressO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13OpenWebCommon18OWIAUVideoProgressO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s13OpenWebCommon18OWIAUVideoProgressO2eeoiySbAC_ACtFZ",
+            "moduleName": "OpenWebCommon",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Enum",
@@ -2040,17 +2403,31 @@
           },
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
             "name": "Hashable",
             "printedName": "Hashable",
             "usr": "s:SH",
             "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
           }
         ]
       },
@@ -2105,38 +2482,6 @@
             "usr": "s:13OpenWebCommon19OWIAUViewSourceTypeO2adyA2CmF",
             "mangledName": "$s13OpenWebCommon19OWIAUViewSourceTypeO2adyA2CmF",
             "moduleName": "OpenWebCommon"
-          },
-          {
-            "kind": "Function",
-            "name": "==",
-            "printedName": "==(_:_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "OWIAUViewSourceType",
-                "printedName": "OpenWebCommon.OWIAUViewSourceType",
-                "usr": "s:13OpenWebCommon19OWIAUViewSourceTypeO"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "OWIAUViewSourceType",
-                "printedName": "OpenWebCommon.OWIAUViewSourceType",
-                "usr": "s:13OpenWebCommon19OWIAUViewSourceTypeO"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:13OpenWebCommon19OWIAUViewSourceTypeO2eeoiySbAC_ACtFZ",
-            "mangledName": "$s13OpenWebCommon19OWIAUViewSourceTypeO2eeoiySbAC_ACtFZ",
-            "moduleName": "OpenWebCommon",
-            "static": true,
-            "implicit": true,
-            "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Var",
@@ -2201,6 +2546,89 @@
             "moduleName": "OpenWebCommon",
             "implicit": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OWIAUViewSourceType",
+                "printedName": "OpenWebCommon.OWIAUViewSourceType",
+                "usr": "s:13OpenWebCommon19OWIAUViewSourceTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13OpenWebCommon19OWIAUViewSourceTypeO4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s13OpenWebCommon19OWIAUViewSourceTypeO4fromACs7Decoder_p_tKcfc",
+            "moduleName": "OpenWebCommon",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13OpenWebCommon19OWIAUViewSourceTypeO6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s13OpenWebCommon19OWIAUViewSourceTypeO6encode2toys7Encoder_p_tKF",
+            "moduleName": "OpenWebCommon",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OWIAUViewSourceType",
+                "printedName": "OpenWebCommon.OWIAUViewSourceType",
+                "usr": "s:13OpenWebCommon19OWIAUViewSourceTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OWIAUViewSourceType",
+                "printedName": "OpenWebCommon.OWIAUViewSourceType",
+                "usr": "s:13OpenWebCommon19OWIAUViewSourceTypeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13OpenWebCommon19OWIAUViewSourceTypeO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s13OpenWebCommon19OWIAUViewSourceTypeO2eeoiySbAC_ACtFZ",
+            "moduleName": "OpenWebCommon",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Enum",
@@ -2227,17 +2655,31 @@
           },
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
             "name": "Hashable",
             "printedName": "Hashable",
             "usr": "s:SH",
             "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
           }
         ]
       },
@@ -2456,6 +2898,165 @@
         "moduleName": "OpenWebCommon",
         "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OpenWebCommon",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OWIAUAdSettings",
+        "printedName": "OWIAUAdSettings",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "configuration",
+            "printedName": "configuration",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OWIAUAdConfiguration",
+                "printedName": "OpenWebCommon.OWIAUAdConfiguration",
+                "usr": "s:13OpenWebCommon20OWIAUAdConfigurationO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13OpenWebCommon15OWIAUAdSettingsC13configurationAA0D13ConfigurationOvp",
+            "mangledName": "$s13OpenWebCommon15OWIAUAdSettingsC13configurationAA0D13ConfigurationOvp",
+            "moduleName": "OpenWebCommon",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OWIAUAdConfiguration",
+                    "printedName": "OpenWebCommon.OWIAUAdConfiguration",
+                    "usr": "s:13OpenWebCommon20OWIAUAdConfigurationO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13OpenWebCommon15OWIAUAdSettingsC13configurationAA0D13ConfigurationOvg",
+                "mangledName": "$s13OpenWebCommon15OWIAUAdSettingsC13configurationAA0D13ConfigurationOvg",
+                "moduleName": "OpenWebCommon",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OWIAUAdConfiguration",
+                    "printedName": "OpenWebCommon.OWIAUAdConfiguration",
+                    "usr": "s:13OpenWebCommon20OWIAUAdConfigurationO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13OpenWebCommon15OWIAUAdSettingsC13configurationAA0D13ConfigurationOvs",
+                "mangledName": "$s13OpenWebCommon15OWIAUAdSettingsC13configurationAA0D13ConfigurationOvs",
+                "moduleName": "OpenWebCommon",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13OpenWebCommon15OWIAUAdSettingsC13configurationAA0D13ConfigurationOvM",
+                "mangledName": "$s13OpenWebCommon15OWIAUAdSettingsC13configurationAA0D13ConfigurationOvM",
+                "moduleName": "OpenWebCommon",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(configuration:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OWIAUAdSettings",
+                "printedName": "OpenWebCommon.OWIAUAdSettings",
+                "usr": "s:13OpenWebCommon15OWIAUAdSettingsC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OWIAUAdConfiguration",
+                "printedName": "OpenWebCommon.OWIAUAdConfiguration",
+                "usr": "s:13OpenWebCommon20OWIAUAdConfigurationO"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13OpenWebCommon15OWIAUAdSettingsC13configurationAcA0D13ConfigurationO_tcfc",
+            "mangledName": "$s13OpenWebCommon15OWIAUAdSettingsC13configurationAcA0D13ConfigurationO_tcfc",
+            "moduleName": "OpenWebCommon",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:13OpenWebCommon15OWIAUAdSettingsC",
+        "mangledName": "$s13OpenWebCommon15OWIAUAdSettingsC",
+        "moduleName": "OpenWebCommon",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "OWIAUAdSettingsProtocol",
+            "printedName": "OWIAUAdSettingsProtocol",
+            "usr": "s:13OpenWebCommon23OWIAUAdSettingsProtocolP",
+            "mangledName": "$s13OpenWebCommon23OWIAUAdSettingsProtocolP"
+          }
         ]
       },
       {
