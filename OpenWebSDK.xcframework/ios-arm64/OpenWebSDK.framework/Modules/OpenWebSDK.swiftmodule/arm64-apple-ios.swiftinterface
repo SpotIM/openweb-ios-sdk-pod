@@ -408,11 +408,18 @@ public enum OWError : Swift.Error, Swift.Codable {
   case conversationCounters
   case custom(description: Swift.String)
   case missingImplementation
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension OpenWebSDK.OWError : Swift.CustomStringConvertible {
   public var description: Swift.String {
     get
   }
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+}
+extension OpenWebSDK.OWError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
 }
 public enum OWFlowActionCallbackType : Swift.Codable {
   case openPublisherProfile(ssoPublisherId: Swift.String, type: OpenWebSDK.OWUserProfileType, presentationalMode: OpenWebSDK.OWPresentationalMode)

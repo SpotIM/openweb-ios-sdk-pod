@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'OpenWebSDK'
-  s.version          = '2.6.1'
+  s.version          = '2.6.2'
   s.summary          = 'OpenWeb SDK'
   s.description      = 'This SDK allows you to integrate OpenWeb into your iOS app.'
   s.homepage        = "https://www.openweb.com"

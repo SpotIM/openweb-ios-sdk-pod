@@ -16201,46 +16201,6 @@
             ]
           },
           {
-            "kind": "Var",
-            "name": "description",
-            "printedName": "description",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:10OpenWebSDK7OWErrorO11descriptionSSvp",
-            "mangledName": "$s10OpenWebSDK7OWErrorO11descriptionSSvp",
-            "moduleName": "OpenWebSDK",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:10OpenWebSDK7OWErrorO11descriptionSSvg",
-                "mangledName": "$s10OpenWebSDK7OWErrorO11descriptionSSvg",
-                "moduleName": "OpenWebSDK",
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(from:)",
@@ -16290,6 +16250,106 @@
             "implicit": true,
             "throwing": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10OpenWebSDK7OWErrorO11descriptionSSvp",
+            "mangledName": "$s10OpenWebSDK7OWErrorO11descriptionSSvp",
+            "moduleName": "OpenWebSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10OpenWebSDK7OWErrorO11descriptionSSvg",
+                "mangledName": "$s10OpenWebSDK7OWErrorO11descriptionSSvg",
+                "moduleName": "OpenWebSDK",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "errorDescription",
+            "printedName": "errorDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10OpenWebSDK7OWErrorO16errorDescriptionSSSgvp",
+            "mangledName": "$s10OpenWebSDK7OWErrorO16errorDescriptionSSSgvp",
+            "moduleName": "OpenWebSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10OpenWebSDK7OWErrorO16errorDescriptionSSSgvg",
+                "mangledName": "$s10OpenWebSDK7OWErrorO16errorDescriptionSSSgvg",
+                "moduleName": "OpenWebSDK",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
           }
         ],
         "declKind": "Enum",
@@ -16341,6 +16401,20 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "LocalizedError",
+            "printedName": "LocalizedError",
+            "usr": "s:10Foundation14LocalizedErrorP",
+            "mangledName": "$s10Foundation14LocalizedErrorP"
           }
         ]
       },
@@ -44324,6 +44398,57 @@
       },
       {
         "kind": "Import",
+        "name": "RxSwift",
+        "printedName": "RxSwift",
+        "declKind": "Import",
+        "moduleName": "OpenWebSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OpenWebSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "OpenWebSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "RxSwift",
+        "printedName": "RxSwift",
+        "declKind": "Import",
+        "moduleName": "OpenWebSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "RxCocoa",
+        "printedName": "RxCocoa",
+        "declKind": "Import",
+        "moduleName": "OpenWebSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "OpenWebSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -55321,7 +55446,7 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Extensions\/Date+OWExtenstion.swift",
       "kind": "StringLiteral",
-      "offset": 562,
+      "offset": 544,
       "length": 4,
       "value": "\"HH\""
     },
@@ -55426,14 +55551,14 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Helpers\/Localization\/OWLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 872,
+      "offset": 1425,
       "length": 7,
       "value": "\"en-US\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Helpers\/Localization\/OWLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 930,
+      "offset": 1483,
       "length": 7,
       "value": "\"lproj\""
     },
@@ -55811,35 +55936,35 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Models\/Configs\/Configuration\/SPConfigurationConversation.swift",
       "kind": "StringLiteral",
-      "offset": 1096,
+      "offset": 1129,
       "length": 17,
       "value": "\"subscriberBadge\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Models\/Configs\/Configuration\/SPConfigurationConversation.swift",
       "kind": "StringLiteral",
-      "offset": 1149,
+      "offset": 1182,
       "length": 15,
       "value": "\"disable_share\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Models\/Configs\/Configuration\/SPConfigurationConversation.swift",
       "kind": "StringLiteral",
-      "offset": 1202,
+      "offset": 1235,
       "length": 23,
       "value": "\"showCommentEditOption\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Models\/Configs\/Configuration\/SPConfigurationConversation.swift",
       "kind": "StringLiteral",
-      "offset": 1257,
+      "offset": 1290,
       "length": 17,
       "value": "\"isAppealEnabled\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Models\/Configs\/Configuration\/SPConfigurationConversation.swift",
       "kind": "StringLiteral",
-      "offset": 1304,
+      "offset": 1337,
       "length": 12,
       "value": "\"enableTabs\""
     },
@@ -58422,35 +58547,35 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Services\/AuthenticationManager\/OWAuthenticationManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 2344,
+      "offset": 2392,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Services\/AuthenticationManager\/OWAuthenticationManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 2414,
+      "offset": 2462,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Services\/AuthenticationManager\/OWAuthenticationManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 2460,
+      "offset": 2508,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Services\/AuthenticationManager\/OWAuthenticationManager.swift",
       "kind": "StringLiteral",
-      "offset": 2812,
+      "offset": 2860,
       "length": 38,
       "value": "\"OpenWebSDKAuthenticationManagerQueue\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Services\/AuthenticationManager\/OWAuthenticationManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 8395,
+      "offset": 8776,
       "length": 4,
       "value": "true"
     },
@@ -58534,42 +58659,49 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Services\/ToastNotificationService\/OWToastNotificationPresenterProtocol.swift",
       "kind": "IntegerLiteral",
-      "offset": 568,
+      "offset": 560,
+      "length": 2,
+      "value": "32"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Services\/ToastNotificationService\/OWToastNotificationPresenterProtocol.swift",
+      "kind": "IntegerLiteral",
+      "offset": 626,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Services\/ToastNotificationService\/OWToastNotificationPresenterProtocol.swift",
       "kind": "IntegerLiteral",
-      "offset": 614,
+      "offset": 672,
       "length": 3,
       "value": "500"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Services\/ToastNotificationService\/OWToastNotificationPresenterProtocol.swift",
       "kind": "IntegerLiteral",
-      "offset": 690,
+      "offset": 748,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Services\/ToastNotificationService\/OWToastNotificationPresenterProtocol.swift",
       "kind": "IntegerLiteral",
-      "offset": 758,
+      "offset": 816,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Services\/ToastNotificationService\/OWToastNotificationPresenterProtocol.swift",
       "kind": "FloatLiteral",
-      "offset": 828,
+      "offset": 886,
       "length": 3,
       "value": "0.3"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Services\/ToastNotificationService\/OWToastNotificationPresenterProtocol.swift",
       "kind": "StringLiteral",
-      "offset": 876,
+      "offset": 934,
       "length": 19,
       "value": "\"OWToastPanGesture\""
     },
@@ -58611,16 +58743,30 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Services\/ViewableTime\/OWViewableTimeTracker.swift",
       "kind": "IntegerLiteral",
-      "offset": 949,
+      "offset": 998,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Services\/ViewableTime\/OWViewableTimeTracker.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1318,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Services\/ViewableTime\/OWViewableTimeTracker.swift",
       "kind": "IntegerLiteral",
-      "offset": 5656,
+      "offset": 5799,
       "length": 1,
       "value": "1"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Services\/ViewableTime\/OWViewableTimeTracker.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5833,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Services\/OWAnalyticsEventCreatorService.swift",
@@ -60907,14 +61053,14 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/AdditionalInfo\/ViewModels\/OWAdditionalInfoViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 2653,
+      "offset": 2589,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/AdditionalInfo\/ViewModels\/OWAdditionalInfoViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 4148,
+      "offset": 4084,
       "length": 5,
       "value": "false"
     },
@@ -61229,84 +61375,84 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWAppealLabelViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 3063,
+      "offset": 3031,
       "length": 8,
       "value": "\"Appeal\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWAppealLabelViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 3437,
+      "offset": 3373,
       "length": 13,
       "value": "\"AppealLabel\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWAppealLabelViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 3998,
+      "offset": 3934,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWAppealLabelViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 4771,
+      "offset": 4707,
       "length": 17,
       "value": "\"appealErrorIcon\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWAppealLabelViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 4807,
+      "offset": 4743,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWAppealLabelViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 4885,
+      "offset": 4821,
       "length": 23,
       "value": "\"appealUnavailableIcon\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWAppealLabelViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 4927,
+      "offset": 4863,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWAppealLabelViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 5863,
+      "offset": 5767,
       "length": 18,
       "value": "\"AppealLabelError\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWAppealLabelViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 6299,
+      "offset": 6171,
       "length": 25,
       "value": "\"AppealLabelNotAvailable\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWAppealLabelViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 8300,
+      "offset": 8172,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWAppealLabelViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 8512,
+      "offset": 8384,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWAppealLabelViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 8567,
+      "offset": 8439,
       "length": 5,
       "value": "false"
     },
@@ -61320,196 +61466,196 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWClarityDetailsViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 3569,
+      "offset": 3537,
       "length": 21,
       "value": "\"CommunityGuidelines\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWClarityDetailsViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 3762,
+      "offset": 3698,
       "length": 17,
       "value": "\"CommentRejected\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWClarityDetailsViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 3873,
+      "offset": 3777,
       "length": 16,
       "value": "\"AwaitingReview\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWClarityDetailsViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 4373,
+      "offset": 4245,
       "length": 20,
       "value": "\"RejectReasonsTitle\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWClarityDetailsViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 4437,
+      "offset": 4309,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWClarityDetailsViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 4569,
+      "offset": 4441,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWClarityDetailsViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 4664,
+      "offset": 4504,
       "length": 30,
       "value": "\"ClarityDetailsPendingSummary\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWClarityDetailsViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 4962,
+      "offset": 4802,
       "length": 12,
       "value": "\"heart-icon\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWClarityDetailsViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 5053,
+      "offset": 4861,
       "length": 25,
       "value": "\"RejectReasonEnsureCivil\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWClarityDetailsViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 5164,
+      "offset": 4972,
       "length": 11,
       "value": "\"info-icon\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWClarityDetailsViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 5254,
+      "offset": 5030,
       "length": 29,
       "value": "\"RejectReasonMachineLearning\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWClarityDetailsViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 5369,
+      "offset": 5145,
       "length": 16,
       "value": "\"megaphone-icon\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWClarityDetailsViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 5464,
+      "offset": 5208,
       "length": 27,
       "value": "\"RejectReasonWeDoNotCensor\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWClarityDetailsViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 5634,
+      "offset": 5378,
       "length": 8,
       "value": "\"v-icon\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWClarityDetailsViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 5721,
+      "offset": 5433,
       "length": 28,
       "value": "\"PendingResonManualApproval\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWClarityDetailsViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 5835,
+      "offset": 5547,
       "length": 10,
       "value": "\"eye-icon\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWClarityDetailsViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 5924,
+      "offset": 5604,
       "length": 32,
       "value": "\"PendingReasonPerformanceReview\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWClarityDetailsViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 6042,
+      "offset": 5722,
       "length": 11,
       "value": "\"flag-icon\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWClarityDetailsViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 6132,
+      "offset": 5780,
       "length": 33,
       "value": "\"PendingResonCommunityGuidelines\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWClarityDetailsViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 6218,
+      "offset": 5866,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWClarityDetailsViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 6736,
+      "offset": 6384,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWClarityDetailsViewVM.swift",
       "kind": "Array",
-      "offset": 6766,
+      "offset": 6414,
       "length": 5,
       "value": "[false]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWClarityDetailsViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 7022,
+      "offset": 6670,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWClarityDetailsViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 7271,
+      "offset": 6919,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWParagraphWithIconVM.swift",
       "kind": "StringLiteral",
-      "offset": 1578,
+      "offset": 1546,
       "length": 21,
       "value": "\"CommunityGuidelines\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWParagraphWithIconVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 1975,
+      "offset": 1943,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWParagraphWithIconVM.swift",
       "kind": "Array",
-      "offset": 2005,
+      "offset": 1973,
       "length": 5,
       "value": "[false]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/ViewModels\/OWParagraphWithIconVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 2222,
+      "offset": 2190,
       "length": 5,
       "value": "false"
     },
@@ -61817,7 +61963,7 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ClarityDetails\/Views\/OWClarityDetailsView.swift",
       "kind": "StringLiteral",
-      "offset": 5208,
+      "offset": 5176,
       "length": 7,
       "value": "\"GotIt\""
     },
@@ -61859,63 +62005,63 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentCreation\/ViewModels\/OWCommentCreationFloatingKeyboardViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 2921,
+      "offset": 2889,
       "length": 16,
       "value": "\"WhatDoYouThink\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentCreation\/ViewModels\/OWCommentCreationFloatingKeyboardViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 2972,
+      "offset": 2940,
       "length": 17,
       "value": "\"sendCommentIcon\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentCreation\/ViewModels\/OWCommentCreationFloatingKeyboardViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 3032,
+      "offset": 3000,
       "length": 3,
       "value": "350"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentCreation\/ViewModels\/OWCommentCreationFloatingKeyboardViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 3081,
+      "offset": 3049,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentCreation\/ViewModels\/OWCommentCreationFloatingKeyboardViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 5933,
+      "offset": 5901,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentCreation\/ViewModels\/OWCommentCreationFloatingKeyboardViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 6362,
+      "offset": 6330,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentCreation\/ViewModels\/OWCommentCreationFloatingKeyboardViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 8529,
+      "offset": 8497,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentCreation\/ViewModels\/OWCommentCreationFloatingKeyboardViewVM.swift",
       "kind": "Array",
-      "offset": 9064,
+      "offset": 9032,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentCreation\/ViewModels\/OWCommentCreationFloatingKeyboardViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 9915,
+      "offset": 9883,
       "length": 2,
       "value": "\"\""
     },
@@ -61936,16 +62082,16 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentCreation\/ViewModels\/OWCommentCreationRegularViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 4960,
+      "offset": 4928,
       "length": 14,
       "value": "\"CommentingOn\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentCreation\/ViewModels\/OWCommentCreationRegularViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 5892,
-      "length": 12,
-      "value": "\"ReplyingTo\""
+      "offset": 4995,
+      "length": 16,
+      "value": "\"EditingComment\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentCreation\/ViewModels\/OWCommentCreationViewVM.swift",
@@ -62034,21 +62180,21 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentCreation\/ViewModels\/OWCommentCreationViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 17130,
+      "offset": 17098,
       "length": 23,
       "value": "\"ErrorStatePostComment\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentCreation\/ViewModels\/OWCommentCreationViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 20415,
+      "offset": 20383,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentCreation\/ViewModels\/OWCommentCreationViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 21907,
+      "offset": 21875,
       "length": 5,
       "value": "false"
     },
@@ -62328,63 +62474,63 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentCreation\/Views\/OWCommentCreationFloatingKeyboardView.swift",
       "kind": "StringLiteral",
-      "offset": 5277,
+      "offset": 5245,
       "length": 16,
       "value": "\"EditingComment\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentCreation\/Views\/OWCommentCreationFloatingKeyboardView.swift",
       "kind": "StringLiteral",
-      "offset": 5457,
+      "offset": 5425,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentCreation\/Views\/OWCommentCreationFloatingKeyboardView.swift",
       "kind": "StringLiteral",
-      "offset": 5827,
+      "offset": 5763,
       "length": 12,
       "value": "\"ReplyingTo\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentCreation\/Views\/OWCommentCreationFloatingKeyboardView.swift",
       "kind": "BooleanLiteral",
-      "offset": 7674,
+      "offset": 7610,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentCreation\/Views\/OWCommentCreationFloatingKeyboardView.swift",
       "kind": "IntegerLiteral",
-      "offset": 8820,
+      "offset": 8756,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentCreation\/Views\/OWCommentCreationFloatingKeyboardView.swift",
       "kind": "IntegerLiteral",
-      "offset": 8873,
+      "offset": 8809,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentCreation\/Views\/OWCommentCreationFloatingKeyboardView.swift",
       "kind": "IntegerLiteral",
-      "offset": 8925,
+      "offset": 8861,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentCreation\/Views\/OWCommentCreationFloatingKeyboardView.swift",
       "kind": "IntegerLiteral",
-      "offset": 8951,
+      "offset": 8887,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentCreation\/Views\/OWCommentCreationFloatingKeyboardView.swift",
       "kind": "BooleanLiteral",
-      "offset": 10030,
+      "offset": 9966,
       "length": 5,
       "value": "false"
     },
@@ -62523,29 +62669,22 @@
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentCreation\/Views\/OWCommentCreationLightView.swift",
-      "kind": "StringLiteral",
-      "offset": 1774,
-      "length": 19,
-      "value": "\"closeCrossIconNew\""
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentCreation\/Views\/OWCommentCreationLightView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1812,
+      "offset": 1821,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentCreation\/Views\/OWCommentCreationLightView.swift",
       "kind": "IntegerLiteral",
-      "offset": 3073,
+      "offset": 3082,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentCreation\/Views\/OWCommentCreationLightView.swift",
       "kind": "IntegerLiteral",
-      "offset": 3383,
+      "offset": 3392,
       "length": 1,
       "value": "1"
     },
@@ -62664,28 +62803,21 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentCreation\/Views\/OWCommentCreationRegularView.swift",
       "kind": "StringLiteral",
-      "offset": 1526,
+      "offset": 1494,
       "length": 14,
       "value": "\"CommentingOn\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentCreation\/Views\/OWCommentCreationRegularView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1661,
+      "offset": 1629,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentCreation\/Views\/OWCommentCreationRegularView.swift",
-      "kind": "StringLiteral",
-      "offset": 1822,
-      "length": 16,
-      "value": "\"closeCrossIcon\""
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentCreation\/Views\/OWCommentCreationRegularView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1857,
+      "offset": 1837,
       "length": 4,
       "value": "true"
     },
@@ -63056,42 +63188,42 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommenterAppeal\/Views\/OWCommenterAppealView.swift",
       "kind": "StringLiteral",
-      "offset": 1853,
+      "offset": 1821,
       "length": 22,
       "value": "\"CommenterAppealTitle\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommenterAppeal\/Views\/OWCommenterAppealView.swift",
       "kind": "StringLiteral",
-      "offset": 2195,
+      "offset": 2163,
       "length": 16,
       "value": "\"closeCrossIcon\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommenterAppeal\/Views\/OWCommenterAppealView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2230,
+      "offset": 2198,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommenterAppeal\/Views\/OWCommenterAppealView.swift",
       "kind": "IntegerLiteral",
-      "offset": 3889,
+      "offset": 3857,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommenterAppeal\/Views\/OWCommenterAppealView.swift",
       "kind": "StringLiteral",
-      "offset": 4453,
+      "offset": 4389,
       "length": 8,
       "value": "\"Cancel\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommenterAppeal\/Views\/OWCommenterAppealView.swift",
       "kind": "BooleanLiteral",
-      "offset": 4951,
+      "offset": 4887,
       "length": 5,
       "value": "false"
     },
@@ -63203,91 +63335,91 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 4040,
+      "offset": 4008,
       "length": 9,
       "value": "\"Replies\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 4463,
+      "offset": 4431,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "Dictionary",
-      "offset": 4615,
+      "offset": 4583,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 5748,
+      "offset": 5716,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 5933,
+      "offset": 5901,
       "length": 30,
       "value": "\"commentThreadViewVMScheduler\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 6369,
+      "offset": 6337,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 6460,
+      "offset": 6428,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "Array",
-      "offset": 8307,
+      "offset": 8275,
       "length": 2,
       "value": "[[]]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "Array",
-      "offset": 9411,
+      "offset": 9379,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "Array",
-      "offset": 9554,
+      "offset": 9522,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 12768,
+      "offset": 12736,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 16035,
+      "offset": 16009,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 23188,
+      "offset": 23162,
       "length": 1,
       "value": "0"
     },
@@ -63490,35 +63622,35 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ArticleDescription\/Views\/OWArticleDescriptionView.swift",
       "kind": "StringLiteral",
-      "offset": 1359,
+      "offset": 1116,
       "length": 23,
       "value": "\"imagePlaceholderEmpty\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ArticleDescription\/Views\/OWArticleDescriptionView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1401,
+      "offset": 1158,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ArticleDescription\/Views\/OWArticleDescriptionView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1480,
+      "offset": 1237,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ArticleDescription\/Views\/OWArticleDescriptionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1712,
+      "offset": 1469,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ArticleDescription\/Views\/OWArticleDescriptionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2164,
+      "offset": 1921,
       "length": 1,
       "value": "1"
     },
@@ -63553,14 +63685,14 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ConversationEmptyState\/ViewModels\/OWConversationEmptyStateViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 3926,
+      "offset": 3894,
       "length": 19,
       "value": "\"EmptyConversation\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ConversationEmptyState\/ViewModels\/OWConversationEmptyStateViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 4062,
+      "offset": 3998,
       "length": 28,
       "value": "\"ClosedAndEmptyConversation\""
     },
@@ -63679,14 +63811,14 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ConversationSummary\/Views\/OWConversationSortView.swift",
       "kind": "StringLiteral",
-      "offset": 853,
+      "offset": 821,
       "length": 8,
       "value": "\"SortBy\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ConversationSummary\/Views\/OWConversationSortView.swift",
       "kind": "StringLiteral",
-      "offset": 1277,
+      "offset": 1245,
       "length": 6,
       "value": "\"sort\""
     },
@@ -63868,21 +64000,21 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ConversationTitleHeader\/Views\/OWConversationTitleHeaderView.swift",
       "kind": "StringLiteral",
-      "offset": 1021,
+      "offset": 989,
       "length": 14,
       "value": "\"Conversation\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ConversationTitleHeader\/Views\/OWConversationTitleHeaderView.swift",
       "kind": "StringLiteral",
-      "offset": 1156,
+      "offset": 1124,
       "length": 13,
       "value": "\"closeButton\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ConversationTitleHeader\/Views\/OWConversationTitleHeaderView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1188,
+      "offset": 1156,
       "length": 4,
       "value": "true"
     },
@@ -63903,364 +64035,357 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 4582,
+      "offset": 4577,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 4635,
+      "offset": 4630,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 4697,
+      "offset": 4692,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 4755,
+      "offset": 4750,
       "length": 4,
       "value": "2000"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 4823,
+      "offset": 4818,
       "length": 3,
       "value": "100"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 4893,
+      "offset": 4888,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 4962,
+      "offset": 4957,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 5041,
+      "offset": 5036,
       "length": 3,
       "value": "500"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 5112,
+      "offset": 5107,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 5180,
+      "offset": 5175,
       "length": 3,
       "value": "500"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 5256,
+      "offset": 5251,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 5325,
+      "offset": 5320,
       "length": 3,
       "value": "500"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 5389,
+      "offset": 5384,
       "length": 3,
       "value": "300"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 5482,
+      "offset": 5477,
       "length": 3,
       "value": "100"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 5545,
+      "offset": 5540,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 5611,
+      "offset": 5606,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 5664,
+      "offset": 5659,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 5739,
+      "offset": 5734,
       "length": 3,
       "value": "800"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 5804,
+      "offset": 5799,
       "length": 3,
       "value": "450"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 5872,
+      "offset": 5867,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 5941,
+      "offset": 5936,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 5993,
+      "offset": 5988,
       "length": 3,
       "value": "500"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 6051,
+      "offset": 6046,
       "length": 3,
       "value": "350"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "Dictionary",
-      "offset": 6192,
+      "offset": 6187,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 6335,
+      "offset": 6330,
       "length": 25,
       "value": "\"conversationViewVMQueue\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 6556,
+      "offset": 6551,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 6694,
+      "offset": 6689,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 6979,
+      "offset": 6974,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 7212,
+      "offset": 7207,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 7993,
+      "offset": 8042,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 8122,
+      "offset": 8171,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 8627,
+      "offset": 8676,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 8858,
+      "offset": 8907,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 9091,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
-      "kind": "BooleanLiteral",
-      "offset": 9307,
+      "offset": 9135,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 9796,
+      "offset": 9624,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 9836,
+      "offset": 9664,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 9880,
+      "offset": 9708,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 10450,
+      "offset": 10278,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 12178,
+      "offset": 12006,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 16470,
+      "offset": 16302,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "Array",
-      "offset": 17731,
+      "offset": 17873,
       "length": 2,
       "value": "[[]]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "Array",
-      "offset": 18217,
+      "offset": 18359,
       "length": 2,
       "value": "[[]]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "Array",
-      "offset": 20220,
+      "offset": 20362,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "Array",
-      "offset": 20351,
+      "offset": 20493,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "Array",
-      "offset": 21099,
+      "offset": 21241,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "Array",
-      "offset": 21195,
+      "offset": 21337,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 25200,
+      "offset": 25342,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 29769,
+      "offset": 29911,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 38541,
+      "offset": 38683,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 39081,
+      "offset": 39223,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationVM.swift",
       "kind": "StringLiteral",
-      "offset": 2709,
+      "offset": 2677,
       "length": 14,
       "value": "\"Conversation\""
     },
@@ -64406,36 +64531,43 @@
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/Views\/OWConversationView.swift",
-      "kind": "FloatLiteral",
-      "offset": 1554,
+      "kind": "IntegerLiteral",
+      "offset": 1562,
       "length": 3,
-      "value": "0.3"
+      "value": "300"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/Views\/OWConversationView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1678,
+      "length": 4,
+      "value": "1000"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/Views\/OWConversationView.swift",
       "kind": "StringLiteral",
-      "offset": 1701,
+      "offset": 1826,
       "length": 23,
       "value": "\"conversationViewQueue\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/Views\/OWConversationView.swift",
       "kind": "BooleanLiteral",
-      "offset": 4156,
+      "offset": 4281,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/Views\/OWConversationView.swift",
       "kind": "Array",
-      "offset": 5861,
+      "offset": 5986,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/Views\/OWConversationView.swift",
       "kind": "Array",
-      "offset": 5930,
+      "offset": 6055,
       "length": 2,
       "value": "[]"
     },
@@ -64463,315 +64595,315 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "IntegerLiteral",
-      "offset": 854,
+      "offset": 895,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "IntegerLiteral",
-      "offset": 858,
+      "offset": 899,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "IntegerLiteral",
-      "offset": 870,
+      "offset": 911,
       "length": 3,
       "value": "172"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "IntegerLiteral",
-      "offset": 874,
+      "offset": 915,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "IntegerLiteral",
-      "offset": 885,
+      "offset": 926,
       "length": 2,
       "value": "51"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "IntegerLiteral",
-      "offset": 888,
+      "offset": 929,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "FloatLiteral",
-      "offset": 900,
+      "offset": 941,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "IntegerLiteral",
-      "offset": 1097,
+      "offset": 1138,
       "length": 3,
       "value": "136"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "IntegerLiteral",
-      "offset": 1101,
+      "offset": 1142,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "IntegerLiteral",
-      "offset": 1113,
+      "offset": 1154,
       "length": 3,
       "value": "153"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "IntegerLiteral",
-      "offset": 1117,
+      "offset": 1158,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "IntegerLiteral",
-      "offset": 1128,
+      "offset": 1169,
       "length": 3,
       "value": "166"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "IntegerLiteral",
-      "offset": 1132,
+      "offset": 1173,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "FloatLiteral",
-      "offset": 1144,
+      "offset": 1185,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "IntegerLiteral",
-      "offset": 1427,
+      "offset": 1468,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "IntegerLiteral",
-      "offset": 1431,
+      "offset": 1472,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "IntegerLiteral",
-      "offset": 1443,
+      "offset": 1484,
       "length": 3,
       "value": "172"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "IntegerLiteral",
-      "offset": 1447,
+      "offset": 1488,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "IntegerLiteral",
-      "offset": 1458,
+      "offset": 1499,
       "length": 2,
       "value": "51"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "IntegerLiteral",
-      "offset": 1461,
+      "offset": 1502,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "FloatLiteral",
-      "offset": 1473,
+      "offset": 1514,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "IntegerLiteral",
-      "offset": 1660,
+      "offset": 1701,
       "length": 3,
       "value": "250"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "IntegerLiteral",
-      "offset": 1664,
+      "offset": 1705,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "IntegerLiteral",
-      "offset": 1676,
+      "offset": 1717,
       "length": 3,
       "value": "120"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "IntegerLiteral",
-      "offset": 1680,
+      "offset": 1721,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "IntegerLiteral",
-      "offset": 1691,
+      "offset": 1732,
       "length": 2,
       "value": "68"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "IntegerLiteral",
-      "offset": 1694,
+      "offset": 1735,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "FloatLiteral",
-      "offset": 1706,
+      "offset": 1747,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "StringLiteral",
-      "offset": 1960,
+      "offset": 2001,
       "length": 11,
       "value": "\"transform\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "StringLiteral",
-      "offset": 2040,
+      "offset": 2081,
       "length": 11,
       "value": "\"transform\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "StringLiteral",
-      "offset": 2116,
+      "offset": 2157,
       "length": 13,
       "value": "\"strokeStart\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "StringLiteral",
-      "offset": 2192,
+      "offset": 2233,
       "length": 11,
       "value": "\"strokeEnd\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "StringLiteral",
-      "offset": 2264,
+      "offset": 2305,
       "length": 9,
       "value": "\"opacity\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "StringLiteral",
-      "offset": 2337,
+      "offset": 2378,
       "length": 11,
       "value": "\"transform\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "FloatLiteral",
-      "offset": 2448,
+      "offset": 2489,
       "length": 5,
       "value": "0.333"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "FloatLiteral",
-      "offset": 2523,
+      "offset": 2564,
       "length": 5,
       "value": "0.333"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "FloatLiteral",
-      "offset": 2594,
+      "offset": 2635,
       "length": 3,
       "value": "0.6"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "FloatLiteral",
-      "offset": 2661,
+      "offset": 2702,
       "length": 3,
       "value": "0.6"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "FloatLiteral",
-      "offset": 2726,
+      "offset": 2767,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "FloatLiteral",
-      "offset": 2794,
+      "offset": 2835,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "FloatLiteral",
-      "offset": 2386,
+      "offset": 2427,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "FloatLiteral",
-      "offset": 3149,
+      "offset": 3190,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "FloatLiteral",
-      "offset": 3194,
+      "offset": 3235,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "FloatLiteral",
-      "offset": 3272,
+      "offset": 3313,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/OldRequiredCode\/SPAnimatedButton.swift",
       "kind": "FloatLiteral",
-      "offset": 3317,
+      "offset": 3358,
       "length": 3,
       "value": "1.0"
     },
@@ -65316,78 +65448,99 @@
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationCompactContentViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1540,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationCompactContentViewModel.swift",
+      "kind": "Array",
+      "offset": 2169,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationCompactContentViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 2271,
+      "offset": 2556,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationCompactContentViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 2318,
+      "offset": 2603,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationCompactContentViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 2541,
+      "offset": 2826,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationCompactContentViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 2588,
+      "offset": 2873,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationCompactContentViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 2885,
+      "offset": 3170,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationCompactContentViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 2931,
+      "offset": 3216,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationCompactContentViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 3138,
+      "offset": 3773,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationCompactContentViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 3259,
+      "offset": 3902,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationCompactContentViewModel.swift",
+      "kind": "StringLiteral",
+      "offset": 4026,
       "length": 19,
       "value": "\"EmptyConversation\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationCompactContentViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 3395,
+      "offset": 4165,
       "length": 28,
       "value": "\"ClosedAndEmptyConversation\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationCompactContentViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 3628,
+      "offset": 4401,
       "length": 7,
       "value": "\"Image\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationCompactContentViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 3847,
+      "offset": 5018,
       "length": 24,
       "value": "\"ErrorStateLoadComments\""
     },
@@ -65513,49 +65666,49 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 11345,
+      "offset": 11153,
       "length": 18,
       "value": "\"ShowMoreComments\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 11407,
+      "offset": 11215,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 11525,
+      "offset": 11301,
       "length": 14,
       "value": "\"ShowComments\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 16379,
+      "offset": 16161,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 16870,
+      "offset": 16652,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 18754,
+      "offset": 18536,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 19056,
+      "offset": 18838,
       "length": 5,
       "value": "false"
     },
@@ -65807,21 +65960,21 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/Views\/OWPreConversationSummaryView.swift",
       "kind": "StringLiteral",
-      "offset": 1356,
+      "offset": 1324,
       "length": 14,
       "value": "\"Conversation\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/Views\/OWPreConversationSummaryView.swift",
       "kind": "StringLiteral",
-      "offset": 2227,
+      "offset": 2195,
       "length": 11,
       "value": "\"nextArrow\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/Views\/OWPreConversationSummaryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2257,
+      "offset": 2225,
       "length": 4,
       "value": "true"
     },
@@ -66066,168 +66219,168 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ReportReasons\/ViewModels\/Report\/OWReportReasonViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 2574,
+      "offset": 2610,
       "length": 3,
       "value": "280"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ReportReasons\/ViewModels\/Report\/OWReportReasonViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 3540,
+      "offset": 3416,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ReportReasons\/ViewModels\/Report\/OWReportReasonViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 5566,
+      "offset": 5346,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ReportReasons\/ViewModels\/Report\/OWReportReasonViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 5804,
+      "offset": 5584,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ReportReasons\/ViewModels\/Report\/OWReportReasonViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 9291,
+      "offset": 9039,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ReportReasons\/ViewModels\/Report\/OWReportReasonViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 9563,
+      "offset": 9311,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ReportReasons\/ViewModels\/Report\/OWReportReasonViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 9622,
+      "offset": 9370,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ReportReasons\/ViewModels\/Report\/OWReportReasonViewVM.swift",
       "kind": "Array",
-      "offset": 9849,
+      "offset": 9597,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ReportReasons\/ViewModels\/Report\/OWReportReasonViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 10182,
+      "offset": 9930,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ReportReasons\/ViewModels\/Report\/OWReportReasonViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 10465,
+      "offset": 10213,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ReportReasons\/ViewModels\/Report\/OWReportReasonViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 10732,
+      "offset": 10480,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ReportReasons\/ViewModels\/Report\/OWReportReasonViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 10981,
+      "offset": 10729,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ReportReasons\/ViewModels\/Report\/OWReportReasonViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 11056,
+      "offset": 10804,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ReportReasons\/ViewModels\/Report\/OWReportReasonViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 11171,
+      "offset": 10919,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ReportReasons\/ViewModels\/Report\/OWReportReasonViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 11778,
+      "offset": 11526,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ReportReasons\/ViewModels\/Report\/OWReportReasonViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 11911,
+      "offset": 11659,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ReportReasons\/ViewModels\/Report\/OWReportReasonViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 12443,
+      "offset": 12191,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ReportReasons\/ViewModels\/Report\/OWReportReasonViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 13959,
+      "offset": 13707,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ReportReasons\/ViewModels\/Report\/OWReportReasonViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 14272,
+      "offset": 14020,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ReportReasons\/ViewModels\/Report\/OWReportReasonViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 14705,
+      "offset": 14453,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ReportReasons\/ViewModels\/Report\/OWReportReasonViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 15013,
+      "offset": 14761,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ReportReasons\/ViewModels\/Report\/OWReportReasonViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 15864,
+      "offset": 15612,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ReportReasons\/ViewModels\/Report\/OWReportReasonViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 15976,
+      "offset": 15724,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/ReportReasons\/ViewModels\/Report\/OWReportReasonVM.swift",
       "kind": "StringLiteral",
-      "offset": 1797,
+      "offset": 1765,
       "length": 19,
       "value": "\"ReportReasonTitle\""
     },
@@ -66911,6 +67064,13 @@
       "value": "[]"
     },
     {
+      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SafariTab\/ViewModels\/OWWebTabVM.swift",
+      "kind": "Array",
+      "offset": 1685,
+      "length": 2,
+      "value": "[]"
+    },
+    {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SafariTab\/Views\/OWWebTabVC.swift",
       "kind": "StringLiteral",
       "offset": 356,
@@ -67403,49 +67563,49 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/ViewModels\/OWCommentContentViewModel.swift",
       "kind": "FloatLiteral",
-      "offset": 1047,
+      "offset": 1100,
       "length": 5,
       "value": "226.0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/ViewModels\/OWCommentContentViewModel.swift",
       "kind": "FloatLiteral",
-      "offset": 1096,
+      "offset": 1149,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/ViewModels\/OWCommentContentViewModel.swift",
       "kind": "FloatLiteral",
-      "offset": 1143,
+      "offset": 1196,
       "length": 4,
       "value": "25.0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/ViewModels\/OWCommentContentViewModel.swift",
       "kind": "FloatLiteral",
-      "offset": 1191,
+      "offset": 1244,
       "length": 4,
       "value": "40.0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/ViewModels\/OWCommentContentViewModel.swift",
       "kind": "FloatLiteral",
-      "offset": 1241,
+      "offset": 1294,
       "length": 4,
       "value": "55.0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/ViewModels\/OWCommentContentViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 4363,
+      "offset": 4729,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/ViewModels\/OWCommentContentViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 4443,
+      "offset": 4809,
       "length": 1,
       "value": "0"
     },
@@ -67467,6 +67627,20 @@
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/ViewModels\/OWCommentOptionsViewModel.swift",
       "kind": "BooleanLiteral",
       "offset": 1225,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/ViewModels\/OWCommentOptionsViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3909,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/ViewModels\/OWCommentOptionsViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4019,
       "length": 5,
       "value": "false"
     },
@@ -67536,21 +67710,21 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/ViewModels\/OWCommentStatusViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 2749,
+      "offset": 2717,
       "length": 11,
       "value": "\"LearnMore\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/ViewModels\/OWCommentStatusViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 2933,
+      "offset": 2901,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/ViewModels\/OWCommentStatusViewModel.swift",
       "kind": "Array",
-      "offset": 2963,
+      "offset": 2931,
       "length": 5,
       "value": "[false]"
     },
@@ -67571,14 +67745,21 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/ViewModels\/OWCommentTextViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 1646,
+      "offset": 1614,
       "length": 9,
       "value": "\"SeeMore\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/ViewModels\/OWCommentTextViewModel.swift",
+      "kind": "Dictionary",
+      "offset": 1823,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/ViewModels\/OWCommentTextViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 3564,
+      "offset": 3500,
       "length": 1,
       "value": "0"
     },
@@ -67661,15 +67842,22 @@
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/Views\/OWCommentContentView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 968,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/Views\/OWCommentContentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 884,
+      "offset": 1118,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/Views\/OWCommentContentView.swift",
       "kind": "StringLiteral",
-      "offset": 1282,
+      "offset": 1484,
       "length": 8,
       "value": "\"Edited\""
     },
@@ -67677,69 +67865,69 @@
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/Views\/OWCommentEngagementView.swift",
       "kind": "IntegerLiteral",
       "offset": 312,
-      "length": 2,
-      "value": "14"
+      "length": 1,
+      "value": "8"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/Views\/OWCommentEngagementView.swift",
       "kind": "IntegerLiteral",
-      "offset": 360,
+      "offset": 359,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/Views\/OWCommentEngagementView.swift",
       "kind": "IntegerLiteral",
-      "offset": 408,
+      "offset": 407,
       "length": 2,
       "value": "24"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/Views\/OWCommentEngagementView.swift",
       "kind": "StringLiteral",
-      "offset": 444,
+      "offset": 443,
       "length": 25,
       "value": "\"comment_actions_view_id\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/Views\/OWCommentEngagementView.swift",
       "kind": "StringLiteral",
-      "offset": 513,
+      "offset": 512,
       "length": 38,
       "value": "\"comment_actions_view_reply_button_id\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/Views\/OWCommentEngagementView.swift",
       "kind": "StringLiteral",
-      "offset": 595,
+      "offset": 594,
       "length": 38,
       "value": "\"comment_actions_view_share_button_id\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/Views\/OWCommentEngagementView.swift",
       "kind": "StringLiteral",
-      "offset": 1196,
+      "offset": 1163,
       "length": 7,
       "value": "\"Reply\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/Views\/OWCommentEngagementView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1384,
+      "offset": 1351,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/Views\/OWCommentEngagementView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1728,
+      "offset": 1695,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/Views\/OWCommentEngagementView.swift",
       "kind": "StringLiteral",
-      "offset": 2030,
+      "offset": 1965,
       "length": 7,
       "value": "\"Share\""
     },
@@ -67956,107 +68144,114 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/Views\/OWCommentOptionsView.swift",
       "kind": "IntegerLiteral",
-      "offset": 753,
+      "offset": 735,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/Views\/OWCommentOptionsView.swift",
       "kind": "IntegerLiteral",
-      "offset": 873,
+      "offset": 837,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/Views\/OWCommentOptionsView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1019,
+      "offset": 983,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/Views\/OWCommentOptionsView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1047,
+      "offset": 1011,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/Views\/OWCommentRatingView.swift",
       "kind": "FloatLiteral",
-      "offset": 308,
+      "offset": 307,
       "length": 4,
       "value": "24.0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/Views\/OWCommentRatingView.swift",
       "kind": "FloatLiteral",
-      "offset": 359,
+      "offset": 358,
       "length": 4,
-      "value": "28.0"
+      "value": "24.0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/Views\/OWCommentRatingView.swift",
       "kind": "StringLiteral",
-      "offset": 396,
+      "offset": 395,
       "length": 24,
       "value": "\"comment_voting_view_id\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/Views\/OWCommentRatingView.swift",
       "kind": "StringLiteral",
-      "offset": 465,
+      "offset": 464,
       "length": 39,
       "value": "\"comment_voting_view_rank_up_button_id\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/Views\/OWCommentRatingView.swift",
       "kind": "StringLiteral",
-      "offset": 551,
+      "offset": 550,
       "length": 41,
       "value": "\"comment_voting_view_rank_down_button_id\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/Views\/OWCommentRatingView.swift",
       "kind": "StringLiteral",
-      "offset": 636,
+      "offset": 635,
       "length": 38,
       "value": "\"comment_voting_view_rank_up_label_id\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/Views\/OWCommentRatingView.swift",
       "kind": "StringLiteral",
-      "offset": 720,
+      "offset": 719,
       "length": 40,
       "value": "\"comment_voting_view_rank_down_label_id\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/Views\/OWCommentRatingView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1191,
+      "offset": 1190,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/Views\/OWCommentRatingView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1197,
+      "offset": 1196,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/Views\/OWCommentRatingView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1477,
+      "offset": 1476,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/Views\/OWCommentRatingView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1483,
+      "offset": 1482,
       "length": 1,
       "value": "0"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/Views\/OWCommentRatingView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1620,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/Views\/OWCommentStatusView.swift",
@@ -68320,21 +68515,28 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/CommentCreation\/CommentCreationContent\/Views\/OWCommentCreationContentView.swift",
       "kind": "FloatLiteral",
-      "offset": 606,
+      "offset": 609,
+      "length": 3,
+      "value": "8.0"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/CommentCreation\/CommentCreationContent\/Views\/OWCommentCreationContentView.swift",
+      "kind": "FloatLiteral",
+      "offset": 664,
       "length": 4,
       "value": "13.0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/CommentCreation\/CommentCreationContent\/Views\/OWCommentCreationContentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 658,
+      "offset": 716,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/CommentCreation\/CommentCreationContent\/Views\/OWCommentCreationContentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1635,
+      "offset": 1693,
       "length": 4,
       "value": "true"
     },
@@ -68376,7 +68578,7 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/CommentCreation\/CommentCreationFooter\/ViewModels\/OWCommentCreationFooterViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 6208,
+      "offset": 6112,
       "length": 5,
       "value": "false"
     },
@@ -68992,7 +69194,7 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/CommentCreationEntry\/Views\/OWCommentCreationEntryView.swift",
       "kind": "StringLiteral",
-      "offset": 1642,
+      "offset": 1610,
       "length": 16,
       "value": "\"WhatDoYouThink\""
     },
@@ -69139,14 +69341,14 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/CommentingCTA\/CommentingReadOnly\/Views\/OWCommentingReadOnlyView.swift",
       "kind": "StringLiteral",
-      "offset": 1040,
+      "offset": 1008,
       "length": 27,
       "value": "\"CommentingReadOnlyMessage\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/CommentingCTA\/CommentingReadOnly\/Views\/OWCommentingReadOnlyView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1256,
+      "offset": 1224,
       "length": 1,
       "value": "0"
     },
@@ -69202,28 +69404,28 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/CommunityGuidelines\/ViewModels\/OWCommunityGuidelinesViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 1731,
+      "offset": 1699,
       "length": 9,
       "value": "\"ReadOur\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/CommunityGuidelines\/ViewModels\/OWCommunityGuidelinesViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 1838,
+      "offset": 1774,
       "length": 21,
       "value": "\"CommunityGuidelines\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/CommunityGuidelines\/ViewModels\/OWCommunityGuidelinesViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 4161,
+      "offset": 4097,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/CommunityGuidelines\/ViewModels\/OWCommunityGuidelinesViewModel.swift",
       "kind": "Array",
-      "offset": 4191,
+      "offset": 4127,
       "length": 5,
       "value": "[false]"
     },
@@ -69426,21 +69628,21 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/ErrorStates\/ViewModels\/OWErrorStateViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 2393,
+      "offset": 2361,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/ErrorStates\/ViewModels\/OWErrorStateViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 2515,
+      "offset": 2483,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/ErrorStates\/ViewModels\/OWErrorStateViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 2594,
+      "offset": 2562,
       "length": 1,
       "value": "0"
     },
@@ -69489,14 +69691,14 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/ErrorStates\/Views\/OWErrorRetryCTAView.swift",
       "kind": "StringLiteral",
-      "offset": 1400,
+      "offset": 1368,
       "length": 21,
       "value": "\"errorStateRetryIcon\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/ErrorStates\/Views\/OWErrorRetryCTAView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1440,
+      "offset": 1408,
       "length": 5,
       "value": "false"
     },
@@ -69664,35 +69866,35 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/FilterTabs\/ViewModels\/OWFilterTabsCollectionCellVM.swift",
       "kind": "StringLiteral",
-      "offset": 1737,
+      "offset": 1705,
       "length": 5,
       "value": "\"all\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/FilterTabs\/ViewModels\/OWFilterTabsCollectionCellVM.swift",
       "kind": "StringLiteral",
-      "offset": 1745,
+      "offset": 1713,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/FilterTabs\/ViewModels\/OWFilterTabsCollectionCellVM.swift",
       "kind": "StringLiteral",
-      "offset": 1750,
+      "offset": 1718,
       "length": 19,
       "value": "\" (\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/FilterTabs\/ViewModels\/OWFilterTabsCollectionCellVM.swift",
       "kind": "StringLiteral",
-      "offset": 1767,
+      "offset": 1735,
       "length": 1,
       "value": "\")\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/FilterTabs\/ViewModels\/OWFilterTabsCollectionCellVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 1870,
+      "offset": 1838,
       "length": 5,
       "value": "false"
     },
@@ -69858,6 +70060,83 @@
       "value": "false"
     },
     {
+      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/FullScreenImage\/Views\/OWFullScreenImageView.swift",
+      "kind": "StringLiteral",
+      "offset": 344,
+      "length": 27,
+      "value": "\"full_screen_image_view_id\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/FullScreenImage\/Views\/OWFullScreenImageView.swift",
+      "kind": "FloatLiteral",
+      "offset": 409,
+      "length": 4,
+      "value": "0.85"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/FullScreenImage\/Views\/OWFullScreenImageView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 460,
+      "length": 2,
+      "value": "40"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/FullScreenImage\/Views\/OWFullScreenImageView.swift",
+      "kind": "StringLiteral",
+      "offset": 506,
+      "length": 35,
+      "value": "\"full_screen_image_close_button_id\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/FullScreenImage\/Views\/OWFullScreenImageView.swift",
+      "kind": "StringLiteral",
+      "offset": 578,
+      "length": 16,
+      "value": "\"closeCrossIcon\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/FullScreenImage\/Views\/OWFullScreenImageView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 644,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/FullScreenImage\/Views\/OWFullScreenImageView.swift",
+      "kind": "FloatLiteral",
+      "offset": 689,
+      "length": 3,
+      "value": "0.3"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/FullScreenImage\/Views\/OWFullScreenImageView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 993,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/FullScreenImage\/Views\/OWFullScreenImageView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1250,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/FullScreenImage\/Views\/OWFullScreenImageView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1446,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/FullScreenImage\/Views\/OWZoomableImageView.swift",
+      "kind": "StringLiteral",
+      "offset": 267,
+      "length": 24,
+      "value": "\"zoomable_image_view_id\""
+    },
+    {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/LoginPrompt\/ViewModels\/OWLoginPromptViewModel.swift",
       "kind": "BooleanLiteral",
       "offset": 2784,
@@ -69930,35 +70209,35 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/LoginPrompt\/Views\/OWLoginPromptView.swift",
       "kind": "StringLiteral",
-      "offset": 1117,
+      "offset": 1085,
       "length": 18,
       "value": "\"LoginPromptTitle\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/LoginPrompt\/Views\/OWLoginPromptView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1206,
+      "offset": 1174,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/LoginPrompt\/Views\/OWLoginPromptView.swift",
       "kind": "StringLiteral",
-      "offset": 1587,
+      "offset": 1555,
       "length": 18,
       "value": "\"loginPromptArrow\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/LoginPrompt\/Views\/OWLoginPromptView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1624,
+      "offset": 1592,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/LoginPrompt\/Views\/OWLoginPromptView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3107,
+      "offset": 3075,
       "length": 4,
       "value": "true"
     },
@@ -70385,42 +70664,42 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/PreConversationFooter\/Views\/OWPreConversationFooterView.swift",
       "kind": "StringLiteral",
-      "offset": 898,
+      "offset": 866,
       "length": 7,
       "value": "\"Terms\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/PreConversationFooter\/Views\/OWPreConversationFooterView.swift",
       "kind": "StringLiteral",
-      "offset": 1147,
+      "offset": 1115,
       "length": 3,
       "value": "\"|\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/PreConversationFooter\/Views\/OWPreConversationFooterView.swift",
       "kind": "StringLiteral",
-      "offset": 1452,
+      "offset": 1388,
       "length": 9,
       "value": "\"Privacy\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/PreConversationFooter\/Views\/OWPreConversationFooterView.swift",
       "kind": "StringLiteral",
-      "offset": 1761,
+      "offset": 1697,
       "length": 14,
       "value": "\"OpenWeb-logo\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/PreConversationFooter\/Views\/OWPreConversationFooterView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1794,
+      "offset": 1730,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/PreConversationFooter\/Views\/OWPreConversationFooterView.swift",
       "kind": "StringLiteral",
-      "offset": 1930,
+      "offset": 1834,
       "length": 11,
       "value": "\"PoweredBy\""
     },
@@ -70777,7 +71056,7 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/RealtimeIndication\/RealtimeTyping\/ViewModels\/OWRealtimeTypingViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 1368,
+      "offset": 1336,
       "length": 11,
       "value": "\"TypingNow\""
     },
@@ -70931,30 +71210,23 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Toast\/Views\/OWToastView.swift",
       "kind": "IntegerLiteral",
-      "offset": 568,
-      "length": 2,
-      "value": "15"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Toast\/Views\/OWToastView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 623,
+      "offset": 581,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Toast\/Views\/OWToastView.swift",
       "kind": "IntegerLiteral",
-      "offset": 676,
+      "offset": 634,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Toast\/Views\/OWToastView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1390,
+      "offset": 1080,
       "length": 1,
-      "value": "1"
+      "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SubmitedView\/ViewModels\/OWSubmittedViewVM.swift",
@@ -71169,14 +71441,14 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/UserMention\/Cells\/UserMentionSearchingCell\/Views\/OWUserMentionLoadingCell.swift",
       "kind": "StringLiteral",
-      "offset": 1091,
+      "offset": 1059,
       "length": 9,
       "value": "\"Loading\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/UserMention\/Cells\/UserMentionSearchingCell\/Views\/OWUserMentionLoadingCell.swift",
       "kind": "StringLiteral",
-      "offset": 1104,
+      "offset": 1072,
       "length": 5,
       "value": "\"...\""
     },
@@ -71918,581 +72190,581 @@
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 11847,
+      "offset": 11806,
+      "length": 12,
+      "value": "\"closeToast\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 11989,
       "length": 33,
       "value": "\"closedAndEmptyConversation-icon\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 12060,
+      "offset": 12202,
       "length": 38,
       "value": "\"closedAndEmptyConversation-icon-dark\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 12254,
+      "offset": 12396,
       "length": 25,
       "value": "\"commentCreationEditIcon\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 12437,
+      "offset": 12579,
       "length": 26,
       "value": "\"commentCreationReplyIcon\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 12617,
+      "offset": 12759,
       "length": 24,
       "value": "\"commentingReadOnlyIcon\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 12804,
+      "offset": 12946,
       "length": 29,
       "value": "\"commentingReadOnlyIcon-dark\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 12961,
-      "length": 11,
-      "value": "\"crossmark\""
-    },
-    {
-      "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
-      "kind": "StringLiteral",
-      "offset": 13108,
+      "offset": 13111,
       "length": 15,
       "value": "\"defaultAvatar\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 13268,
+      "offset": 13271,
       "length": 20,
       "value": "\"defaultAvatar-dark\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 13432,
+      "offset": 13435,
       "length": 19,
       "value": "\"emptyCommentsIcon\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 13604,
+      "offset": 13607,
       "length": 24,
       "value": "\"emptyCommentsIcon-dark\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 13788,
+      "offset": 13791,
       "length": 27,
       "value": "\"emptyCommentsReadOnlyIcon\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 13984,
+      "offset": 13987,
       "length": 32,
       "value": "\"emptyCommentsReadOnlyIcon-dark\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 14169,
+      "offset": 14172,
       "length": 24,
       "value": "\"emptyConversation-icon\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 14355,
+      "offset": 14358,
       "length": 29,
       "value": "\"emptyConversation-icon-dark\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 14522,
+      "offset": 14525,
       "length": 16,
       "value": "\"errorStateIcon\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 14685,
+      "offset": 14688,
       "length": 21,
       "value": "\"errorStateIcon-dark\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 14854,
+      "offset": 14857,
       "length": 21,
       "value": "\"errorStateRetryIcon\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 15005,
+      "offset": 15008,
       "length": 12,
       "value": "\"errorToast\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 15142,
+      "offset": 15145,
       "length": 10,
       "value": "\"eye-icon\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 15279,
+      "offset": 15282,
       "length": 11,
       "value": "\"flag-icon\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 15428,
+      "offset": 15431,
       "length": 16,
       "value": "\"guidelinesIcon\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 15573,
+      "offset": 15576,
       "length": 12,
       "value": "\"heart-icon\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 15737,
+      "offset": 15740,
       "length": 23,
       "value": "\"imageMediaPlaceholder\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 15912,
+      "offset": 15915,
       "length": 23,
       "value": "\"imagePlaceholderEmpty\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 16062,
+      "offset": 16065,
       "length": 11,
       "value": "\"info-icon\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 16215,
+      "offset": 16218,
       "length": 18,
       "value": "\"informationToast\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 16375,
+      "offset": 16378,
       "length": 19,
       "value": "\"leader_badge_icon\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 16536,
+      "offset": 16539,
       "length": 18,
       "value": "\"loginPromptArrow\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 16694,
+      "offset": 16697,
       "length": 17,
       "value": "\"loginPromptLock\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 16848,
+      "offset": 16851,
       "length": 16,
       "value": "\"megaphone-icon\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 16991,
+      "offset": 16994,
       "length": 11,
       "value": "\"menu_icon\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 17138,
+      "offset": 17141,
       "length": 16,
       "value": "\"menu_icon-dark\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 17324,
+      "offset": 17327,
       "length": 32,
       "value": "\"messageDisclosureIndicatorIcon\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 17535,
+      "offset": 17538,
       "length": 37,
       "value": "\"messageDisclosureIndicatorIcon-dark\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 17714,
+      "offset": 17717,
       "length": 18,
       "value": "\"newCommentsArrow\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 17883,
+      "offset": 17886,
       "length": 23,
       "value": "\"newCommentsArrow-dark\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 18034,
+      "offset": 18037,
       "length": 11,
       "value": "\"nextArrow\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 18182,
+      "offset": 18185,
       "length": 16,
       "value": "\"nextArrow-dark\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 18336,
+      "offset": 18339,
       "length": 16,
       "value": "\"noInternetIcon\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 18499,
+      "offset": 18502,
       "length": 21,
       "value": "\"noInternetIcon-dark\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 18658,
+      "offset": 18661,
       "length": 16,
       "value": "\"oldPendingIcon\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 18820,
+      "offset": 18823,
       "length": 20,
       "value": "\"onlineViewingUsers\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 18978,
+      "offset": 18981,
       "length": 16,
       "value": "\"openThreadIcon\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 19138,
+      "offset": 19141,
       "length": 19,
       "value": "\"openwebIconSimple\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 19310,
+      "offset": 19313,
       "length": 24,
       "value": "\"openwebIconSimple-dark\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 19466,
+      "offset": 19469,
       "length": 13,
       "value": "\"optionsIcon\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 19620,
+      "offset": 19623,
       "length": 18,
       "value": "\"optionsIcon-dark\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 19770,
+      "offset": 19773,
       "length": 13,
       "value": "\"pendingIcon\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 19924,
+      "offset": 19927,
       "length": 18,
       "value": "\"pendingIcon-dark\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 20080,
+      "offset": 20083,
       "length": 17,
       "value": "\"rank_arrow_down\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 20252,
+      "offset": 20255,
       "length": 26,
       "value": "\"rank_arrow_down_selected\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 20412,
+      "offset": 20415,
       "length": 15,
       "value": "\"rank_arrow_up\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 20578,
+      "offset": 20581,
       "length": 24,
       "value": "\"rank_arrow_up_selected\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 20731,
+      "offset": 20734,
       "length": 12,
       "value": "\"rank_heart\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 20889,
+      "offset": 20892,
       "length": 21,
       "value": "\"rank_heart_selected\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 21046,
+      "offset": 21049,
       "length": 16,
       "value": "\"rank_like_down\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 21215,
+      "offset": 21218,
       "length": 25,
       "value": "\"rank_like_down_selected\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 21372,
+      "offset": 21375,
       "length": 14,
       "value": "\"rank_like_up\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 21535,
+      "offset": 21538,
       "length": 23,
       "value": "\"rank_like_up_selected\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 21685,
+      "offset": 21688,
       "length": 11,
       "value": "\"rank_star\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 21840,
+      "offset": 21843,
       "length": 20,
       "value": "\"rank_star_selected\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 21990,
+      "offset": 21993,
       "length": 12,
       "value": "\"rejectIcon\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 22136,
+      "offset": 22139,
       "length": 14,
       "value": "\"rejectedIcon\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 22290,
+      "offset": 22293,
       "length": 17,
       "value": "\"removeImageIcon\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 22447,
+      "offset": 22450,
       "length": 17,
       "value": "\"sendCommentIcon\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 22604,
+      "offset": 22607,
       "length": 17,
       "value": "\"shareButtonIcon\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 22739,
+      "offset": 22742,
       "length": 6,
       "value": "\"sort\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 22872,
+      "offset": 22875,
       "length": 11,
       "value": "\"sort-dark\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 23015,
+      "offset": 23018,
       "length": 13,
       "value": "\"sortingIcon\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 23169,
+      "offset": 23172,
       "length": 18,
       "value": "\"sortingIcon-dark\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 23305,
+      "offset": 23308,
       "length": 6,
       "value": "\"star\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 23445,
+      "offset": 23448,
       "length": 14,
       "value": "\"successToast\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 23586,
+      "offset": 23589,
       "length": 11,
       "value": "\"time-icon\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 23733,
+      "offset": 23736,
       "length": 16,
       "value": "\"time-icon-dark\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 23875,
+      "offset": 23878,
       "length": 10,
       "value": "\"tryAgain\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 24003,
+      "offset": 24006,
       "length": 6,
       "value": "\"undo\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 24135,
+      "offset": 24138,
       "length": 10,
       "value": "\"userIcon\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 24280,
+      "offset": 24283,
       "length": 15,
       "value": "\"userIcon-dark\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 24416,
+      "offset": 24419,
       "length": 8,
       "value": "\"v-icon\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 24554,
+      "offset": 24557,
       "length": 12,
       "value": "\"verifyIcon\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 24700,
+      "offset": 24703,
       "length": 14,
       "value": "\"viewingUsers\""
     },
     {
       "filePath": "\/Users\/distiller\/Library\/Developer\/Xcode\/DerivedData\/OpenWeb-Development-guiosdbxxzstzdedeficseukpzen\/Build\/Intermediates.noindex\/ArchiveIntermediates\/OpenWeb-SDK\/IntermediateBuildFilesPath\/OpenWeb-Development.build\/ReleaseInternal-iphoneos\/OpenWebSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 24848,
+      "offset": 24851,
       "length": 14,
       "value": "\"warningToast\""
     }
