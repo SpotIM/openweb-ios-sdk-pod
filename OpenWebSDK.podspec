@@ -25,4 +25,6 @@ Pod::Spec.new do |s|
   s.dependency 'RxRelay', '~> 6.7.0'
   s.dependency 'RxCocoa', '~> 6.7.0'
 
+	s.dependency 'OpenWebCommon', "#{s.version}"
+
 end
