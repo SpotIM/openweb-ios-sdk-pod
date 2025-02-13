@@ -1,22 +1,19 @@
 // swift-tools-version:5.5
 import PackageDescription
 
-let version = "1.0.0"
+let version = "1.1.0"
 let vendorFrameworkshostingUrl = "https://github.com/SpotIM/openweb-ios-vendor-frameworks/releases/download/\(version)/"
 let owSDK = "OpenWebSDK"
 let owSDKWrapperTarget = "OpenWebSDKWrapperTarget"
 
 let frameworksChecksumMapper = [
-    "RxSwift": "8dda0dd2c6ae8d86b8440c880f50e30c75950a7bff38fd83d7554c2d3abb758f",
-    "RxCocoa": "4546710b488e4d4c1b4d0b292eb5ca90893da1203b45fddbfb2ba7c139368dba",
-    "RxRelay": "40175e1abb021a5f6d580acf78ec3e553ebd9ee15b4ebe0201310fa2d355b828"
+    "RxSwift": "189525e6d5f585a5f6a1f7c9e7b0c96eea3b978f787ab6fa44193e0ede66dbf3",
+    "RxCocoa": "0af7ef734e5430b5022b4d3a6f1d13550c97a14f3ea16c91bac61500935c93aa",
+    "RxRelay": "10b7f4192e30043e25638952764609d785a29abe628df5e1074fdc02264f9617"
 ]
 
 func createProducts() -> [Product] {
-    let products: [Product] = [.library(name: owSDK, targets: [owSDKWrapperTarget]),
-                               .library(name: "RxSwift", targets: [owSDKWrapperTarget]),
-                               .library(name: "RxCocoa", targets: [owSDKWrapperTarget]),
-                               .library(name: "RxRelay", targets: [owSDKWrapperTarget])]
+    let products: [Product] = [.library(name: owSDK, targets: [owSDKWrapperTarget])]
 
     return products
 }
