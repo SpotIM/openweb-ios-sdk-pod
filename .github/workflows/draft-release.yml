@@ -25,7 +25,7 @@ jobs:
 
       - name: Prepare Draft GitHub Release
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_OPENWEB_USER_TOKEN }}
+          GH_TOKEN: ${{ secrets.OPENWEB_USER_TOKEN }}
         run: |
           gh release create "$SDK_VERSION" \
             --title "Version $SDK_VERSION" \
