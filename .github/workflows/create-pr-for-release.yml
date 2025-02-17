@@ -24,7 +24,7 @@ jobs:
 
       - name: Create Pull Request
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_OPENWEB_USER_TOKEN }}
+          GH_TOKEN: ${{ secrets.OPENWEB_USER_TOKEN }}
         run: |
           gh pr create \
             --base master \
