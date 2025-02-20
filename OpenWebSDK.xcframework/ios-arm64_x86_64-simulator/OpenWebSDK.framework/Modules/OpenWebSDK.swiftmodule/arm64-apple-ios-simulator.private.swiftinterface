@@ -577,12 +577,16 @@ public enum OWRouteringMode {
   case none
   case flow(navigationController: UIKit.UINavigationController)
 }
-public enum OWSortOption : Swift.String {
+public enum OWSortOption : Swift.String, Swift.CaseIterable {
   case best
   case newest
   case oldest
   public init?(rawValue: Swift.String)
+  public typealias AllCases = [OpenWebSDK.OWSortOption]
   public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [OpenWebSDK.OWSortOption] {
+    get
+  }
   public var rawValue: Swift.String {
     get
   }

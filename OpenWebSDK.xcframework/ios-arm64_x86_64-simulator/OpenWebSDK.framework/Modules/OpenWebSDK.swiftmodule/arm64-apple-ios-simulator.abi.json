@@ -21673,6 +21673,66 @@
                 "accessorKind": "get"
               }
             ]
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[OpenWebSDK.OWSortOption]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OWSortOption",
+                    "printedName": "OpenWebSDK.OWSortOption",
+                    "usr": "s:10OpenWebSDK12OWSortOptionO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10OpenWebSDK12OWSortOptionO8allCasesSayACGvpZ",
+            "mangledName": "$s10OpenWebSDK12OWSortOptionO8allCasesSayACGvpZ",
+            "moduleName": "OpenWebSDK",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Nonisolated"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[OpenWebSDK.OWSortOption]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OWSortOption",
+                        "printedName": "OpenWebSDK.OWSortOption",
+                        "usr": "s:10OpenWebSDK12OWSortOptionO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10OpenWebSDK12OWSortOptionO8allCasesSayACGvgZ",
+                "mangledName": "$s10OpenWebSDK12OWSortOptionO8allCasesSayACGvgZ",
+                "moduleName": "OpenWebSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
           }
         ],
         "declKind": "Enum",
@@ -21733,6 +21793,36 @@
             ],
             "usr": "s:SY",
             "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[OpenWebSDK.OWSortOption]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OWSortOption",
+                        "printedName": "OpenWebSDK.OWSortOption",
+                        "usr": "s:10OpenWebSDK12OWSortOptionO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
           }
         ]
       },
@@ -40499,6 +40589,16 @@
       },
       {
         "kind": "Import",
+        "name": "RxSwift",
+        "printedName": "RxSwift",
+        "declKind": "Import",
+        "moduleName": "OpenWebSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -56223,56 +56323,77 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Models\/RealTime\/OWRealTimeData.swift",
       "kind": "StringLiteral",
-      "offset": 723,
+      "offset": 916,
       "length": 29,
       "value": "\"conversation\/count-messages\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Models\/RealTime\/OWRealTimeData.swift",
       "kind": "StringLiteral",
-      "offset": 794,
+      "offset": 987,
       "length": 30,
       "value": "\"conversation\/typing-v2-count\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Models\/RealTime\/OWRealTimeData.swift",
       "kind": "StringLiteral",
-      "offset": 866,
+      "offset": 1059,
       "length": 30,
       "value": "\"conversation\/typing-v2-users\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Models\/RealTime\/OWRealTimeData.swift",
       "kind": "StringLiteral",
-      "offset": 936,
+      "offset": 1129,
       "length": 27,
       "value": "\"conversation\/new-messages\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Models\/RealTime\/OWRealTimeData.swift",
       "kind": "StringLiteral",
-      "offset": 998,
+      "offset": 1200,
+      "length": 31,
+      "value": "\"conversation\/deleted-messages\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Models\/RealTime\/OWRealTimeData.swift",
+      "kind": "StringLiteral",
+      "offset": 1275,
+      "length": 31,
+      "value": "\"conversation\/updated-messages\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Models\/RealTime\/OWRealTimeData.swift",
+      "kind": "StringLiteral",
+      "offset": 1341,
       "length": 20,
       "value": "\"online\/users-count\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Models\/RealTime\/OWRealTimeData.swift",
       "kind": "StringLiteral",
-      "offset": 1046,
+      "offset": 1389,
       "length": 14,
       "value": "\"online\/users\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Models\/RealTime\/OWRealTimeData.swift",
       "kind": "StringLiteral",
-      "offset": 1143,
+      "offset": 1430,
+      "length": 27,
+      "value": "\"conversation\/is-read-only\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Models\/RealTime\/OWRealTimeData.swift",
+      "kind": "StringLiteral",
+      "offset": 1540,
       "length": 12,
       "value": "\"NewComment\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Models\/RealTime\/OWRealTimeData.swift",
       "kind": "IntegerLiteral",
-      "offset": 1247,
+      "offset": 1644,
       "length": 1,
       "value": "1"
     },
@@ -56289,6 +56410,13 @@
       "offset": 361,
       "length": 10,
       "value": "\"Comments\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Models\/RealTime\/OWRealTimeReadOnly.swift",
+      "kind": "StringLiteral",
+      "offset": 286,
+      "length": 11,
+      "value": "\"read-only\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Models\/Sorting\/OWSortingCustomizer.swift",
@@ -56405,86 +56533,93 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Network\/Endpoints\/OWRealtimeEndpoints.swift",
       "kind": "StringLiteral",
-      "offset": 2534,
+      "offset": 2609,
       "length": 11,
       "value": "\"timestamp\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Network\/Endpoints\/OWRealtimeEndpoints.swift",
       "kind": "StringLiteral",
-      "offset": 2572,
+      "offset": 2647,
       "length": 6,
       "value": "\"data\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Network\/Endpoints\/OWRealtimeEndpoints.swift",
       "kind": "StringLiteral",
-      "offset": 2615,
+      "offset": 2690,
       "length": 17,
       "value": "\"conversation_id\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Network\/Endpoints\/OWRealtimeEndpoints.swift",
       "kind": "StringLiteral",
-      "offset": 2678,
+      "offset": 2753,
       "length": 27,
       "value": "\"conversation\/new-messages\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Network\/Endpoints\/OWRealtimeEndpoints.swift",
       "kind": "StringLiteral",
-      "offset": 2753,
+      "offset": 2828,
       "length": 29,
       "value": "\"conversation\/count-messages\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Network\/Endpoints\/OWRealtimeEndpoints.swift",
       "kind": "StringLiteral",
-      "offset": 2816,
+      "offset": 2891,
       "length": 14,
       "value": "\"online\/users\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Network\/Endpoints\/OWRealtimeEndpoints.swift",
       "kind": "StringLiteral",
-      "offset": 2876,
+      "offset": 2951,
       "length": 20,
       "value": "\"online\/users-count\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Network\/Endpoints\/OWRealtimeEndpoints.swift",
       "kind": "StringLiteral",
-      "offset": 2946,
+      "offset": 3021,
       "length": 31,
       "value": "\"conversation\/updated-messages\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Network\/Endpoints\/OWRealtimeEndpoints.swift",
       "kind": "StringLiteral",
-      "offset": 3027,
+      "offset": 3102,
       "length": 31,
       "value": "\"conversation\/deleted-messages\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Network\/Endpoints\/OWRealtimeEndpoints.swift",
       "kind": "StringLiteral",
-      "offset": 3091,
+      "offset": 3166,
       "length": 13,
       "value": "\"message_ids\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Network\/Endpoints\/OWRealtimeEndpoints.swift",
       "kind": "StringLiteral",
-      "offset": 3152,
+      "offset": 3227,
       "length": 30,
       "value": "\"conversation\/typing-v2-users\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Network\/Endpoints\/OWRealtimeEndpoints.swift",
       "kind": "StringLiteral",
-      "offset": 3230,
+      "offset": 3305,
       "length": 30,
       "value": "\"conversation\/typing-v2-count\""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Network\/Endpoints\/OWRealtimeEndpoints.swift",
+      "kind": "StringLiteral",
+      "offset": 3380,
+      "length": 27,
+      "value": "\"conversation\/is-read-only\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Network\/Endpoints\/OWReportReasonEndpoints.swift",
@@ -59226,21 +59361,21 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Services\/OWRealtimeService.swift",
       "kind": "BooleanLiteral",
-      "offset": 767,
+      "offset": 823,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Services\/OWRealtimeService.swift",
       "kind": "StringLiteral",
-      "offset": 1042,
+      "offset": 1098,
       "length": 32,
       "value": "\"OpenWebSDKRealtimeServiceQueue\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Services\/OWRealtimeService.swift",
       "kind": "IntegerLiteral",
-      "offset": 1624,
+      "offset": 1680,
       "length": 1,
       "value": "1"
     },
@@ -63230,196 +63365,196 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 2653,
+      "offset": 2684,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 2706,
+      "offset": 2737,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 2769,
+      "offset": 2800,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 2831,
+      "offset": 2862,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 2902,
+      "offset": 2933,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 2964,
+      "offset": 2995,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 3036,
+      "offset": 3067,
       "length": 3,
       "value": "500"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 3112,
+      "offset": 3143,
       "length": 3,
       "value": "500"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 3178,
+      "offset": 3209,
       "length": 4,
       "value": "2000"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 3259,
+      "offset": 3290,
       "length": 3,
       "value": "500"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 3325,
+      "offset": 3356,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 3379,
+      "offset": 3410,
       "length": 3,
       "value": "500"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 3449,
+      "offset": 3480,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 3520,
+      "offset": 3551,
       "length": 3,
       "value": "300"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 3591,
+      "offset": 3622,
       "length": 3,
       "value": "450"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 4008,
+      "offset": 4039,
       "length": 9,
       "value": "\"Replies\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 4431,
+      "offset": 4462,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "Dictionary",
-      "offset": 4583,
+      "offset": 4614,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 5716,
+      "offset": 5739,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 5901,
+      "offset": 5916,
       "length": 30,
       "value": "\"commentThreadViewVMScheduler\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 6337,
+      "offset": 6344,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 6428,
+      "offset": 6435,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "Array",
-      "offset": 8275,
+      "offset": 8282,
       "length": 2,
       "value": "[[]]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "Array",
-      "offset": 9379,
+      "offset": 9386,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "Array",
-      "offset": 9522,
+      "offset": 9529,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 12736,
+      "offset": 12743,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 16009,
+      "offset": 16016,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/CommentThread\/ViewModels\/OWCommentThreadViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 23162,
+      "offset": 23169,
       "length": 1,
       "value": "0"
     },
@@ -63811,14 +63946,14 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ConversationSummary\/Views\/OWConversationSortView.swift",
       "kind": "StringLiteral",
-      "offset": 821,
+      "offset": 881,
       "length": 8,
       "value": "\"SortBy\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ConversationSummary\/Views\/OWConversationSortView.swift",
       "kind": "StringLiteral",
-      "offset": 1245,
+      "offset": 1305,
       "length": 6,
       "value": "\"sort\""
     },
@@ -64035,350 +64170,350 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 4577,
+      "offset": 4643,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 4630,
+      "offset": 4696,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 4692,
+      "offset": 4758,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 4750,
+      "offset": 4816,
       "length": 4,
       "value": "2000"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 4818,
+      "offset": 4884,
       "length": 3,
       "value": "100"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 4888,
+      "offset": 4954,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 4957,
+      "offset": 5023,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 5036,
+      "offset": 5102,
       "length": 3,
       "value": "500"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 5107,
+      "offset": 5173,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 5175,
+      "offset": 5241,
       "length": 3,
       "value": "500"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 5251,
+      "offset": 5317,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 5320,
+      "offset": 5386,
       "length": 3,
       "value": "500"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 5384,
+      "offset": 5450,
       "length": 3,
       "value": "300"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 5477,
+      "offset": 5543,
       "length": 3,
       "value": "100"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 5540,
+      "offset": 5606,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 5606,
+      "offset": 5672,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 5659,
+      "offset": 5725,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 5734,
+      "offset": 5800,
       "length": 3,
       "value": "800"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 5799,
+      "offset": 5865,
       "length": 3,
       "value": "450"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 5867,
+      "offset": 5933,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 5936,
+      "offset": 6002,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 5988,
+      "offset": 6054,
       "length": 3,
       "value": "500"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 6046,
+      "offset": 6112,
       "length": 3,
       "value": "350"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "Dictionary",
-      "offset": 6187,
+      "offset": 6253,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 6330,
+      "offset": 6396,
       "length": 25,
       "value": "\"conversationViewVMQueue\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 6551,
+      "offset": 6617,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 6689,
+      "offset": 6755,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 6974,
+      "offset": 7040,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 7207,
+      "offset": 7273,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 8042,
+      "offset": 8108,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 8171,
+      "offset": 8237,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 8676,
+      "offset": 8742,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 8907,
+      "offset": 8973,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 9135,
+      "offset": 9201,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 9624,
+      "offset": 9690,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 9664,
+      "offset": 9730,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 9708,
+      "offset": 9774,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 10278,
+      "offset": 10344,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 12006,
+      "offset": 12064,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 16302,
+      "offset": 16360,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "Array",
-      "offset": 17873,
+      "offset": 17931,
       "length": 2,
       "value": "[[]]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "Array",
-      "offset": 18359,
+      "offset": 18417,
       "length": 2,
       "value": "[[]]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "Array",
-      "offset": 20362,
+      "offset": 20420,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "Array",
-      "offset": 20493,
+      "offset": 20551,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "Array",
-      "offset": 21241,
+      "offset": 21299,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "Array",
-      "offset": 21337,
+      "offset": 21395,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 25342,
+      "offset": 25400,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 29911,
+      "offset": 29969,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 38683,
+      "offset": 38725,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ViewModels\/OWConversationViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 39223,
+      "offset": 39265,
       "length": 5,
       "value": "false"
     },
@@ -65547,168 +65682,168 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 3928,
+      "offset": 3997,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 3984,
+      "offset": 4053,
       "length": 3,
       "value": "100"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 4043,
+      "offset": 4112,
       "length": 34,
       "value": "\"pre_conversation_view_@_style_id\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 4144,
+      "offset": 4213,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 4210,
+      "offset": 4279,
       "length": 4,
       "value": "2000"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 4282,
+      "offset": 4351,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 4587,
+      "offset": 4656,
       "length": 32,
       "value": "\"preConversationViewVMScheduler\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 5055,
+      "offset": 5108,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 6588,
+      "offset": 6641,
       "length": 3,
       "value": "\"@\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 8453,
+      "offset": 8506,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 8483,
+      "offset": 8536,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 8834,
+      "offset": 8887,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 9200,
+      "offset": 9245,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationViewVM.swift",
       "kind": "IntegerLiteral",
-      "offset": 9924,
+      "offset": 9969,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 9928,
+      "offset": 9973,
       "length": 24,
       "value": "\"(\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 9950,
+      "offset": 9995,
       "length": 1,
       "value": "\")\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 9955,
+      "offset": 10000,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 11153,
+      "offset": 11198,
       "length": 18,
       "value": "\"ShowMoreComments\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 11215,
+      "offset": 11260,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationViewVM.swift",
       "kind": "StringLiteral",
-      "offset": 11301,
+      "offset": 11346,
       "length": 14,
       "value": "\"ShowComments\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 16161,
+      "offset": 16206,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 16652,
+      "offset": 16697,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 18536,
+      "offset": 18581,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/PreConversation\/ViewModels\/OWPreConversationViewVM.swift",
       "kind": "BooleanLiteral",
-      "offset": 18838,
+      "offset": 18883,
       "length": 5,
       "value": "false"
     },
@@ -69355,49 +69490,35 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/CommentingCTA\/ViewModels\/OWCommentingCTAViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1671,
+      "offset": 1608,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/CommentingCTA\/ViewModels\/OWCommentingCTAViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 2183,
+      "offset": 2120,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/CommentingCTA\/ViewModels\/OWCommentingCTAViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 2230,
+      "offset": 2167,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/CommentingCTA\/ViewModels\/OWCommentingCTAViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 2458,
+      "offset": 2395,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/CommentingCTA\/ViewModels\/OWCommentingCTAViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 2504,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/CommentingCTA\/ViewModels\/OWCommentingCTAViewModel.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2745,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/CommentingCTA\/ViewModels\/OWCommentingCTAViewModel.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2791,
+      "offset": 2441,
       "length": 5,
       "value": "false"
     },
