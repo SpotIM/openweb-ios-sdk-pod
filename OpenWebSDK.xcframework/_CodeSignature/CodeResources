@@ -260,7 +260,7 @@
 		</data>
 		<key>ios-arm64/dSYMs/OpenWebSDK.framework.dSYM/Contents/Resources/DWARF/OpenWebSDK</key>
 		<data>
-		BYOEMNetrdD/+T9KE0VGjHerdwQ=
+		gptzE6/ZgX3Eo99eCc98mxhRE1c=
 		</data>
 		<key>ios-arm64/dSYMs/OpenWebSDK.framework.dSYM/Contents/Resources/Relocations/aarch64/OpenWebSDK.yml</key>
 		<data>
@@ -542,7 +542,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/OpenWebSDK.framework.dSYM/Contents/Resources/DWARF/OpenWebSDK</key>
 		<data>
-		CnGaSHFEne3XTOYBVu6hd+NK3Qg=
+		3UePJq9I5t/hfRN8CvqVKUHhSrU=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/OpenWebSDK.framework.dSYM/Contents/Resources/Relocations/aarch64/OpenWebSDK.yml</key>
 		<data>
@@ -1046,11 +1046,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			BYOEMNetrdD/+T9KE0VGjHerdwQ=
+			gptzE6/ZgX3Eo99eCc98mxhRE1c=
 			</data>
 			<key>hash2</key>
 			<data>
-			hLIGyO9NPPOwNbdJX6aKdHZfWIcMw/jDMw2cfjYqqDU=
+			AiXYBhaoKSv+QnRZw5JdH02UtMgtQPpP11qD3qbNjTQ=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/OpenWebSDK.framework.dSYM/Contents/Resources/Relocations/aarch64/OpenWebSDK.yml</key>
@@ -1610,11 +1610,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CnGaSHFEne3XTOYBVu6hd+NK3Qg=
+			3UePJq9I5t/hfRN8CvqVKUHhSrU=
 			</data>
 			<key>hash2</key>
 			<data>
-			oB2DKrk82D/3nLCuSTQ73qS+RYUACCoiZW4Sv2303dk=
+			zSerHpKK5cA0r7vWGCmqiXbsrdMsCe71hl4s9zMkqM8=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/OpenWebSDK.framework.dSYM/Contents/Resources/Relocations/aarch64/OpenWebSDK.yml</key>
