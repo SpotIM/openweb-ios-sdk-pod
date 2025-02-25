@@ -1,0 +1,145 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-bare-slash-regex -module-name OpenWebCommon
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public typealias OWSpotId = Swift.String
+public typealias OWPostId = Swift.String
+public typealias OWCommentId = Swift.String
+public typealias OWUserId = Swift.String
+public typealias OWFilterTabId = Swift.String
+public struct OWPageViewId {
+  public let postId: OpenWebCommon.OWPostId
+  public let pageViewId: Swift.String
+  public init(postId: OpenWebCommon.OWPostId, pageViewId: Swift.String)
+}
+public enum OWIAUAdConfiguration {
+  case server(remote: OpenWebCommon.OWIAURemoteAdsStrategy)
+}
+public enum OWIAUError : Swift.Error {
+  case missingSpotId
+  case castingError(description: Swift.String)
+  case missingStoreURL
+}
+public enum OWIAURemoteAdsStrategy {
+  case tmsServer(index: Swift.Int, component: OpenWebCommon.OWIAUTmsComponent = .independentAd)
+}
+public enum OWIAUTmsComponent {
+  case independentAd
+  case preConversationAd
+  case inConversationAds
+  public static func == (a: OpenWebCommon.OWIAUTmsComponent, b: OpenWebCommon.OWIAUTmsComponent) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum OWIAUViewActionCallbackType {
+  case adSizeChanged(UIKit.UIView, CoreFoundation.CGSize)
+}
+public enum OWIAUViewEventCallbackType : Swift.Codable, Swift.Equatable {
+  case video(OpenWebCommon.OWIAUViewEventCallbackVideoType)
+  case display(OpenWebCommon.OWIAUViewEventCallbackDisplayType)
+  public var description: Swift.String {
+    get
+  }
+  public static func == (a: OpenWebCommon.OWIAUViewEventCallbackType, b: OpenWebCommon.OWIAUViewEventCallbackType) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum OWIAUViewEventCallbackVideoType : Swift.Codable, Swift.Equatable {
+  case adServerCalled
+  case inventory
+  case viewableImpression
+  case sourceLoaded
+  case impression
+  case progress(_: OpenWebCommon.OWIAUVideoProgress)
+  case fullScreenToggleRequested
+  case movedToFullscreen
+  case movedFromFullscreen
+  case clickThrough
+  case skippableStateChange
+  case adPaused
+  case closed
+  case error(_: Swift.String)
+  case generic(_: Swift.String)
+  public var description: Swift.String {
+    get
+  }
+  public static func == (a: OpenWebCommon.OWIAUViewEventCallbackVideoType, b: OpenWebCommon.OWIAUViewEventCallbackVideoType) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum OWIAUViewEventCallbackDisplayType : Swift.Codable, Swift.Equatable {
+  case inventory
+  case sourceLoaded
+  case error(_: Swift.String)
+  case impression
+  case viewableImpression
+  case clickThrough
+  case closed
+  public var description: Swift.String {
+    get
+  }
+  public static func == (a: OpenWebCommon.OWIAUViewEventCallbackDisplayType, b: OpenWebCommon.OWIAUViewEventCallbackDisplayType) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum OWIAUVideoProgress : Swift.Codable, Swift.Equatable {
+  case started
+  case firstQuartile
+  case midpoint
+  case thirdQuartile
+  case complete
+  public var description: Swift.String {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: OpenWebCommon.OWIAUVideoProgress, b: OpenWebCommon.OWIAUVideoProgress) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum OWIAUViewSourceType : Swift.Codable, Swift.Equatable {
+  case ad
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: OpenWebCommon.OWIAUViewSourceType, b: OpenWebCommon.OWIAUViewSourceType) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public protocol OWIAUAdSettingsProtocol {
+  var configuration: OpenWebCommon.OWIAUAdConfiguration { get }
+}
+public protocol OWIAUSettingsProtocol {
+  var storeURL: Swift.String? { get }
+}
+public typealias OWIAUAdViewActionsCallbacks = (OpenWebCommon.OWIAUViewActionCallbackType, OpenWebCommon.OWIAUViewSourceType, OpenWebCommon.OWPostId) -> Swift.Void
+public typealias OWIAUViewCompletion = (Swift.Result<UIKit.UIView, OpenWebCommon.OWIAUError>) -> Swift.Void
+public typealias OWIAUAdViewEventsCallbacks = (OpenWebCommon.OWIAUViewEventCallbackType, OpenWebCommon.OWIAUViewSourceType, OpenWebCommon.OWPostId) -> Swift.Void
+public class OWIAUAdSettings : OpenWebCommon.OWIAUAdSettingsProtocol {
+  public var configuration: OpenWebCommon.OWIAUAdConfiguration
+  public init(configuration: OpenWebCommon.OWIAUAdConfiguration)
+  @objc deinit
+}
+public protocol OWIAUDelegate : AnyObject {
+  func getPageViewId(postId: OpenWebCommon.OWPostId) -> Swift.String
+}
+public protocol OWIAUProviding {
+  var delegate: (any OpenWebCommon.OWIAUDelegate)? { get set }
+  var spotId: OpenWebCommon.OWSpotId { get set }
+  var settings: any OpenWebCommon.OWIAUSettingsProtocol { get set }
+  func ad(postId: OpenWebCommon.OWPostId, settings: any OpenWebCommon.OWIAUAdSettingsProtocol, viewEventCallbacks: OpenWebCommon.OWIAUAdViewEventsCallbacks?, actionsCallbacks: OpenWebCommon.OWIAUAdViewActionsCallbacks?, completion: @escaping OpenWebCommon.OWIAUViewCompletion)
+}
+extension OpenWebCommon.OWIAUTmsComponent : Swift.Equatable {}
+extension OpenWebCommon.OWIAUTmsComponent : Swift.Hashable {}
+extension OpenWebCommon.OWIAUVideoProgress : Swift.Hashable {}
+extension OpenWebCommon.OWIAUViewSourceType : Swift.Hashable {}
