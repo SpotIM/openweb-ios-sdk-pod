@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.license         = { :type => 'CUSTOM', :file => 'LICENSE' }
   s.author          = { 'Alon Haiut' => 'alon.h@openweb.com' }
   s.platform        = :ios
-  s.ios.deployment_target = '12.0'
+  s.ios.deployment_target = '13.0'
 
 # the Pre-Compiled Framework:
   s.source          = { :git => 'https://github.com/SpotIM/openweb-ios-sdk-pod.git', :tag => s.version.to_s }
