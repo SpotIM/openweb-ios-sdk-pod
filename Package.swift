@@ -18,6 +18,16 @@ func createProducts() -> [Product] {
     return products
 }
 
+func createDependencies() -> [Package.Dependency] {
+    return [
+        .package(
+            name: "OpenWebCommon",
+            url: "https://github.com/SpotIM/openweb-ios-common-sdk-pod.git",
+            .upToNextMinor(from: "1.0.0")
+        )
+    ]
+}
+
 func createTargets() -> [Target] {
     var targets = [Target]()
 
@@ -41,7 +51,8 @@ func createTargets() -> [Target] {
             .target(name: "OpenWebSDK", condition: .when(platforms: .some([.iOS]))),
             .target(name: "RxSwift", condition: .when(platforms: .some([.iOS]))),
             .target(name: "RxCocoa", condition: .when(platforms: .some([.iOS]))),
-            .target(name: "RxRelay", condition: .when(platforms: .some([.iOS])))
+            .target(name: "RxRelay", condition: .when(platforms: .some([.iOS]))),
+            .product(name: "OpenWebCommon", package: "OpenWebCommon")
         ],
         path: owSDKWrapperTarget
     )
@@ -57,6 +68,7 @@ func createRemoteTarget(framework: String, checksum: String = "") -> Target {
 }
 
 let products = createProducts()
+let dependencies = createDependencies()
 let targets = createTargets()
 
 let package = Package(
@@ -65,5 +77,6 @@ let package = Package(
         .iOS(.v12)
     ],
     products: products,
+    dependencies: dependencies,
     targets: targets
 )
