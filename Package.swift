@@ -1,15 +1,15 @@
 // swift-tools-version:5.5
 import PackageDescription
 
-let version = "1.1.0"
+let version = "1.2.0"
 let vendorFrameworkshostingUrl = "https://github.com/SpotIM/openweb-ios-vendor-frameworks/releases/download/\(version)/"
 let owSDK = "OpenWebSDK"
 let owSDKWrapperTarget = "OpenWebSDKWrapperTarget"
 
 let frameworksChecksumMapper = [
-    "RxSwift": "189525e6d5f585a5f6a1f7c9e7b0c96eea3b978f787ab6fa44193e0ede66dbf3",
-    "RxCocoa": "0af7ef734e5430b5022b4d3a6f1d13550c97a14f3ea16c91bac61500935c93aa",
-    "RxRelay": "10b7f4192e30043e25638952764609d785a29abe628df5e1074fdc02264f9617"
+    "RxSwift": "5828c5427354ca7384a9bf2faa9d574ba53d7d762e488dd7e6c5789a31c3f44b",
+    "RxCocoa": "c81bb1633c519610489a27f48c1f5c19107149b10b2210da22f4cb14daca2ce8",
+    "RxRelay": "ab6c4b1553b657a0ef48f1c84c56ce3abf6060e6f74442d90c34863e9714973f"
 ]
 
 func createProducts() -> [Product] {
