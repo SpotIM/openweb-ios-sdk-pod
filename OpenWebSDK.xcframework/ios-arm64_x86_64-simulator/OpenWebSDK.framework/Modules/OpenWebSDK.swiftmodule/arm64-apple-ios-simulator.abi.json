@@ -60715,21 +60715,28 @@
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Network\/Infrastructure\/OWNetworkStatusCode.swift",
       "kind": "IntegerLiteral",
-      "offset": 291,
+      "offset": 275,
+      "length": 3,
+      "value": "404"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Network\/Infrastructure\/OWNetworkStatusCode.swift",
+      "kind": "IntegerLiteral",
+      "offset": 330,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Network\/Infrastructure\/OWNetworkStatusCode.swift",
       "kind": "IntegerLiteral",
-      "offset": 297,
+      "offset": 336,
       "length": 3,
       "value": "300"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/Network\/Infrastructure\/OWNetworkStatusCode.swift",
       "kind": "Array",
-      "offset": 352,
+      "offset": 391,
       "length": 10,
       "value": "[204, 205]"
     },
@@ -66349,120 +66356,120 @@
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ArticleDescription\/Views\/OWArticleDescriptionView.swift",
-      "kind": "FloatLiteral",
+      "kind": "IntegerLiteral",
       "offset": 371,
-      "length": 3,
-      "value": "0.5"
+      "length": 1,
+      "value": "0"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ArticleDescription\/Views\/OWArticleDescriptionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 415,
+      "offset": 413,
       "length": 2,
       "value": "62"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ArticleDescription\/Views\/OWArticleDescriptionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 477,
+      "offset": 475,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ArticleDescription\/Views\/OWArticleDescriptionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 524,
+      "offset": 522,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ArticleDescription\/Views\/OWArticleDescriptionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 588,
+      "offset": 586,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ArticleDescription\/Views\/OWArticleDescriptionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 598,
+      "offset": 596,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ArticleDescription\/Views\/OWArticleDescriptionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 610,
+      "offset": 608,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ArticleDescription\/Views\/OWArticleDescriptionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 621,
+      "offset": 619,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ArticleDescription\/Views\/OWArticleDescriptionView.swift",
       "kind": "StringLiteral",
-      "offset": 658,
+      "offset": 656,
       "length": 19,
       "value": "\"article_header_id\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ArticleDescription\/Views\/OWArticleDescriptionView.swift",
       "kind": "StringLiteral",
-      "offset": 727,
+      "offset": 725,
       "length": 38,
       "value": "\"article_header_conversation_image_id\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ArticleDescription\/Views\/OWArticleDescriptionView.swift",
       "kind": "StringLiteral",
-      "offset": 815,
+      "offset": 813,
       "length": 38,
       "value": "\"article_header_conversation_title_id\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ArticleDescription\/Views\/OWArticleDescriptionView.swift",
       "kind": "StringLiteral",
-      "offset": 904,
+      "offset": 902,
       "length": 39,
       "value": "\"article_header_conversation_author_id\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ArticleDescription\/Views\/OWArticleDescriptionView.swift",
       "kind": "StringLiteral",
-      "offset": 1116,
+      "offset": 1279,
       "length": 23,
       "value": "\"imagePlaceholderEmpty\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ArticleDescription\/Views\/OWArticleDescriptionView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1158,
+      "offset": 1321,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ArticleDescription\/Views\/OWArticleDescriptionView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1237,
+      "offset": 1400,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ArticleDescription\/Views\/OWArticleDescriptionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1469,
+      "offset": 1632,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/distiller\/project\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Conversation\/ArticleDescription\/Views\/OWArticleDescriptionView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1921,
+      "offset": 2084,
       "length": 1,
       "value": "1"
     },
