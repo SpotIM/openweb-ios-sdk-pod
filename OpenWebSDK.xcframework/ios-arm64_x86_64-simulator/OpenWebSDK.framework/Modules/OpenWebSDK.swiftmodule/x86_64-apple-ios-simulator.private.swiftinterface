@@ -152,6 +152,7 @@ public struct OWAppealRequiredData : Swift.Codable {
 public struct OWClarityDetailsRequireData : Swift.Codable {
   public let commentId: OpenWebCommon.OWCommentId
   public let type: OpenWebSDK.OWClarityDetailsType
+  public let postId: OpenWebCommon.OWPostId
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -170,14 +171,6 @@ public enum OWCommentActionsFontStyle : Swift.Int, Swift.Codable {
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
-    get
-  }
-}
-public enum OWParserError : Swift.Error {
-  case generalParseError
-  public static func == (a: OpenWebSDK.OWParserError, b: OpenWebSDK.OWParserError) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
     get
   }
 }
@@ -245,6 +238,7 @@ public enum OWBIAnalyticEvent {
   case commentRankUpUndoButtonClicked(commentId: Swift.String)
   case commentRankDownUndoButtonClicked(commentId: Swift.String)
   case loadMoreRepliesClicked(commentId: Swift.String)
+  case loadMoreComments(paginationOffset: Swift.Int)
   case hideMoreRepliesClicked(commentId: Swift.String)
   case sortByClicked(currentSort: OpenWebSDK.OWSortOption)
   case sortByClosed(currentSort: OpenWebSDK.OWSortOption)
@@ -309,17 +303,15 @@ public enum OWCommunityQuestionCustomizableElement {
   case regular(label: UIKit.UILabel)
   case compact(containerView: UIKit.UIView, label: UIKit.UILabel)
 }
-public enum OWCommunityQuestionStyle : Swift.Codable {
+public enum OWCommunityQuestionStyle : Swift.String, Swift.Codable {
   case none
   case regular
   case compact
-  public static func == (a: OpenWebSDK.OWCommunityQuestionStyle, b: OpenWebSDK.OWCommunityQuestionStyle) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public func encode(to encoder: any Swift.Encoder) throws
-  public var hashValue: Swift.Int {
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
     get
   }
-  public init(from decoder: any Swift.Decoder) throws
 }
 public enum OWConversationSpacing : Swift.Codable {
   public struct Metrics {
@@ -398,6 +390,7 @@ public enum OWError : Swift.Error, Swift.Codable {
   case conversationCounters
   case custom(description: Swift.String)
   case missingImplementation
+  case invalidSpotId
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -708,6 +701,7 @@ public enum OWViewActionCallbackType : Swift.Codable {
   case privacyTapped
   case adSizeChanged(size: CoreFoundation.CGSize)
   case adEvent(_: OpenWebCommon.OWIAUViewEventCallbackType, index: Swift.Int)
+  case closeNotifications
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -723,6 +717,7 @@ public enum OWViewSourceType {
   case clarityDetails
   case commenterAppeal
   case webView
+  case notifications
   public static func == (a: OpenWebSDK.OWViewSourceType, b: OpenWebSDK.OWViewSourceType) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
@@ -962,7 +957,7 @@ public protocol OWManagerProtocol : AnyObject {
 public typealias OWAuthenticationFlowCallback = (OpenWebSDK.OWRouteringMode, @escaping OpenWebSDK.OWBasicCompletion) -> Swift.Void
 public typealias OWBIAnalyticEventCallback = (OpenWebSDK.OWBIAnalyticEvent, any OpenWebSDK.OWBIAnalyticAdditionalInfoProtocol, Swift.String) -> Swift.Void
 public typealias OWCustomizableElementCallback = (OpenWebSDK.OWCustomizableElement, OpenWebSDK.OWViewSourceType, OpenWebSDK.OWThemeStyle, Swift.String?) -> Swift.Void
-public typealias OWFlowActionsCallbacks = (OpenWebSDK.OWFlowActionCallbackType, OpenWebSDK.OWViewSourceType, Swift.String) -> Swift.Void
+public typealias OWFlowActionsCallbacks = (OpenWebSDK.OWFlowActionCallbackType, OpenWebSDK.OWViewSourceType, OpenWebCommon.OWPostId) -> Swift.Void
 public typealias OWRenewSSOCallback = (Swift.String, @escaping OpenWebSDK.OWBasicCompletion) -> Swift.Void
 public typealias OWViewActionsCallbacks = (OpenWebSDK.OWViewActionCallbackType, OpenWebSDK.OWViewSourceType, Swift.String) -> Swift.Void
 public typealias OWBasicCompletion = () -> Swift.Void
@@ -1048,8 +1043,6 @@ extension OpenWebSDK.OWCommentActionsColor : Swift.RawRepresentable {}
 extension OpenWebSDK.OWCommentActionsFontStyle : Swift.Equatable {}
 extension OpenWebSDK.OWCommentActionsFontStyle : Swift.Hashable {}
 extension OpenWebSDK.OWCommentActionsFontStyle : Swift.RawRepresentable {}
-extension OpenWebSDK.OWParserError : Swift.Equatable {}
-extension OpenWebSDK.OWParserError : Swift.Hashable {}
 extension OpenWebSDK.OWAdditionalConfiguration : Swift.Equatable {}
 extension OpenWebSDK.OWAdditionalConfiguration : Swift.Hashable {}
 extension OpenWebSDK.OWArticleHeaderStyle : Swift.Equatable {}
@@ -1059,6 +1052,7 @@ extension OpenWebSDK.OWCommunityGuidelinesStyle : Swift.Hashable {}
 extension OpenWebSDK.OWCommunityGuidelinesStyle : Swift.RawRepresentable {}
 extension OpenWebSDK.OWCommunityQuestionStyle : Swift.Equatable {}
 extension OpenWebSDK.OWCommunityQuestionStyle : Swift.Hashable {}
+extension OpenWebSDK.OWCommunityQuestionStyle : Swift.RawRepresentable {}
 extension OpenWebSDK.OWModalPresentationStyle : Swift.Equatable {}
 extension OpenWebSDK.OWModalPresentationStyle : Swift.Hashable {}
 extension OpenWebSDK.OWNavigationBarStyle : Swift.Equatable {}
