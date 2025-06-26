@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
-// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-bare-slash-regex -module-name OpenWebSDK
+// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-bare-slash-regex -module-name OpenWebSDK
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import AVFoundation
 import DeveloperToolsSupport
@@ -74,14 +74,15 @@ public struct OWBIAnalyticAdditionalInfo : OpenWebSDK.OWBIAnalyticAdditionalInfo
 }
 public struct OWArticle : OpenWebSDK.OWArticleProtocol {
   public let articleInformationStrategy: OpenWebSDK.OWArticleInformationStrategy
-  public let additionalSettings: any OpenWebSDK.OWArticleSettingsProtocol
+  public var additionalSettings: any OpenWebSDK.OWArticleSettingsProtocol
   public init(articleInformationStrategy: OpenWebSDK.OWArticleInformationStrategy, additionalSettings: any OpenWebSDK.OWArticleSettingsProtocol)
 }
 public struct OWArticleSettings : OpenWebSDK.OWArticleSettingsProtocol {
   public let section: Swift.String
   public let headerStyle: OpenWebSDK.OWArticleHeaderStyle
   public let readOnlyMode: OpenWebSDK.OWReadOnlyMode
-  public init(section: Swift.String, headerStyle: OpenWebSDK.OWArticleHeaderStyle = .regular, readOnlyMode: OpenWebSDK.OWReadOnlyMode = .server)
+  public var starRatingEnabled: Swift.Bool
+  public init(section: Swift.String, headerStyle: OpenWebSDK.OWArticleHeaderStyle = .regular, readOnlyMode: OpenWebSDK.OWReadOnlyMode = .server, starRatingEnabled: Swift.Bool = false)
 }
 public struct OWCommentCreationSettings : OpenWebSDK.OWCommentCreationSettingsProtocol {
   public let style: OpenWebSDK.OWCommentCreationStyle
@@ -692,6 +693,7 @@ public enum OWViewActionCallbackType : Swift.Codable {
   case floatingCommentCreationDismissed
   case error(_: OpenWebSDK.OWError)
   case commentSubmitted
+  case reviewSubmitted
   case closeWebView
   case openLinkInComment(url: Foundation.URL)
   case openCommenterAppeal(data: OpenWebSDK.OWAppealRequiredData)
@@ -818,6 +820,7 @@ public protocol OWArticleSettingsProtocol {
   var section: Swift.String { get }
   var headerStyle: OpenWebSDK.OWArticleHeaderStyle { get }
   var readOnlyMode: OpenWebSDK.OWReadOnlyMode { get }
+  var starRatingEnabled: Swift.Bool { get }
 }
 public protocol OWSortingCustomizations : AnyObject {
   func setTitle(_ title: Swift.String, forOption sortOption: OpenWebSDK.OWSortOption)
