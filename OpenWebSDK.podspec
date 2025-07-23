@@ -16,5 +16,5 @@ Pod::Spec.new do |s|
   s.dependency 'RxSwift', '~> 6.9.0'
   s.dependency 'RxRelay', '~> 6.9.0'
   s.dependency 'RxCocoa', '~> 6.9.0'
-  s.dependency 'OpenWebCommon', '~> 1.0.0'
+  s.dependency 'OpenWebCommon', '~> 1.1.0'
 end
