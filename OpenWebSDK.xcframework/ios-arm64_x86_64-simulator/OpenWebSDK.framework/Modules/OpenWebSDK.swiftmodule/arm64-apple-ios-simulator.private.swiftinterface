@@ -146,6 +146,13 @@ extension OpenWebSDK.OWPreConversationStyle : Swift.Equatable {
 }
 extension OpenWebSDK.OWSortOption : Swift.Codable {
 }
+public struct OWAdEventData : Swift.Codable, Swift.Equatable {
+  public let index: Swift.Int
+  public let position: Swift.Int
+  public static func == (a: OpenWebSDK.OWAdEventData, b: OpenWebSDK.OWAdEventData) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 public struct OWAppealRequiredData : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -409,7 +416,7 @@ public enum OWFlowActionCallbackType : Swift.Codable {
   case openPublisherProfile(ssoPublisherId: Swift.String, type: OpenWebSDK.OWUserProfileType, presentationalMode: OpenWebSDK.OWPresentationalMode)
   case conversationDismissed
   case adSizeChanged(size: CoreFoundation.CGSize)
-  case adEvent(_: OpenWebCommon.OWIAUViewEventCallbackType, index: Swift.Int)
+  case adEvent(_: OpenWebCommon.OWIAUViewEventCallbackType, _: OpenWebSDK.OWAdEventData)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -702,7 +709,7 @@ public enum OWViewActionCallbackType : Swift.Codable {
   case termsTapped
   case privacyTapped
   case adSizeChanged(size: CoreFoundation.CGSize)
-  case adEvent(_: OpenWebCommon.OWIAUViewEventCallbackType, index: Swift.Int)
+  case adEvent(_: OpenWebCommon.OWIAUViewEventCallbackType, _: OpenWebSDK.OWAdEventData)
   case closeNotifications
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
