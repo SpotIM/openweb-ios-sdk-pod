@@ -90,3 +90,6 @@ Temporary Items
 .apdisk
 
 ConversationDemo.app.dSYM.zip
+
+# Swift Package Manager
+Package.resolved
