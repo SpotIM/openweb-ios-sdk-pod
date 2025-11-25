@@ -39,7 +39,7 @@ func createTargets() -> [Target] {
             .product(name: "OpenWebCommon", package: "OpenWebCommon")
         ],
         path: owSDKWrapperTarget,
-        resources: [.process("Resources")]
+        resources: [.copy(".ow_dist")]
     )
     targets.append(wrapperTarget)
 
