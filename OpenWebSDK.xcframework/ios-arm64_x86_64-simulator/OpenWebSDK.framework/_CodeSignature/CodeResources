@@ -26,15 +26,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		gke13SUz/yj4M0wT0jQEDHnYqjw=
+		omNlGQ5rfWKHC3EglcBEU9sEPPI=
 		</data>
 		<key>Modules/OpenWebSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		c4nQ1aEkX4NIUc/UQd/cs0TucFY=
+		oDhFbFnh7SwZeA9xhIVm2XH68d4=
 		</data>
 		<key>Modules/OpenWebSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		jTFlHAsX4NMlhzlFMN1S6RiobXY=
+		Vf2SXtuX5DHLqlTVmBVQ5gB6tTY=
 		</data>
 		<key>Modules/OpenWebSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -42,19 +42,19 @@
 		</data>
 		<key>Modules/OpenWebSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		jTFlHAsX4NMlhzlFMN1S6RiobXY=
+		Vf2SXtuX5DHLqlTVmBVQ5gB6tTY=
 		</data>
 		<key>Modules/OpenWebSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		3Qm5ky4HXDjcZLLXhSL7q4jz9WM=
+		9rQGzg92+owDDFuVStO0M9nQFKc=
 		</data>
 		<key>Modules/OpenWebSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		c4nQ1aEkX4NIUc/UQd/cs0TucFY=
+		oDhFbFnh7SwZeA9xhIVm2XH68d4=
 		</data>
 		<key>Modules/OpenWebSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		vEkSjawkSqGb6quSMzOFPAgIxx0=
+		niWaaa6l0czR5kdyaVo8XKH8bt4=
 		</data>
 		<key>Modules/OpenWebSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -62,11 +62,11 @@
 		</data>
 		<key>Modules/OpenWebSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		vEkSjawkSqGb6quSMzOFPAgIxx0=
+		niWaaa6l0czR5kdyaVo8XKH8bt4=
 		</data>
 		<key>Modules/OpenWebSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		mQYu4Cj3UpT5tlWDcPr27UB3VDQ=
+		jQ51Lvcpre/bSifaE9VnSqp5lSc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -98,7 +98,7 @@
 		</data>
 		<key>OpenWebSettings.plist</key>
 		<data>
-		ADpxcixUgGjN6WD3Z8Kv/ON/1xA=
+		KMX/WRJ1iP3ysV7aM2Y035XYzvw=
 		</data>
 		<key>PrivacyInfo.xcprivacy</key>
 		<data>
@@ -469,14 +469,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+aURo9lG9bDzGOZ64Xdk0SRZtp0MU//Y2WlHgkx5QYY=
+			iL2S1PCtQSLf4eg2cB0DjpQF9e/G/i7XjwrmCIAnmUE=
 			</data>
 		</dict>
 		<key>Modules/OpenWebSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RNqpW+Mo7wOB5DodH1tt8MqQlPRDgc4RNuvMdm/ePHc=
+			CInjAaSoa54N5Ccx8o4zcej+0YHaQPtzYN4hE3Q8g/0=
 			</data>
 		</dict>
 		<key>Modules/OpenWebSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -490,28 +490,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RNqpW+Mo7wOB5DodH1tt8MqQlPRDgc4RNuvMdm/ePHc=
+			CInjAaSoa54N5Ccx8o4zcej+0YHaQPtzYN4hE3Q8g/0=
 			</data>
 		</dict>
 		<key>Modules/OpenWebSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sNFfRy+DfmVF51nkkgXiElnzXgGZmcANzv9sqyv6tkw=
+			7ZqclQ/t2kmXzyr4K2llPU8pLJnQoojTH4/o8X1T1Ro=
 			</data>
 		</dict>
 		<key>Modules/OpenWebSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+aURo9lG9bDzGOZ64Xdk0SRZtp0MU//Y2WlHgkx5QYY=
+			iL2S1PCtQSLf4eg2cB0DjpQF9e/G/i7XjwrmCIAnmUE=
 			</data>
 		</dict>
 		<key>Modules/OpenWebSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xFhIj8Yjny449j4882kGpZjMF6+wXFDJOGy3of44vM4=
+			TkdYl1Cv34AkyYkYQbtmfirpsyXqPvBPss4G7cKVqt0=
 			</data>
 		</dict>
 		<key>Modules/OpenWebSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -525,14 +525,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xFhIj8Yjny449j4882kGpZjMF6+wXFDJOGy3of44vM4=
+			TkdYl1Cv34AkyYkYQbtmfirpsyXqPvBPss4G7cKVqt0=
 			</data>
 		</dict>
 		<key>Modules/OpenWebSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			f5IT7BGUcgxOSHj8MQRshA/1/pu181ZSyEB0Y9DwqEo=
+			8rWR5BLHhC+PkE7F39tBuWgBP69p1DS9QDSbsmM05qU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -588,7 +588,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JwPIyr9zRpfqIocf2NWaRlpUziPmX+NoW8S+PVM2t+Y=
+			Z9HJ8OIx3To4154CgKz+aNBwOMzY8TccHJ7HY0Axt6I=
 			</data>
 		</dict>
 		<key>PrivacyInfo.xcprivacy</key>
