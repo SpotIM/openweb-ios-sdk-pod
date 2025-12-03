@@ -38,7 +38,8 @@ func createTargets() -> [Target] {
             .target(name: "OpenWebSDK", condition: .when(platforms: .some([.iOS]))),
             .product(name: "OpenWebCommon", package: "OpenWebCommon")
         ],
-        path: owSDKWrapperTarget
+        path: owSDKWrapperTarget,
+        resources: [.copy("ow.dat")]
     )
     targets.append(wrapperTarget)
 
