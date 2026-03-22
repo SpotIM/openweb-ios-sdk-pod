@@ -4,7 +4,7 @@ This library provides an easy integration with OpenWebSDK into a native iOS app.
 
 ## Requirements
 
-* iOS 15 or later.
+* iOS 16 or later.
 * Have a [OpenWeb](https://www.openweb.com) account
 
 ## Getting started

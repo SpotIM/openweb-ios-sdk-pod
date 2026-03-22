@@ -1,4 +1,4 @@
-// swift-tools-version:5.5
+// swift-tools-version:5.7
 import PackageDescription
 
 let version = "1.2.0"
@@ -52,7 +52,7 @@ let targets = createTargets()
 let package = Package(
     name: owSDK,
     platforms: [
-        .iOS(.v15)
+        .iOS(.v16)
     ],
     products: products,
     dependencies: dependencies,
