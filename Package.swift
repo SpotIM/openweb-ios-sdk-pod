@@ -35,7 +35,7 @@ func createTargets() -> [Target] {
         name: owSDKWrapperTarget,
         dependencies: [
             .target(name: "OpenWebSDK", condition: .when(platforms: [.iOS])),
-            .product(name: "OpenWebCommon", package: "OpenWebCommon")
+            .product(name: "OpenWebCommon", package: "openweb-ios-common-sdk-pod")
         ],
         path: owSDKWrapperTarget
     )
