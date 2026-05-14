@@ -14,7 +14,6 @@ func createProducts() -> [Product] {
 func createDependencies() -> [Package.Dependency] {
     return [
         .package(
-            name: "OpenWebCommon",
             url: "https://github.com/SpotIM/openweb-ios-common-sdk-pod.git",
             .upToNextMinor(from: "1.1.0")
         )
