@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'OpenWebSDK'
-  s.version          = '3.0.0'
+  s.version          = '2.13.0'
   s.summary          = 'OpenWeb SDK'
   s.description      = 'This SDK allows you to integrate OpenWeb into your iOS app.'
   s.homepage        = "https://www.openweb.com"
@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.license         = { :type => 'CUSTOM', :file => 'LICENSE' }
   s.author          = { 'OpenWeb' => 'ios-dev@openweb.com' }
   s.platform        = :ios
-  s.ios.deployment_target = '16.0'
+  s.ios.deployment_target = '15.0'
 
 # the Pre-Compiled Framework:
   s.source          = { :git => 'https://github.com/SpotIM/openweb-ios-sdk-pod.git', :tag => s.version.to_s }
