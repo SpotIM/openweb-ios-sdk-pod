@@ -14,5 +14,5 @@ Pod::Spec.new do |s|
   s.source          = { :git => 'https://github.com/SpotIM/openweb-ios-sdk-pod.git', :tag => s.version.to_s }
   s.ios.vendored_frameworks = 'OpenWebSDK.xcframework'
   s.resources = '.ow_dist'
-  s.dependency 'OpenWebCommon', '~> 1.1.0'
+  s.dependency 'OpenWebCommon', '~> 1.1.1'
 end

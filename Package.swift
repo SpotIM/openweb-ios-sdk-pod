@@ -15,7 +15,7 @@ func createDependencies() -> [Package.Dependency] {
     return [
         .package(
             url: "https://github.com/SpotIM/openweb-ios-common-sdk-pod.git",
-            .upToNextMinor(from: "1.1.0")
+            .upToNextMinor(from: "1.1.1")
         )
     ]
 }
