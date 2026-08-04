@@ -8,6 +8,7 @@ import Combine
 import Darwin
 import DeveloperToolsSupport
 import Foundation
+import ImageIO
 import NaturalLanguage
 import Network
 import OpenWebSDK.OWGiphySDK
@@ -1191,6 +1192,7 @@ public protocol OWUIComponents : AnyObject {
   #if compiler(>=5.3) && $NonescapableTypes
   func getPreConversation(postId: OpenWebCommon.OWPostId, article: any OpenWebSDK.OWArticleProtocol, conversationNavigation: OpenWebSDK.OWConversationNavigationMode, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol, callbacks: OpenWebSDK.OWActionsCallbacks?, completion: @escaping OpenWebSDK.OWViewCompletion)
   #endif
+  func getReactions(postId: OpenWebCommon.OWPostId, themeName: Swift.String, completion: @escaping OpenWebSDK.OWViewCompletion)
 }
 extension OpenWebSDK.OWUIComponents {
   #if compiler(>=5.3) && $NonescapableTypes
@@ -1211,6 +1213,8 @@ extension OpenWebSDK.OWUIComponents {
   #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor public func getPreConversation(postId: OpenWebCommon.OWPostId, article: any OpenWebSDK.OWArticleProtocol = OWArticle(), conversationNavigation: OpenWebSDK.OWConversationNavigationMode = .fullScreen, additionalSettings: any OpenWebSDK.OWAdditionalSettingsProtocol = OWAdditionalSettings(), callbacks: OpenWebSDK.OWActionsCallbacks? = nil) async throws -> UIKit.UIView
   #endif
+  public func getReactions(postId: OpenWebCommon.OWPostId, themeName: Swift.String = "default", completion: @escaping OpenWebSDK.OWViewCompletion)
+  @_Concurrency.MainActor public func getReactions(postId: OpenWebCommon.OWPostId, themeName: Swift.String = "default") async throws -> UIKit.UIView
 }
 public protocol OWUIFlows : AnyObject {
   #if compiler(>=5.3) && $NonescapableTypes
@@ -1526,6 +1530,17 @@ extension OpenWebSDK.OpenWebPreConversation {
   @_Concurrency.MainActor @preconcurrency public func starRatingEnabled(_ enabled: Swift.Bool) -> OpenWebSDK.OpenWebPreConversation
   @_Concurrency.MainActor @preconcurrency public func articleExtraData(_ data: OpenWebSDK.OWArticleExtraData) -> OpenWebSDK.OpenWebPreConversation
 }
+@_Concurrency.MainActor @preconcurrency public struct OpenWebReactions : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init(postId: OpenWebCommon.OWPostId, themeName: Swift.String = "default")
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s10OpenWebSDK0aB9ReactionsV4bodyQrvp", 0) __
+}
+
+
+
+
 public typealias OWActionsCallbacks = (OpenWebSDK.OWActionCallbackType, OpenWebSDK.OWViewSourceType, OpenWebCommon.OWPostId) -> Swift.Void
 public typealias OWFlowActionsCallbacks = OpenWebSDK.OWActionsCallbacks
 public typealias OWAuthenticationFlowCallback = (OpenWebSDK.OWRouteringMode, @escaping OpenWebSDK.OWBasicCompletion) -> Swift.Void
@@ -1595,6 +1610,11 @@ public enum OWClarityDetailsType : Swift.Codable, Swift.Equatable {
   }
   public init(from decoder: any Swift.Decoder) throws
 }
+
+
+
+
+
 public enum OWUserProfileType : Swift.Codable, Swift.Equatable {
   case currentUser
   case otherUser
@@ -1653,6 +1673,7 @@ extension OpenWebSDK.OpenWebConversation : Swift.Sendable {}
 extension OpenWebSDK.OpenWebConversationCount : Swift.Sendable {}
 extension OpenWebSDK.OWConversationCountDefaultContent : Swift.Sendable {}
 extension OpenWebSDK.OpenWebPreConversation : Swift.Sendable {}
+extension OpenWebSDK.OpenWebReactions : Swift.Sendable {}
 extension OpenWebSDK.OWLogLevel : Swift.Equatable {}
 extension OpenWebSDK.OWLogLevel : Swift.Hashable {}
 extension OpenWebSDK.OWClarityDetailsType : Swift.Hashable {}
