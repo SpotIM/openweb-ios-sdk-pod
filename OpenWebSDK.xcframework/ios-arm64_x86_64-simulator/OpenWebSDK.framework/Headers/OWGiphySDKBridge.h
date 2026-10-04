@@ -11,6 +11,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSInteger, OWGiphyRating) {
+    /// Keeps the Giphy SDK default rating.
+    OWGiphyRatingUnspecified,
+    OWGiphyRatingRatedY,
+    OWGiphyRatingRatedG,
+    OWGiphyRatingRatedPG,
+    OWGiphyRatingRatedPG13,
+    OWGiphyRatingRatedR
+};
+
 @interface OWGiphyMedia : NSObject
 @property NSInteger previewWidth;
 @property NSInteger previewHeight;
@@ -36,7 +46,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)init;
 - (void)configure:(NSString*)apiKey;
-- (nullable UIViewController*)gifSelectionVC;
+- (nullable UIViewController*)gifSelectionVCWithRating:(OWGiphyRating)rating NS_SWIFT_NAME(gifSelectionVC(rating:));
 - (void)setIsDarkMode:(Boolean)isDarkMode;
 
 @end

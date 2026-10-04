@@ -461,38 +461,69 @@ public enum OWEmptyStateCustomizableElement {
   case icon(image: UIKit.UIImageView)
   case title(label: UIKit.UILabel)
 }
-public enum OWError : Swift.Error, Swift.Codable, Swift.Equatable {
-  case reportReasonSubmitError(title: Swift.String, description: Swift.String)
-  case missingSpotId
-  case missingPostId
-  case castingError(description: Swift.String)
-  case preConversationFlow
-  case conversationFlow
-  case commentCreationFlow
-  case reportReasonFlow
-  case commentThreadFlow
-  case preConversationView
-  case conversationView
-  case commentCreationView
-  case commentThreadView
-  case reportReasonView
-  case clarityDetailsView
-  case commenterAppealView
-  case notificationsView
-  case webTabView
-  case logout
-  case userStatus
-  case ssoStart
-  case ssoComplete
-  case ssoProvider
-  case alreadyLoggedIn
-  case conversationCounters
-  case custom(description: Swift.String)
-  case missingImplementation
-  case invalidSpotId
-  public static func == (a: OpenWebSDK.OWError, b: OpenWebSDK.OWError) -> Swift.Bool
+public struct OWError : Swift.Error, Swift.Codable, Swift.Sendable {
+  public enum Operation : Swift.String, Swift.Codable, Swift.Sendable {
+    case ssoStart
+    case ssoComplete
+    case ssoProvider
+    case ssoRenew
+    case logout
+    case userStatus
+    case conversationCounters
+    case preConversation
+    case conversation
+    case commentCreation
+    case commentThread
+    case reportReason
+    case reactions
+    case clarityDetails
+    case commenterAppeal
+    case notifications
+    case configuration
+    case sdkInternal
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init?(rawValue: Swift.String)
+    #endif
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Reason : Swift.String, Swift.Codable, Swift.Sendable {
+    case missingSpotId
+    case invalidSpotId
+    case missingPostId
+    case alreadyLoggedIn
+    case notAuthorized
+    case sdkDisabled
+    case serverRejected
+    case serverUnavailable
+    case networkUnavailable
+    case invalidServerResponse
+    case missingRenewSSOCallback
+    case callbackFailed
+    case internalError
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init?(rawValue: Swift.String)
+    #endif
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public let operation: OpenWebSDK.OWError.Operation
+  public let reason: OpenWebSDK.OWError.Reason
+  public let details: Swift.String?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
+}
+extension OpenWebSDK.OWError : Swift.Equatable {
+  public static func == (lhs: OpenWebSDK.OWError, rhs: OpenWebSDK.OWError) -> Swift.Bool
+}
+extension OpenWebSDK.OWError.Reason : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
 }
 extension OpenWebSDK.OWError : Swift.CustomStringConvertible {
   public var description: Swift.String {
@@ -505,6 +536,112 @@ extension OpenWebSDK.OWError : Foundation.LocalizedError {
     get
   }
   #endif
+}
+extension OpenWebSDK.OWError {
+  @available(*, deprecated, message: "Match `error.operation == .ssoStart` instead")
+  public static var ssoStart: OpenWebSDK.OWError {
+    get
+  }
+  @available(*, deprecated, message: "Match `error.operation == .ssoComplete` instead")
+  public static var ssoComplete: OpenWebSDK.OWError {
+    get
+  }
+  @available(*, deprecated, message: "Match `error.operation == .ssoProvider` instead")
+  public static var ssoProvider: OpenWebSDK.OWError {
+    get
+  }
+  @available(*, deprecated, message: "Match `error.operation == .logout` instead")
+  public static var logout: OpenWebSDK.OWError {
+    get
+  }
+  @available(*, deprecated, message: "Match `error.operation == .userStatus` instead")
+  public static var userStatus: OpenWebSDK.OWError {
+    get
+  }
+  @available(*, deprecated, message: "Match `error.operation == .conversationCounters` instead")
+  public static var conversationCounters: OpenWebSDK.OWError {
+    get
+  }
+  @available(*, deprecated, message: "Match `error.operation == .preConversation` instead")
+  public static var preConversationFlow: OpenWebSDK.OWError {
+    get
+  }
+  @available(*, deprecated, message: "Match `error.operation == .conversation` instead")
+  public static var conversationFlow: OpenWebSDK.OWError {
+    get
+  }
+  @available(*, deprecated, message: "Match `error.operation == .commentCreation` instead")
+  public static var commentCreationFlow: OpenWebSDK.OWError {
+    get
+  }
+  @available(*, deprecated, message: "Match `error.operation == .commentThread` instead")
+  public static var commentThreadFlow: OpenWebSDK.OWError {
+    get
+  }
+  @available(*, deprecated, message: "Match `error.operation == .reportReason` instead")
+  public static var reportReasonFlow: OpenWebSDK.OWError {
+    get
+  }
+  @available(*, deprecated, message: "Match `error.operation == .preConversation` instead")
+  public static var preConversationView: OpenWebSDK.OWError {
+    get
+  }
+  @available(*, deprecated, message: "Match `error.operation == .conversation` instead")
+  public static var conversationView: OpenWebSDK.OWError {
+    get
+  }
+  @available(*, deprecated, message: "Match `error.operation == .commentCreation` instead")
+  public static var commentCreationView: OpenWebSDK.OWError {
+    get
+  }
+  @available(*, deprecated, message: "Match `error.operation == .commentThread` instead")
+  public static var commentThreadView: OpenWebSDK.OWError {
+    get
+  }
+  @available(*, deprecated, message: "Match `error.operation == .reportReason` instead")
+  public static var reportReasonView: OpenWebSDK.OWError {
+    get
+  }
+  @available(*, deprecated, message: "Match `error.operation == .clarityDetails` instead")
+  public static var clarityDetailsView: OpenWebSDK.OWError {
+    get
+  }
+  @available(*, deprecated, message: "Match `error.operation == .commenterAppeal` instead")
+  public static var commenterAppealView: OpenWebSDK.OWError {
+    get
+  }
+  @available(*, deprecated, message: "Match `error.operation == .notifications` instead")
+  public static var notificationsView: OpenWebSDK.OWError {
+    get
+  }
+  @available(*, deprecated, message: "Match `error.reason == .missingSpotId` instead")
+  public static var missingSpotId: OpenWebSDK.OWError {
+    get
+  }
+  @available(*, deprecated, message: "Match `error.reason == .invalidSpotId` instead")
+  public static var invalidSpotId: OpenWebSDK.OWError {
+    get
+  }
+  @available(*, deprecated, message: "Match `error.reason == .missingPostId` instead")
+  public static var missingPostId: OpenWebSDK.OWError {
+    get
+  }
+  @available(*, deprecated, message: "Match `error.reason == .alreadyLoggedIn` instead")
+  public static var alreadyLoggedIn: OpenWebSDK.OWError {
+    get
+  }
+  @available(*, deprecated, message: "`webTab` was removed; this error is no longer reported")
+  public static var webTabView: OpenWebSDK.OWError {
+    get
+  }
+  @available(*, deprecated, message: "No longer reported; remove this case")
+  public static var missingImplementation: OpenWebSDK.OWError {
+    get
+  }
+  @available(*, deprecated, message: "`OWError`s are created only by the SDK; use your own error type instead")
+  public static func castingError(description: Swift.String) -> OpenWebSDK.OWError
+  @available(*, deprecated, message: "No longer reported; read `error.details`")
+  public static func reportReasonSubmitError(title: Swift.String, description: Swift.String) -> OpenWebSDK.OWError
 }
 public enum OWFontGroupFamily : Swift.Codable {
   case `default`
@@ -1160,6 +1297,7 @@ public protocol OWHelpers : AnyObject {
   func conversationCounters(forPostIds postIds: [OpenWebCommon.OWPostId], completion: @escaping OpenWebSDK.OWConversationCountersCompletion)
   var additionalConfigurations: [OpenWebSDK.OWAdditionalConfiguration] { get set }
   var loggerConfiguration: any OpenWebSDK.OWLoggerConfiguration { get }
+  func addErrorCallback(_ callback: @escaping OpenWebSDK.OWErrorCallback)
   var languageStrategy: OpenWebSDK.OWLanguageStrategy { get set }
   var localeStrategy: OpenWebSDK.OWLocaleStrategy { get set }
   var orientationEnforcement: OpenWebSDK.OWOrientationEnforcement { get set }
@@ -1546,6 +1684,7 @@ public typealias OWFlowActionsCallbacks = OpenWebSDK.OWActionsCallbacks
 public typealias OWAuthenticationFlowCallback = (OpenWebSDK.OWRouteringMode, @escaping OpenWebSDK.OWBasicCompletion) -> Swift.Void
 public typealias OWBIAnalyticEventCallback = (OpenWebSDK.OWBIAnalyticEvent, any OpenWebSDK.OWBIAnalyticAdditionalInfoProtocol, Swift.String) -> Swift.Void
 public typealias OWCustomizableElementCallback = (OpenWebSDK.OWCustomizableElement, OpenWebSDK.OWViewSourceType, OpenWebSDK.OWThemeStyle, Swift.String?) -> Swift.Void
+public typealias OWErrorCallback = (OpenWebSDK.OWError) -> Swift.Void
 public typealias OWOpenPublisherProfileData = (ssoPublisherId: Swift.String, type: OpenWebSDK.OWUserProfileType, presentationalMode: OpenWebSDK.OWPresentationalMode, source: OpenWebSDK.OWViewSourceType, postId: OpenWebCommon.OWPostId)
 public typealias OWPreConversationActionsCallbacks = (OpenWebSDK.OWPreConversationActionCallbackType, OpenWebCommon.OWPostId) -> Swift.Void
 public typealias OWRenewSSOCallback = (Swift.String, @escaping OpenWebSDK.OWBasicCompletion) -> Swift.Void
@@ -1615,6 +1754,8 @@ public enum OWClarityDetailsType : Swift.Codable, Swift.Equatable {
 
 
 
+
+
 public enum OWUserProfileType : Swift.Codable, Swift.Equatable {
   case currentUser
   case otherUser
@@ -1626,6 +1767,10 @@ public enum OWUserProfileType : Swift.Codable, Swift.Equatable {
   }
   public init(from decoder: any Swift.Decoder) throws
 }
+
+
+
+
 extension OpenWebSDK.OWSupportedLanguage : Swift.Equatable {}
 extension OpenWebSDK.OWSupportedLanguage : Swift.Hashable {}
 extension OpenWebSDK.OWSupportedLanguage : Swift.RawRepresentable {}
@@ -1641,6 +1786,9 @@ extension OpenWebSDK.OWCommentActionsColor : Swift.RawRepresentable {}
 extension OpenWebSDK.OWCommentActionsFontStyle : Swift.Equatable {}
 extension OpenWebSDK.OWCommentActionsFontStyle : Swift.Hashable {}
 extension OpenWebSDK.OWCommentActionsFontStyle : Swift.RawRepresentable {}
+extension OpenWebSDK.OWError.Reason : Swift.Equatable {}
+extension OpenWebSDK.OWError.Reason : Swift.Hashable {}
+extension OpenWebSDK.OWError.Reason : Swift.RawRepresentable {}
 extension OpenWebSDK.OWAdditionalConfiguration : Swift.Equatable {}
 extension OpenWebSDK.OWAdditionalConfiguration : Swift.Hashable {}
 extension OpenWebSDK.OWCommunityGuidelinesStyle : Swift.Equatable {}
@@ -1649,6 +1797,9 @@ extension OpenWebSDK.OWCommunityGuidelinesStyle : Swift.RawRepresentable {}
 extension OpenWebSDK.OWCommunityQuestionStyle : Swift.Equatable {}
 extension OpenWebSDK.OWCommunityQuestionStyle : Swift.Hashable {}
 extension OpenWebSDK.OWCommunityQuestionStyle : Swift.RawRepresentable {}
+extension OpenWebSDK.OWError.Operation : Swift.Equatable {}
+extension OpenWebSDK.OWError.Operation : Swift.Hashable {}
+extension OpenWebSDK.OWError.Operation : Swift.RawRepresentable {}
 extension OpenWebSDK.OWModalPresentationStyle : Swift.Equatable {}
 extension OpenWebSDK.OWModalPresentationStyle : Swift.Hashable {}
 extension OpenWebSDK.OWNavigationBarStyle : Swift.Equatable {}
