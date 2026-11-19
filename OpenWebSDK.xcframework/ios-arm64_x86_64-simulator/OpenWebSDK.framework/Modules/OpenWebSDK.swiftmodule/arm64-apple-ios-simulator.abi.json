@@ -2306,6 +2306,17 @@
         ]
       },
       {
+        "kind": "OperatorDecl",
+        "name": "??=",
+        "printedName": "??=",
+        "declKind": "InfixOperator",
+        "moduleName": "OpenWebSDK",
+        "declAttributes": [
+          "Infix",
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -7048,16 +7059,6 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "OpenWebSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "OpenWebCommon",
         "printedName": "OpenWebCommon",
         "declKind": "Import",
@@ -10098,16 +10099,6 @@
         "printedName": "UIKit",
         "declKind": "Import",
         "moduleName": "OpenWebSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "OpenWebSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
       },
       {
         "kind": "Import",
@@ -16450,12 +16441,12 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(OpenWebSDK.OWConversationRoute.Type) -> (Swift.String) -> OpenWebSDK.OWConversationRoute",
+                "printedName": "(OpenWebSDK.OWConversationRoute.Type) -> (Swift.String, OpenWebSDK.OWCommentThreadPerformActionType) -> OpenWebSDK.OWConversationRoute",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.String) -> OpenWebSDK.OWConversationRoute",
+                    "printedName": "(Swift.String, OpenWebSDK.OWCommentThreadPerformActionType) -> OpenWebSDK.OWConversationRoute",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -16466,13 +16457,19 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Tuple",
-                        "printedName": "(commentId: Swift.String)",
+                        "printedName": "(commentId: Swift.String, performActionType: OpenWebSDK.OWCommentThreadPerformActionType)",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "String",
                             "printedName": "Swift.String",
                             "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "OWCommentThreadPerformActionType",
+                            "printedName": "OpenWebSDK.OWCommentThreadPerformActionType",
+                            "usr": "s:10OpenWebSDK32OWCommentThreadPerformActionTypeO"
                           }
                         ]
                       }
@@ -16495,8 +16492,8 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:10OpenWebSDK19OWConversationRouteO13commentThreadyACSS_tcACmF",
-            "mangledName": "$s10OpenWebSDK19OWConversationRouteO13commentThreadyACSS_tcACmF",
+            "usr": "s:10OpenWebSDK19OWConversationRouteO13commentThreadyACSS_AA09OWCommentG17PerformActionTypeOtcACmF",
+            "mangledName": "$s10OpenWebSDK19OWConversationRouteO13commentThreadyACSS_AA09OWCommentG17PerformActionTypeOtcACmF",
             "moduleName": "OpenWebSDK",
             "declAttributes": [
               "RawDocComment"
@@ -56245,6 +56242,27 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
+        "moduleName": "OpenWebSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "OpenWebSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UserNotifications",
+        "printedName": "UserNotifications",
+        "declKind": "Import",
+        "moduleName": "OpenWebSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
         "moduleName": "OpenWebSDK",
         "declAttributes": [
           "RawDocComment"
@@ -57065,13 +57083,6 @@
         "declAttributes": [
           "RawDocComment"
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "OpenWebSDK"
       },
       {
         "kind": "Import",
@@ -70745,42 +70756,42 @@
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Helpers\/Localization\/OWLocalizationManager.swift",
       "kind": "Array",
-      "offset": 1393,
+      "offset": 1483,
       "length": 18,
       "value": "[\"%s\", \"%c\", \"%p\"]"
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Helpers\/Localization\/OWLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 3223,
+      "offset": 3313,
       "length": 7,
       "value": "\"en-US\""
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Helpers\/Localization\/OWLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 3281,
+      "offset": 3371,
       "length": 7,
       "value": "\"lproj\""
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Helpers\/Localization\/OWLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 3335,
+      "offset": 3425,
       "length": 7,
       "value": "\"\u0000\""
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Helpers\/Localization\/OWLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 3397,
+      "offset": 3487,
       "length": 6,
       "value": "\"👿\""
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Helpers\/Localization\/OWLocalizationManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 3845,
+      "offset": 3974,
       "length": 5,
       "value": "false"
     },
@@ -70955,7 +70966,7 @@
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Manager\/ManagerLayers\/OWAuthenticationLayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 3698,
+      "offset": 3439,
       "length": 5,
       "value": "false"
     },
@@ -70976,7 +70987,7 @@
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Manager\/OWManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 1013,
+      "offset": 961,
       "length": 5,
       "value": "false"
     },
@@ -71340,7 +71351,7 @@
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Models\/Configs\/Configuration\/SPConfigurationSDKStatus.swift",
       "kind": "IntegerLiteral",
-      "offset": 1193,
+      "offset": 1139,
       "length": 4,
       "value": "1000"
     },
@@ -72109,15 +72120,22 @@
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Network\/Infrastructure\/OWRetryWhen.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2259,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Network\/Infrastructure\/OWRetryWhen.swift",
       "kind": "BooleanLiteral",
-      "offset": 2301,
+      "offset": 2343,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Network\/Infrastructure\/OWRetryWhen.swift",
       "kind": "BooleanLiteral",
-      "offset": 2344,
+      "offset": 2386,
       "length": 5,
       "value": "false"
     },
@@ -72929,21 +72947,21 @@
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/SdkAPI\/SwiftUI\/OpenWebPreConversation.swift",
       "kind": "BooleanLiteral",
-      "offset": 8921,
+      "offset": 8891,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/SdkAPI\/SwiftUI\/OpenWebPreConversation.swift",
       "kind": "BooleanLiteral",
-      "offset": 8958,
+      "offset": 8928,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/SdkAPI\/SwiftUI\/OpenWebPreConversation.swift",
       "kind": "BooleanLiteral",
-      "offset": 9000,
+      "offset": 8970,
       "length": 5,
       "value": "false"
     },
@@ -73235,6 +73253,13 @@
       "value": "\"Bearer \""
     },
     {
+      "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/AuthenticationManager\/Helpers\/OWJWTDecoder.swift",
+      "kind": "IntegerLiteral",
+      "offset": 439,
+      "length": 2,
+      "value": "60"
+    },
+    {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/AuthenticationManager\/Helpers\/OWNavigationPlaceholderViewModel.swift",
       "kind": "IntegerLiteral",
       "offset": 1051,
@@ -73250,64 +73275,57 @@
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/AuthenticationManager\/Helpers\/OWProactiveTokenRenewer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 457,
-      "length": 2,
-      "value": "60"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/AuthenticationManager\/Helpers\/OWProactiveTokenRenewer.swift",
       "kind": "StringLiteral",
-      "offset": 911,
+      "offset": 814,
       "length": 38,
       "value": "\"OpenWebSDKProactiveTokenRenewerQueue\""
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/AuthenticationManager\/OWAuthenticationManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 3138,
+      "offset": 3172,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/AuthenticationManager\/OWAuthenticationManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 5589,
+      "offset": 5623,
       "length": 2,
       "value": "20"
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/AuthenticationManager\/OWAuthenticationManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 5659,
+      "offset": 5693,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/AuthenticationManager\/OWAuthenticationManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 5705,
+      "offset": 5739,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/AuthenticationManager\/OWAuthenticationManager.swift",
       "kind": "StringLiteral",
-      "offset": 6004,
+      "offset": 6038,
       "length": 38,
       "value": "\"OpenWebSDKAuthenticationManagerQueue\""
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/AuthenticationManager\/OWAuthenticationManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 12914,
+      "offset": 12973,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/AuthenticationManager\/OWAuthenticationManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 36357,
+      "offset": 36928,
       "length": 4,
       "value": "true"
     },
@@ -73366,13 +73384,6 @@
       "offset": 11686,
       "length": 4,
       "value": "true"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/BlockerService\/OWBlockerService.swift",
-      "kind": "Dictionary",
-      "offset": 1076,
-      "length": 3,
-      "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/GifService\/OWGifService.swift",
@@ -73439,94 +73450,94 @@
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/PopNotifications\/OWPopNotificationsService.swift",
-      "kind": "Array",
-      "offset": 1219,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/PopNotifications\/OWPopNotificationsService.swift",
       "kind": "BooleanLiteral",
-      "offset": 1425,
+      "offset": 1470,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/PopNotifications\/OWPopNotificationsService.swift",
       "kind": "StringLiteral",
-      "offset": 1955,
+      "offset": 2332,
       "length": 34,
       "value": "\"com.openweb.sdk.background-fetch\""
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/PopNotifications\/OWPopNotificationsService.swift",
       "kind": "StringLiteral",
-      "offset": 2037,
+      "offset": 2414,
       "length": 34,
       "value": "\"com.openweb.sdk.pop-notification\""
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/PopNotifications\/OWPopNotificationsService.swift",
       "kind": "StringLiteral",
-      "offset": 2113,
+      "offset": 2490,
       "length": 7,
       "value": "\"fetch\""
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/PopNotifications\/OWPopNotificationsService.swift",
       "kind": "IntegerLiteral",
-      "offset": 2170,
+      "offset": 2547,
       "length": 2,
       "value": "15"
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/PopNotifications\/OWPopNotificationsService.swift",
       "kind": "IntegerLiteral",
-      "offset": 2355,
+      "offset": 2732,
       "length": 2,
       "value": "15"
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/PopNotifications\/OWPopNotificationsService.swift",
       "kind": "IntegerLiteral",
-      "offset": 2472,
+      "offset": 2849,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/PopNotifications\/OWPopNotificationsService.swift",
       "kind": "IntegerLiteral",
-      "offset": 2477,
+      "offset": 2854,
       "length": 2,
       "value": "24"
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/PopNotifications\/OWPopNotificationsService.swift",
       "kind": "IntegerLiteral",
-      "offset": 2544,
+      "offset": 2921,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/PopNotifications\/OWPopNotificationsService.swift",
       "kind": "IntegerLiteral",
-      "offset": 2613,
+      "offset": 2990,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/PopNotifications\/OWPopNotificationsService.swift",
       "kind": "IntegerLiteral",
-      "offset": 2648,
+      "offset": 3025,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/PopNotifications\/OWPopNotificationsService.swift",
       "kind": "StringLiteral",
-      "offset": 2696,
+      "offset": 3073,
       "length": 9,
       "value": "\"default\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/PopNotifications\/OWPopNotificationsService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3121,
+      "length": 3,
+      "value": "500"
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/ProfileService\/OWProfileService.swift",
@@ -73790,14 +73801,14 @@
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/ViewableTime\/OWViewableTimeTracker.swift",
       "kind": "IntegerLiteral",
-      "offset": 5896,
+      "offset": 6072,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/ViewableTime\/OWViewableTimeTracker.swift",
       "kind": "BooleanLiteral",
-      "offset": 5930,
+      "offset": 6106,
       "length": 5,
       "value": "false"
     },
@@ -73825,14 +73836,14 @@
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/OWAnalyticsEventCreatorService.swift",
       "kind": "StringLiteral",
-      "offset": 3262,
+      "offset": 3275,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/OWAnalyticsEventCreatorService.swift",
       "kind": "StringLiteral",
-      "offset": 3298,
+      "offset": 3324,
       "length": 2,
       "value": "\"\""
     },
@@ -73846,21 +73857,7 @@
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/OWAnalyticsService.swift",
       "kind": "StringLiteral",
-      "offset": 804,
-      "length": 5,
-      "value": "\"all\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/OWAnalyticsService.swift",
-      "kind": "Array",
-      "offset": 1235,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/OWAnalyticsService.swift",
-      "kind": "StringLiteral",
-      "offset": 1544,
+      "offset": 2280,
       "length": 34,
       "value": "\"OpenWebSDKAnalyticsDispatchQueue\""
     },
@@ -73881,28 +73878,28 @@
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/OWCacheService.swift",
       "kind": "IntegerLiteral",
-      "offset": 832,
+      "offset": 819,
       "length": 2,
       "value": "24"
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/OWCacheService.swift",
       "kind": "IntegerLiteral",
-      "offset": 837,
+      "offset": 824,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/OWCacheService.swift",
       "kind": "IntegerLiteral",
-      "offset": 842,
+      "offset": 829,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/OWCacheService.swift",
       "kind": "IntegerLiteral",
-      "offset": 897,
+      "offset": 884,
       "length": 2,
       "value": "50"
     },
@@ -74392,7 +74389,7 @@
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/OWSharedServicesProvider.swift",
       "kind": "StringLiteral",
-      "offset": 5959,
+      "offset": 4897,
       "length": 20,
       "value": "\"Logger initialized\""
     },
@@ -74535,6 +74532,20 @@
       "offset": 1657,
       "length": 36,
       "value": "\"ow.popNotifications.lastFailReason\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/OWUserDefaultsService.swift",
+      "kind": "StringLiteral",
+      "offset": 1847,
+      "length": 31,
+      "value": "\"ow.popNotifications.debugLogs\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Services\/OWUserDefaultsService.swift",
+      "kind": "Array",
+      "offset": 1902,
+      "length": 2,
+      "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/Style\/Colors\/OWColorType.swift",
@@ -82734,6 +82745,27 @@
       "value": "false"
     },
     {
+      "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Profile\/ViewModels\/OWProfilePrivacyVM.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1396,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Profile\/ViewModels\/OWProfilePrivacyVM.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1443,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Profile\/ViewModels\/OWProfilePrivacyVM.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1483,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/UI\/Profile\/ViewModels\/OWProfileSettingsMenuVM.swift",
       "kind": "StringLiteral",
       "offset": 1516,
@@ -85375,14 +85407,14 @@
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/ViewModels\/OWCommentContentViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 5008,
+      "offset": 5020,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/Comment\/ViewModels\/OWCommentContentViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 5083,
+      "offset": 5095,
       "length": 1,
       "value": "0"
     },
@@ -86516,21 +86548,21 @@
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/CommentCreation\/AttachmentPreview\/ViewModels\/OWAttachmentPreviewViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 2476,
+      "offset": 2526,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/CommentCreation\/AttachmentPreview\/ViewModels\/OWAttachmentPreviewViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 4209,
+      "offset": 4259,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/openweb-ios-sdk-demo-apps\/openweb-ios-sdk-demo-apps\/OpenWeb-Development\/OpenWeb-SDK\/UI\/SharedViews\/CommentCreation\/AttachmentPreview\/ViewModels\/OWAttachmentPreviewViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 4249,
+      "offset": 4299,
       "length": 5,
       "value": "false"
     },

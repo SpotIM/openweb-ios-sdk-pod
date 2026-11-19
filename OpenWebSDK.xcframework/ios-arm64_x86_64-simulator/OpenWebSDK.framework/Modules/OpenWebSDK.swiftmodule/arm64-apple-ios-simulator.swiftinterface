@@ -44,6 +44,7 @@ internal protocol _AnyEncodable {
 extension Combine.AnyPublisher where Output == Swift.Int, Failure == Swift.Never {
   public static func interval(_ seconds: Foundation.TimeInterval, runLoop: Foundation.RunLoop = .main, mode: Foundation.RunLoop.Mode = .common) -> Combine.AnyPublisher<Swift.Void, Swift.Never>
 }
+infix operator ??= : AssignmentPrecedence
 extension OpenWebSDK.OWLanguageStrategy : Swift.Equatable {
   public static func == (lhs: OpenWebSDK.OWLanguageStrategy, rhs: OpenWebSDK.OWLanguageStrategy) -> Swift.Bool
 }
@@ -396,7 +397,7 @@ public enum OWConversationNavigationMode {
 public enum OWConversationRoute : Swift.Codable {
   case none
   case commentCreation(type: OpenWebSDK.OWCommentCreationType)
-  case commentThread(commentId: OpenWebCommon.OWCommentId)
+  case commentThread(commentId: OpenWebCommon.OWCommentId, performActionType: OpenWebSDK.OWCommentThreadPerformActionType = .none)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
